@@ -81,7 +81,7 @@ function Main() {
               <div className="panel-heading">
                 <h3>News</h3></div>
               <div className="panel-body">
-                <marquee ref={refContainer} scrollamount="3" direction="left" height={200} direction="up" onMouseEnter={()=>{refContainer.current.setAttribute('scrollamount',0);}}>
+                <marquee scrollamount="3" direction="left" height={200} direction="up" >
                   <div className="row">
                     <div className="col-md-6">
                       <span>ABCD</span> 
