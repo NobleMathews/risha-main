@@ -5,11 +5,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
-import Publications from './Publications';
-import Lab from './Lab';
-import Talks from './Talks';
-import Teaching from './Teaching';
-import Press from './Press';
 // maybe socials in nav
 
 
