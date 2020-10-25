@@ -1,8 +1,10 @@
 import React,{useEffect, useState} from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
+import {BrowserRouter,NavLink} from 'react-router-dom';
 import DarkModeToggle from "react-dark-mode-toggle";
 import ReactDOM from 'react-dom';
 import './index.css';
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 // maybe socials in nav
@@ -18,8 +20,11 @@ body{
   background-color: ${props=>props.theme.mode === "dark" ? "#1D1F21" : "#F5F5F5"};
   color: ${props=>props.theme.mode === "dark" ? "#F5F5F5":"#1D1F21"};
 }
-a{
+.nav-link,.navbar-brand{
   color: ${props=>props.theme.mode === "dark" ? "#F5F5F5":"#1D1F21"} !important;
+}
+.mylight {
+  background-color:${props=>props.theme.mode === "dark" ? "#252525":"#eeeeee"} !important;
 }
 `
 function getInitialTheme(){
@@ -39,13 +44,17 @@ function Main(){
     <>
     <GlobalStyle />
       <React.StrictMode>
+      <BrowserRouter >
         <Navbar collapseOnSelect expand="lg">
-        <Navbar.Brand href="#home">RISHA Lab</Navbar.Brand>
+        <Navbar.Brand href="/"><b>RISHA Lab</b></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <NavLink exact activeClassName="nav-link active" className="nav-link" to="/">Home</NavLink>
+            <NavLink exact activeClassName="nav-link active" className="nav-link" to="/publications">Publications</NavLink>
+            <NavLink exact activeClassName="nav-link active" className="nav-link" to="/lab">Lab</NavLink>
+            <NavLink exact activeClassName="nav-link active" className="nav-link" to="/talks">Talks</NavLink>
+            <NavLink exact activeClassName="nav-link active" className="nav-link" to="/press">Press</NavLink>
           </Nav>
           <Nav>
             <DarkModeToggle
@@ -57,6 +66,13 @@ function Main(){
         </Navbar.Collapse>
       </Navbar>
         <App />
+      <footer className="blog-footer">
+      <p class="text-center">
+          <a href="#">Back to top</a>
+        </p>
+        <p class="text-center">Webpage designed by <a href="#">Noble</a>.</p>
+      </footer>
+      </BrowserRouter>
       </React.StrictMode>
     </>
     </ThemeProvider>
