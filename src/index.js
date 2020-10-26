@@ -8,8 +8,6 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 // maybe socials in nav
-import Ticker from './Components/ticker'
-
 
 import reportWebVitals from './reportWebVitals';
 
@@ -67,13 +65,6 @@ function Main(){
         </Navbar.Collapse>
       </Navbar>
         <App />
-      <Ticker/>
-      <footer className="blog-footer">
-      {/* <p class="text-center">
-          <a href="#">Back to top</a>
-        </p> */}
-        <p class="text-center">Webpage designed by <a href="#">Noble</a>.</p>
-      </footer>
       </BrowserRouter>
       </React.StrictMode>
     </>

@@ -1,9 +1,11 @@
 import React from "react";
 import {Container,Row,Col,Image} from 'react-bootstrap';
+import Ticker from '../Components/ticker'
 
 // import Marquee from '../Components/Marquee'
 function Main() {
   return (
+    <>
     <div>
         {/* <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -85,6 +87,14 @@ function Main() {
         </div>{/* /.row */}
       </div>
     </div>
+    <Ticker/>
+    <footer className="blog-footer">
+    {/* <p class="text-center">
+        <a href="#">Back to top</a>
+      </p> */}
+      <p class="text-center">Webpage designed by <a href="#">Noble</a>.</p>
+    </footer>
+    </>
   );
 }
 

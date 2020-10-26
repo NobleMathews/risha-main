@@ -1,6 +1,22 @@
 import React, {useState} from 'react';
 import {NewsTicker} from "react-announcement-ticker";
 
+const repeatt =()=>{
+  return (
+    <>
+    <div className="row">
+      <div className="col-md-6">
+        <span>ABCD</span> 
+      </div>
+      <div className="col-md-6">
+        <span>1234</span>
+      </div>
+    </div>
+    <hr />
+    </>
+  )
+}
+
 // https://coderwall.com/p/6qaeya/lazy-carousel-in-bootstrap%20https://react-bootstrap.github.io/components/carousel/
 
 const Marqueem = () => {

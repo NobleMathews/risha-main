@@ -5,11 +5,13 @@ import Publications from './Pages/Publications';
 import Lab from './Pages/Lab';
 import Talks from './Pages/Talks';
 import Press from './Pages/Press';
+import GalleryAdmin from './Pages/admin/Title';
 
 function App() {
   return (
     <div className="App">
       <Switch>
+      <Route path="/admin" component={GalleryAdmin} />
         <Route path="/publications" component={Publications} />
         <Route path="/lab" component={Lab} />
         <Route path="/talks" component={Talks} />
