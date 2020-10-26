@@ -22,3 +22,21 @@ a {
 a:hover{
   color: #F65314 !important;
 }
+
+/* .tickr-title,.tickr-box{
+  background: transparent !important;
+}
+.tickr-title{
+  display: none;
+}
+#tickr-scroll{
+  height: 1000px!important;
+  background: transparent !important;
+} */
+
+.newsticker {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0rem;
+}
+

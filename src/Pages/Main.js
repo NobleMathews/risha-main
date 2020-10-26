@@ -1,6 +1,7 @@
 import React from "react";
 import {Container,Row,Col,Image} from 'react-bootstrap';
 
+// import Marquee from '../Components/Marquee'
 function Main() {
   return (
     <div>
@@ -76,142 +77,9 @@ function Main() {
                 <li><a href="#">Facebook</a></li>
               </ol>
             </div>
-            <div className="p-4 mb-3 mylight rounded">
-            <div className="panel panel-default">
-              <div className="panel-heading">
-                <h3>News</h3></div>
-              <div className="panel-body">
-                <marquee scrollamount="3" direction="left" height={200} direction="up" >
-                  <div className="row">
-                    <div className="col-md-6">
-                      <span>ABCD</span> 
-                    </div>
-                    <div className="col-md-6">
-                      <span>1234</span>
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="row">
-                    <div className="col-md-6">
-                      <span>EFGH</span> 
-                    </div>
-                    <div className="col-md-6">
-                      <span>5678</span>
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="row">
-                    <div className="col-md-6">
-                      <span>IJKL</span> 
-                    </div>
-                    <div className="col-md-6">
-                      <span>9101</span>
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="row">
-                    <div className="col-md-6">
-                      <span>ขอนแก่น</span> 
-                    </div>
-                    <div className="col-md-6">
-                      <span>40000</span>
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="row">
-                    <div className="col-md-6">
-                      <span>สารคาม</span> 
-                    </div>
-                    <div className="col-md-6">
-                      <span>44000</span>
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="row">
-                    <div className="col-md-6">
-                      <span>nan</span> 
-                    </div>
-                    <div className="col-md-6">
-                      <span>1212</span>
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="row">
-                    <div className="col-md-6">
-                      <span>มิตรภาพ</span> 
-                    </div>
-                    <div className="col-md-6">
-                      <span>1111</span>
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="row">
-                    <div className="col-md-6">
-                      <span>ABCD</span> 
-                    </div>
-                    <div className="col-md-6">
-                      <span>1234</span>
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="row">
-                    <div className="col-md-6">
-                      <span>EFGH</span> 
-                    </div>
-                    <div className="col-md-6">
-                      <span>5678</span>
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="row">
-                    <div className="col-md-6">
-                      <span>IJKL</span> 
-                    </div>
-                    <div className="col-md-6">
-                      <span>9101</span>
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="row">
-                    <div className="col-md-6">
-                      <span>ขอนแก่น</span> 
-                    </div>
-                    <div className="col-md-6">
-                      <span>40000</span>
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="row">
-                    <div className="col-md-6">
-                      <span>สารคาม</span> 
-                    </div>
-                    <div className="col-md-6">
-                      <span>44000</span>
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="row">
-                    <div className="col-md-6">
-                      <span>nan</span> 
-                    </div>
-                    <div className="col-md-6">
-                      <span>1212</span>
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="row">
-                    <div className="col-md-6">
-                      <span>มิตรภาพ</span> 
-                    </div>
-                    <div className="col-md-6">
-                      <span>1111</span>
-                    </div>
-                  </div>
-                  <hr />
-                </marquee>
-              </div>
-            </div>
-            </div>
+            {/* <div className="p-4 mb-3 mylight rounded">
+            <Marquee/>
+            </div> */}
             
           </aside>{/* /.blog-sidebar */}
         </div>{/* /.row */}
