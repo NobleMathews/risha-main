@@ -17,9 +17,9 @@ import {ThemeProvider,createGlobalStyle} from 'styled-components';
 import storage from 'local-storage-fallback'
 
 const GlobalStyle = createGlobalStyle`
-body{
-  background-color: ${props=>props.theme.mode === "dark" ? "#1D1F21" : "#F5F5F5"};
-  color: ${props=>props.theme.mode === "dark" ? "#F5F5F5":"#1D1F21"};
+body,footer{
+  background-color: ${props=>props.theme.mode === "dark" ? "#1D1F21" : "#F5F5F5"} !important;
+  color: ${props=>props.theme.mode === "dark" ? "#F5F5F5":"#1D1F21"} !important;
 }
 .nav-link,.navbar-brand{
   color: ${props=>props.theme.mode === "dark" ? "#F5F5F5":"#1D1F21"} !important;
@@ -69,9 +69,9 @@ function Main(){
         <App />
       <Ticker/>
       <footer className="blog-footer">
-      <p class="text-center">
+      {/* <p class="text-center">
           <a href="#">Back to top</a>
-        </p>
+        </p> */}
         <p class="text-center">Webpage designed by <a href="#">Noble</a>.</p>
       </footer>
       </BrowserRouter>

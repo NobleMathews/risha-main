@@ -49,23 +49,23 @@ function Main() {
           </div>{/* /.blog-main */}
           <aside className="col-md-4 blog-sidebar">
             <div className="p-4 mb-3 mylight rounded">
-              <h4 className="font-italic">Dr. Sridhar Chimalakonda</h4>
+              <h4 className="title-main">Dr. Sridhar Chimalakonda</h4>
               <Container>
               <Row className="my-3">
                 <Col className="mx-auto">
-                  <Image  src="https://2020.msrconf.org/getProfileImage/sridharchimalakonda/76c8c23f-1094-41a3-ac57-9d38bf899419/small.jpg?1596264188000" alt="LabHead" height="150px" roundedCircle />
+                <Image  className="testermain" src="https://2020.msrconf.org/getProfileImage/sridharchimalakonda/76c8c23f-1094-41a3-ac57-9d38bf899419/small.jpg?1596264188000" alt="LabHead" roundedCircle />
+                <p className="ml-1 tester-sub mb-0">Associate Professor, Department of Computer Science & Engineering <a className="preserve">IIT Tirupati, India</a></p>
+                <p className="ml-1 tester-sub mb-0">Email: <a className="preserve">ch@iittp.ac.in</a></p>
                 </Col>
               </Row>
             </Container>
-            {/* [TODO] */}
-              <p className="mb-0">I am a passionate researcher and teacher in the area of software engineering with deep interest in educational technologies with an aim to deliver top quality research and teaching from India. On a personal note, I believe that creating a happy ecosystem of people and communities will take us there!</p>
+            {/* [TODO] <p className="mb-0">I am a passionate researcher and teacher in the area of software engineering with deep interest in educational technologies with an aim to deliver top quality research and teaching from India. On a personal note, I believe that creating a happy ecosystem of people and communities will take us there!</p> */}
             </div>
-<div className="p-4 mb-3 mylight rounded">
+              <div className="p-4 mb-3 mylight rounded">
               <h4 className="font-italic">About me</h4>
                 <p className="mx-auto"><a  className="p-2" href="#">Bio</a>
-                <a className="p-2" href="#">Contact</a>
-                <a  className="p-2" href="#">CV</a></p><p>
                 <a className="p-2"  href="#">Teaching</a>
+                <a  className="p-2" href="#">CV</a></p><p>
                 <a  className="p-2" href="#">Blog</a>
                 <a className="p-2"  href="#">Cool Reads</a></p>
             </div>
