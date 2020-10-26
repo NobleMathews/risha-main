@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components'
+import ImageGrid from '../../Components/ImageGrid';
+import Modal from '../../Components/Modal';
 import UploadForm from "../../Components/UploadForm";
 
 const Title = styled.div`
+
+  width:80%;
+  margin: 0 auto;
+
   :root{
     --primary: #efb6b2;
     --secondary: #4e4e4e;
@@ -24,12 +30,15 @@ const Title = styled.div`
 `;
 
 const GalleryAdmin = () => {
+  const [selectedImg,setSelectedImg] = useState(null);
   return (
     <Title>
       <h1>#weAreRisha</h1>
       <h2>Main Gallery - Admin</h2>
       <p>Upload images to be displayed in mainpage gallery </p>
       <UploadForm />
+      <ImageGrid setSelectedImg={setSelectedImg}/>
+      {selectedImg&& <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />}
     </Title>
   )
 }
