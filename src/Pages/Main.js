@@ -1,5 +1,6 @@
 import React from "react";
 import {Container,Row,Col,Image} from 'react-bootstrap';
+import Footer from "../Components/Footer";
 import Ticker from '../Components/ticker'
 
 // import Marquee from '../Components/Marquee'
@@ -88,12 +89,7 @@ function Main() {
       </div>
     </div>
     <Ticker/>
-    <footer className="blog-footer">
-    {/* <p class="text-center">
-        <a href="#">Back to top</a>
-      </p> */}
-      <p class="text-center">Webpage designed by <a href="#">Noble</a>.</p>
-    </footer>
+    <Footer/>
     </>
   );
 }

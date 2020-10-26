@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import ImageGrid from '../../Components/ImageGrid';
 import Modal from '../../Components/Modal';
 import UploadForm from "../../Components/UploadForm";
+import Footer from "../../Components/Footer"
 
 const Title = styled.div`
 
@@ -32,14 +33,17 @@ const Title = styled.div`
 const GalleryAdmin = () => {
   const [selectedImg,setSelectedImg] = useState(null);
   return (
+    <>
     <Title>
-      <h1>#weAreRisha</h1>
+      <h1>#WeAreRisha</h1>
       <h2>Main Gallery - Admin</h2>
       <p>Upload images to be displayed in mainpage gallery </p>
       <UploadForm />
       <ImageGrid setSelectedImg={setSelectedImg}/>
       {selectedImg&& <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />}
     </Title>
+    <Footer/>
+    </>
   )
 }
 
