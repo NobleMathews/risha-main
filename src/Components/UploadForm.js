@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import ProgressBar from './ProgressBar';
+import {FaPlusCircle} from 'react-icons/fa'
 
 const UploadForm = () =>{
 
@@ -7,22 +9,30 @@ const UploadForm = () =>{
 
     const types=['image/png','image/jpeg','image/jpg']
 
-    const changeHandler=(e)=>{
+    const handleChange = (e) => {
         let selected = e.target.files[0];
-        if(selected && types.includes(selected.type)){
-            setFile(selected);
-        }else{
-            setFile(null);
-            setError('Please select a valid image file png or jpeg');
+    
+        if (selected && types.includes(selected.type)) {
+          setFile(selected);
+          setError('');
+        } else {
+          setFile(null);
+          setError('Please select an image file (png or jpg)');
         }
-    }
+    };
+
     return (
         <form>
-            <input type="file" onChange={changeHandler}/>
-            <div className="output">
-                {error && <div className="error">{error}</div>}
-            </div>
-        </form>
+        <label>
+          <input type="file" onChange={handleChange} />
+          <FaPlusCircle />
+        </label>
+        <div className="output">
+          { error && <div className="error">{ error }</div>}
+          { file && <div>{ file.name }</div> }
+          { file && <ProgressBar file={file} setFile={setFile} /> }
+        </div>
+      </form>
     )
 }
 
