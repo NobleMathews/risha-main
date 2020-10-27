@@ -29,7 +29,7 @@ const Title = styled.div`
 `;
 
 const GalleryAdmin = () => {
-  const [selectedImg,setSelectedImg] = useState(null);
+  const [selectedOpt,setSelectedOpt] = useState(0);
   return (
     <>
     <Title>

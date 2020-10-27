@@ -16,6 +16,7 @@ function App() {
         <Route path="/lab" component={Lab} />
         <Route path="/talks" component={Talks} />
         <Route path="/news" component={Press} />
+        <Route path="/gallery" component={GalleryAdmin} />
         <Route exact path="/" component={Main} />
         <Route path="/admin/publications" component={PubAdmin} />
         <Route path="/admin/gallery" component={GalleryAdmin} />

@@ -49,9 +49,7 @@ function Main(){
         <Navbar.Brand href="/"><b>RISHA Lab</b></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto">
-            <NavbarL/>
-          </Nav>
+          <NavbarL/>
           <Nav>
             <DarkModeToggle
               onChange={setIsDarkMode}
