@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import styled from 'styled-components'
 import UploadForm from "../../Components/UploadPubForm";
-import Footer from "../../Components/Footer"
+import Footer from "../../Components/Footer";
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
+import useFirestore from '../../hooks/useEzStore';
+var _ = require('lodash');
 
 const Title = styled.div`
 
@@ -64,18 +68,31 @@ label:hover{
 
 `;
 
-const GalleryAdmin = () => {
-  const [selectedOpt,setSelectedOpt] = useState(0);
+const PubAdmin = () => {
+  const [selectedOpt,setSelectedOpt] = useState("New");
+  const firestore = useFirestore();
+  const [publications, setDocument] = useState();
+  firestore.getCollection('publications',
+  (snap) => {
+    let documents = [];
+    snap.forEach(doc => {
+      documents.push({...doc.data(), id: doc.id});
+    });
+    setDocument(documents);
+  }
+  );
   return (
     <>
     <Title>
-      <h2>Publications - Admin</h2>
-      <p>Add new publications to the showcase !!</p>
-      <UploadForm />
+    <h2>Publications - Admin</h2>
+    <p>Add new publications to the showcase !!</p>
+    <Dropdown options={["New"].concat(_.map(publications, 'title'))} onChange={event=>{setSelectedOpt(event.value)}} value={selectedOpt} placeholder="Select an option" />
+    {(publications&&selectedOpt!=="New") && <UploadForm selectedOpt={selectedOpt} publications={_.find(publications, 'title', selectedOpt)}/>}
+    {(publications&&selectedOpt==="New") && <UploadForm selectedOpt={selectedOpt}/>}
     </Title>
     <Footer/>
     </>
   )
 }
 
-export default GalleryAdmin;
+export default PubAdmin;

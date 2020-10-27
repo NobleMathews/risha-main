@@ -24,11 +24,11 @@ const UploadForm = () =>{
 
     return (
         <form>
-        <div class="form-group mx-auto" style={{width:"75%"}}>
+        <div className="form-group mx-auto" style={{width:"75%"}}>
             <input type="text" className="form-control" id="captionKeeper" onChange={event => setCaption(event.target.value)} value={caption} placeholder="Please enter a caption ... " required/>
             <small id="captionHelp" className="text-muted unselectable">Please describe the image going to be uploaded</small>
         </div>
-        <label>
+        <label style={{display:"inline-block"}}>
           <input type="file" onChange={handleChange} disabled={!caption}/>
           <FaPlusCircle className="clickable" color={!caption?"#ddd":""} />
         </label>
