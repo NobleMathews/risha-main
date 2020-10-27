@@ -4,6 +4,7 @@ import { Nav } from 'react-bootstrap';
 import {NavLink} from 'react-router-dom';
 import {FiLogOut} from 'react-icons/fi'
 import {projectAuth} from '../firebase/config'
+import PrivateRoute from '../firebase/PrivateRoute';
 
 function NavbarN() {
     return (
@@ -39,7 +40,7 @@ function NavbarA() {
 export default function NavbarL() {
     return (
         <Switch>
-            <Route path="/admin" component={NavbarA} />
+            <PrivateRoute path="/admin" component={NavbarA} />
             <Route path="/" component={NavbarN} />
         </Switch>
     )

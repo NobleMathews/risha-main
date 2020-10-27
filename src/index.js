@@ -48,6 +48,7 @@ function Main(){
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <NavbarL/>
+          <div className="mr-auto navbar-nav"></div>
           <Nav>
             <DarkModeToggle
               onChange={setIsDarkMode}
