@@ -62,41 +62,6 @@ a:hover{
   width: 60%;
 }
 
-/* upload form styles */
-form{
-  margin: 30px auto 10px;
-  text-align: center;
-}
-label input{
-  display: none;
-}
-label{
-  display: block;
-  width: 30px;
-  height: 30px;
-  margin: 0 0 !important;
-  line-height: 30px;
-  color: var(--primary);
-  font-weight: bold;
-  font-size: 32px;
-}
-
-label span{
-  display: inline-block;
-  vertical-align:top;
-}
-
-label:hover{
-  color: #F65314;
-}
-.output{
-  height: 60px;
-  font-size: 0.8rem;
-}
-.error{
-  color: var(--error);
-}
-
 /* progress bar styles */
 .progress-bar{
   height: 5px;
@@ -152,4 +117,34 @@ label:hover{
 }
 .centered-label svg{
   margin-right: 5px;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }

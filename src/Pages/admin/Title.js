@@ -28,6 +28,42 @@ const Title = styled.div`
     margin-top: 60px;
     font-size: 2.6rem;
   }
+
+  /* upload form styles */
+form{
+  margin: 30px auto 10px;
+  text-align: center;
+}
+label input{
+  display: none;
+}
+label{
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0 0 !important;
+  line-height: 30px;
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 32px;
+}
+
+label span{
+  display: inline-block;
+  vertical-align:top;
+}
+
+label:hover{
+  color: #F65314;
+}
+.output{
+  height: 60px;
+  font-size: 0.8rem;
+}
+.error{
+  color: var(--error);
+}
+
 `;
 
 const GalleryAdmin = () => {
