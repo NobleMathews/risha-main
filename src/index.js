@@ -1,7 +1,8 @@
 import React,{useEffect, useState} from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
-import {BrowserRouter,NavLink} from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 import DarkModeToggle from "react-dark-mode-toggle";
+import NavbarL from './Components/NavbarL'
 import ReactDOM from 'react-dom';
 import './index.css';
 import './App.css';
@@ -49,11 +50,7 @@ function Main(){
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <NavLink exact activeClassName="nav-link active" className="nav-link" to="/">Home</NavLink>
-            <NavLink exact activeClassName="nav-link active" className="nav-link" to="/publications">Publications</NavLink>
-            <NavLink exact activeClassName="nav-link active" className="nav-link" to="/lab">Lab</NavLink>
-            <NavLink exact activeClassName="nav-link active" className="nav-link" to="/talks">Talks</NavLink>
-            <NavLink exact activeClassName="nav-link active" className="nav-link" to="/press">Press</NavLink>
+            <NavbarL/>
           </Nav>
           <Nav>
             <DarkModeToggle
