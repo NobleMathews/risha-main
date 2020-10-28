@@ -9,6 +9,7 @@ import GalleryAdmin from './Pages/admin/Title';
 import PubAdmin from './Pages/admin/PubAdmin';
 import Login from './Pages/admin/Admin';
 import PrivateRoute from './firebase/PrivateRoute';
+import Gallery from './Pages/Gallery';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         <Route path="/lab" component={Lab} />
         <Route path="/talks" component={Talks} />
         <Route path="/news" component={Press} />
-        <Route path="/gallery" component={GalleryAdmin} />
+        <Route path="/gallery" component={Gallery} />
         <Route exact path="/" component={Main} />
         <Route path="/admin" component={Login} />
       </Switch>

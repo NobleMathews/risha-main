@@ -9,7 +9,7 @@ import PrivateRoute from '../firebase/PrivateRoute';
 function NavbarN() {
     return (
         <Nav className="mr-auto">
-            <NavLink activeClassName="nav-link active" className="nav-link" to="/">Home</NavLink>
+            <NavLink activeClassName="nav-link active" className="nav-link" exact to="/">Home</NavLink>
             <NavLink activeClassName="nav-link active" className="nav-link" to="/publications">Publications</NavLink>
             <NavLink activeClassName="nav-link active" className="nav-link" to="/lab">Lab</NavLink>
             <NavLink activeClassName="nav-link active" className="nav-link" to="/talks">Talks</NavLink>
