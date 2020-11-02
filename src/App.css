@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 .display-4 {
   font-size: 2.5rem;
 }
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .display-4 {
     font-size: 3rem;
   }
@@ -82,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .h-250 { height: 250px; }
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .h-md-250 { height: 250px; }
 }
 
@@ -130,6 +130,13 @@ h1, h2, h3, h4, h5, h6 {
     color: inherit;
 }
 
+
+.preserveb
+{
+    text-decoration: none;
+    color: inherit;
+}
+
 .unselectable {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -142,4 +149,30 @@ h1, h2, h3, h4, h5, h6 {
 
 .clickable{
   cursor: pointer;
+}
+
+@media screen and (max-width: 992px)
+{
+  .lab-member {
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
+  }
+
+}
+@media screen and (max-width: 769px)
+{
+  .lab-member {
+    grid-template-columns: 1fr 1fr 1fr !important;
+  }
+
+}
+
+@media screen and (max-width: 350px)
+{
+  .lab-member {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+}
+.lab-member {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
