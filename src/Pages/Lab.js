@@ -32,7 +32,7 @@ function Lab() {
             <p>
               <Link
                 to={{
-                  pathname: `/modal/${member.key}`,
+                  pathname: `/info/${member.key}`,
                   state: { modal: true }
                 }}
               >
@@ -53,7 +53,7 @@ function Lab() {
           <li>
               <Link
                 to={{
-                  pathname: `/modal/${member.key}`,
+                  pathname: `/info/${member.key}`,
                   state: { modal: true }
                 }}
               >

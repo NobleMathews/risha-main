@@ -42,11 +42,11 @@ class App extends Component {
           <Route path="/news" component={Press} />
           <Route path="/gallery" component={Gallery} />
           <Route exact path="/" component={Main} />
-          <Route exact path="/modal/:id" component={Modal} />
+          <Route exact path="/info/:id" component={Modal} />
           <Route path="/admin" component={Login} />
         </Switch>
         {isModal?
-        <Route exact path="/modal/:id" component={Modal} >
+        <Route exact path="/info/:id" component={Modal} >
           <Modal isModal />
         </Route>
         : null
