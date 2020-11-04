@@ -4,18 +4,7 @@ import Footer from "../Components/Footer";
 import {Row,Container,Col,Image} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import img from "../assets/logo.png";
-import sir from "../assets/team/sir.jpg";
-import akhilla from "../assets/team/akhila.jpg";
-import darahas from "../assets/team/darahas.jpg";
-import dheeraj from "../assets/team/dheeraj.jpg";
-import eeshan from "../assets/team/eeshan.jpg";
-import karthik from "../assets/team/karthik.jpg";
-import kowndinya from "../assets/team/kowndinya.jpg";
-import noble from "../assets/team/noble.jpg";
-import shruti from "../assets/team/shruti.jpg";
-import shubhankar from "../assets/team/shubhankar.jpg";
-import vartika from "../assets/team/vartika.jpg";
-
+import {members,alumini,value,sponsors} from "../data"
 
 function Lab() {
 
@@ -34,84 +23,59 @@ function Lab() {
         <h5>People</h5>
         <div className="container">
         <div className="img-grid lab-member">
+        {members.map((member) => (
           <figure className="figure">
-          <div className="img-wrap">
-            <img src={sir} alt="thumb" style={{width:"100%",height:"auto"}}/>
-          </div>
-            <figcaption class="figure-caption text-center">
-            <p>
-              <a href="https://www.cc.gatech.edu/~parikh/">Sridhar Chimalakonda</a>
-              <br/>
-              Assistant Professor
-            </p>
-            </figcaption>
-          </figure>
-
-          <figure className="figure">
-          <div className="img-wrap">
-            <img src={akhilla} alt="thumb" style={{width:"100%",height:"auto"}}/>
-          </div>
-            <figcaption class="figure-caption text-center">
+            <div className="img-wrap">
+              <img className="rounded" src={require("../assets/team/"+member.key+".jpg").default} alt="thumb" style={{width:"100%",height:"auto"}}/>
+            </div>
+            <figcaption className="figure-caption text-center">
             <p>
               <Link
                 to={{
-                  pathname: '/modal/1',
+                  pathname: `/modal/${member.key}`,
                   state: { modal: true }
                 }}
               >
-                Akhilla Manasa
+              {member.title}
               </Link>
               <br/>
-              Ph.D. Student
+              {value[member.value]}
             </p>
             </figcaption>
           </figure>
-
-          <figure className="figure">
-          <div className="img-wrap">
-            <img src={noble} alt="thumb" style={{width:"100%",height:"auto"}}/>
-          </div>
-            <figcaption class="figure-caption text-center">
-            <p>
-              <a href="https://www.cc.gatech.edu/~parikh/">Noble Mathews</a>
-              <br/>
-              B.tech. Student
-            </p>
-            </figcaption>
-          </figure>
-
-          <figure className="figure">
-          <div className="img-wrap">
-            <img src={akhilla} alt="thumb" style={{width:"100%",height:"auto"}}/>
-          </div>
-            <figcaption class="figure-caption text-center">
-            <p>
-              <a href="https://www.cc.gatech.edu/~parikh/">Devi Parikh</a>
-              <br/>
-              B.tech. Student
-            </p>
-            </figcaption>
-          </figure>
-
-          <figure className="figure">
-          <div className="img-wrap">
-            <img src={akhilla} alt="thumb" style={{width:"100%",height:"auto"}}/>
-          </div>
-            <figcaption class="figure-caption text-center">
-            <p>
-              <a href="https://www.cc.gatech.edu/~parikh/">Devi Parikh</a>
-              <br/>
-              B.tech. Student
-            </p>
-            </figcaption>
-          </figure>
-          
+        ))}
         </div>
         </div>
         <hr/>
         <h5>Past Students</h5>
+        <ul>
+        {alumini.map((member) => (
+          <li>
+              <Link
+                to={{
+                  pathname: `/modal/${member.key}`,
+                  state: { modal: true }
+                }}
+              >
+              {member.title}
+              </Link>
+              <p style={{display:"inline"}}>{` (${value[member.value].split(" ")[0]} 20${member.email.match(/\d+/)}) ${member.desc}`}</p>
+          </li>
+        ))}
+        </ul>
         <hr/>
-        <h5>Sponsors</h5>
+        <h5>Collaborator / Sponsors</h5>
+        <div className="card-group">
+        {sponsors.map((sponsor) => (
+          <div className="card m-2 px-3">
+            <div className="d-flex align-items-center" style={{height:"150px"}}>
+            <a href={sponsor.redirect} target="_blank">
+            <img className="card-img my-auto" src={require(`../assets/sponsors/${sponsor.src}`).default} alt={sponsor.title} />
+            </a> 
+            </div>
+          </div>
+        ))}
+        </div>
 
     </div>
     </FadeIn>
