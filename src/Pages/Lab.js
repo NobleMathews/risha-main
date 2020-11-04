@@ -2,6 +2,7 @@ import React from 'react'
 import FadeIn from 'react-fade-in';
 import Footer from "../Components/Footer";
 import {Row,Container,Col,Image} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 import img from "../assets/logo.png";
 import sir from "../assets/team/sir.jpg";
 import akhilla from "../assets/team/akhila.jpg";
@@ -52,7 +53,14 @@ function Lab() {
           </div>
             <figcaption class="figure-caption text-center">
             <p>
-              <a href="https://www.cc.gatech.edu/~parikh/">Akhilla Manasa</a>
+              <Link
+                to={{
+                  pathname: '/modal/1',
+                  state: { modal: true }
+                }}
+              >
+                Akhilla Manasa
+              </Link>
               <br/>
               Ph.D. Student
             </p>
