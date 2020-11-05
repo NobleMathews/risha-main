@@ -29,7 +29,7 @@ function Publication() {
               <h2 className="blog-post-title">Latest Publications</h2>
               <p className="blog-post-meta">
               {arr.map((el, i) => (
-              <a className="preserveb" onClick={()=>{executeScroll(i)}}>{`[${el}]`}</a> 
+              <a className="preserveb mx-1" onClick={()=>{executeScroll(i)}}>{`[${el}]`}</a> 
               ))}
               </p>
               <hr />

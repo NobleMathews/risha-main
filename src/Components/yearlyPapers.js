@@ -32,11 +32,12 @@ const YearlyPapers = ({year,docs}) =>{
                 state: { modal: true }
               }}
             >
-            {`[${authors.find(method => method.key === key).title}]`}
+            {authors.find(method => method.key === key)&& `[${authors.find(method => method.key === key).title}]`}
             </Link>
             ))}
             </div>
-            <p><a className="preserveb font-weight-bold">{doc.title}</a></p>
+            <p className="mb-0"><a className="preserveb font-weight-bold" href={doc.direct} target="_blank">{doc.title}</a></p>
+            <p className="mb-1" >{doc.venue}</p>
             <div className="text-muted">
             {doc.links.split(']')
           .filter(function(str) {

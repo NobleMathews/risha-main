@@ -1,7 +1,7 @@
 import {useState,useEffect} from 'react';
-import {projectStorage,projectFirestore,timeStamp} from '../firebase/config';
+import {projectStorage,projectFirestore} from '../firebase/config';
 
-const useStorage=(file,title,authors,links,venue)=>{
+const useStorage=(selectedOpt,file,title,direct,createdAt,authors,links,venue)=>{
     const [progress,setProgress]=useState(0);
     const [error,setError]=useState(null);
     const [url,setUrl]=useState(null);
@@ -18,8 +18,7 @@ const useStorage=(file,title,authors,links,venue)=>{
             setError(err)
         },async ()=>{
             const url = await storageRef.getDownloadURL();
-            const createdAt = timeStamp();
-            collectionRef.add({url,title,authors,links,venue,createdAt})
+            selectedOpt==="New"?collectionRef.add({url,title,direct,createdAt,authors,links,venue}):collectionRef.doc(selectedOpt).update({url,title,direct,createdAt,authors,links,venue});
             setUrl(url);
         });
     },[file,title,authors,links,venue]);
