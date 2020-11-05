@@ -3,6 +3,7 @@ import FadeIn from 'react-fade-in';
 import Footer from "../Components/Footer";
 import {Row,Container,Col,Image} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
+import { motion } from 'framer-motion';
 import img from "../assets/logo.png";
 import {members,alumini,value,sponsors} from "../data"
 
@@ -15,7 +16,13 @@ function Lab() {
       <Container>
       <Row>
         <Col xs={6} md={4}>
-          <Image src={img} height="80px"/>
+        <motion.img src={img} alt="risha_lab"
+            className="img-thumbnail"
+            style={{height:"80px"}}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            />
         </Col>
       </Row>
       </Container>
@@ -32,7 +39,13 @@ function Lab() {
               }}
             >
             <div className="img-wrap">
-              <img className="rounded" src={require("../assets/team/"+member.key+".jpg").default} alt="thumb" style={{width:"100%",height:"auto"}}/>
+              {/* <img className="rounded" src={require("../assets/team/"+member.key+".jpg").default} alt="thumb" style={{width:"100%",height:"auto"}}/> */}
+              <motion.img
+                className="rounded"
+                src={require("../assets/team/"+member.key+".jpg").default} alt="thumb" style={{width:"100%",height:"auto"}}                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.8 }}
+                />
             </div>
             </Link>
             <figcaption className="figure-caption text-center">

@@ -2,11 +2,16 @@ import React, { useRef } from 'react'
 import FadeIn from 'react-fade-in';
 import Footer from "../Components/Footer";
 import { animateScroll as scroll } from "react-scroll";
+import useFirestore from '../hooks/useFirestore';
+import { motion } from 'framer-motion';
+import {authors} from "../data"
+import {Link} from 'react-router-dom';
 
 const scrollToRef = (ref) => scroll.scrollTo(ref.current.offsetTop)   
 
 function Publication() {
 
+  const { docs } = useFirestore('publications');
   const myRef = useRef(null)
   const executeScroll = () => scrollToRef(myRef)
 
@@ -21,97 +26,51 @@ function Publication() {
               <hr />
         </div>
 
-        <h2>2020</h2>
+        <h2 ref={myRef}>2020</h2>
 
-        <div className="row" ref={myRef}>
+        {docs && docs.map(doc => (
+        <motion.div className="row" key={doc.id} 
+          whileHover={{ opacity: 1 }}s
+        >
           <div className="col-3 my-3">
-            <img className="img-thumbnail" src={"https://firebasestorage.googleapis.com/v0/b/risha-lab-server.appspot.com/o/h4.jpg?alt=media&token=3bc5fabd-ef32-4682-b8cf-b2160ae01cfc"} style={{width:"100%"}}></img>
+            <motion.img src={doc.url} alt="publication_img"
+            className="img-thumbnail"
+            style={{width:"100%"}}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1 }}
+            />
           </div>
           <div className="col-9" style={{display:"flex",alignItems:"center"}} >
           <div className="container">
             <div className="text-muted">
-              <a className="preserveb pr-2">[Noble Mathews]</a>
-              <a className="preserveb pr-2">[‪Akhila Venigalla]</a>
-              <a className="preserveb pr-2">[Sridhar Chimalakonda]</a>
+            {doc.authors.split(",").map((key) => (
+            <Link
+            className="preserveb pr-2"
+              to={{
+                pathname: `/info/${key}`,
+                state: { modal: true }
+              }}
+            >
+            {`[${authors.find(method => method.key === key).title}]`}
+            </Link>
+            ))}
             </div>
-            <p><a className="preserveb font-weight-bold">With supporting text below as a natural lead-in to additional content.</a></p>
+            <p><a className="preserveb font-weight-bold">{doc.title}</a></p>
             <div className="text-muted">
-              <a className="preserveb pr-2">[Github]</a>
-              <a className="preserveb pr-2">[Youtube]</a>
-              <a className="preserveb pr-2">[App]</a>
+            {doc.links.split(']')
+          .filter(function(str) {
+            return /\S/.test(str);
+          })
+          .map((link) => (
+            <a  className="preserveb pr-2" href={link.split('[').pop().split(']')[0]} target="_blank">{`[${link.split('[')[0]}]`}</a>
+            ))}
             </div>
           </div>
           </div>
-        </div>
-
+        </motion.div>
+      ))}
         <hr />
-
-        <div className="row" ref={myRef}>
-          <div className="col-3 my-3">
-            <img className="img-thumbnail" src={"https://firebasestorage.googleapis.com/v0/b/risha-lab-server.appspot.com/o/h4.jpg?alt=media&token=3bc5fabd-ef32-4682-b8cf-b2160ae01cfc"} style={{width:"100%"}}></img>
-          </div>
-          <div className="col-9" style={{display:"flex",alignItems:"center"}} >
-          <div className="container">
-            <div className="text-muted">
-              <a className="preserveb pr-2">[Noble Mathews]</a>
-              <a className="preserveb pr-2">[‪Akhila Venigalla]</a>
-              <a className="preserveb pr-2">[Sridhar Chimalakonda]</a>
-            </div>
-            <p><a className="preserveb font-weight-bold">With supporting text below as a natural lead-in to additional content.</a></p>
-            <div className="text-muted">
-              <a className="preserveb pr-2">[Github]</a>
-              <a className="preserveb pr-2">[Youtube]</a>
-              <a className="preserveb pr-2">[App]</a>
-            </div>
-          </div>
-          </div>
-        </div>
-
-        <hr/>
-
-        <div className="row" ref={myRef}>
-          <div className="col-3 my-3">
-            <img className="img-thumbnail" src={"https://firebasestorage.googleapis.com/v0/b/risha-lab-server.appspot.com/o/h4.jpg?alt=media&token=3bc5fabd-ef32-4682-b8cf-b2160ae01cfc"} style={{width:"100%"}}></img>
-          </div>
-          <div className="col-9" style={{display:"flex",alignItems:"center"}} >
-          <div className="container">
-            <div className="text-muted">
-              <a className="preserveb pr-2">[Noble Mathews]</a>
-              <a className="preserveb pr-2">[‪Akhila Venigalla]</a>
-              <a className="preserveb pr-2">[Sridhar Chimalakonda]</a>
-            </div>
-            <p><a className="preserveb font-weight-bold">With supporting text below as a natural lead-in to additional content.</a></p>
-            <div className="text-muted">
-              <a className="preserveb pr-2">[Github]</a>
-              <a className="preserveb pr-2">[Youtube]</a>
-              <a className="preserveb pr-2">[App]</a>
-            </div>
-          </div>
-          </div>
-        </div>
-
-        <hr/>
-
-        <div className="row" ref={myRef}>
-          <div className="col-3 my-3">
-            <img className="img-thumbnail" src={"https://firebasestorage.googleapis.com/v0/b/risha-lab-server.appspot.com/o/h4.jpg?alt=media&token=3bc5fabd-ef32-4682-b8cf-b2160ae01cfc"} style={{width:"100%"}}></img>
-          </div>
-          <div className="col-9" style={{display:"flex",alignItems:"center"}} >
-          <div className="container">
-            <div className="text-muted">
-              <a className="preserveb pr-2">[Noble Mathews]</a>
-              <a className="preserveb pr-2">[‪Akhila Venigalla]</a>
-              <a className="preserveb pr-2">[Sridhar Chimalakonda]</a>
-            </div>
-            <p><a className="preserveb font-weight-bold">With supporting text below as a natural lead-in to additional content.</a></p>
-            <div className="text-muted">
-              <a className="preserveb pr-2">[Github]</a>
-              <a className="preserveb pr-2">[Youtube]</a>
-              <a className="preserveb pr-2">[App]</a>
-            </div>
-          </div>
-          </div>
-        </div>
     </div>
     </FadeIn>
     <Footer/>

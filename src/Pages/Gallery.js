@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import styled from 'styled-components'
 import ImageGrid from '../Components/ImageGrid';
 import Modal from '../Components/Modal';
-import UploadForm from "../Components/UploadForm";
 import Footer from "../Components/Footer"
 
 const Title = styled.div`
