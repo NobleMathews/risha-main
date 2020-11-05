@@ -1,8 +1,9 @@
 import React,{Component} from 'react'
 import { withRouter } from 'react-router-dom';
-import {authors,value} from "../data";
+import {authors,value,alumini} from "../data";
 import {AiOutlineMail} from 'react-icons/ai';
 import {Tooltip,OverlayTrigger} from 'react-bootstrap';
+import FadeIn from 'react-fade-in';
 
 class authModal extends Component {
     constructor(props){
@@ -11,6 +12,8 @@ class authModal extends Component {
     render(){
     const id = this.props.match.params.id;
     const author = authors.find(method => method.key === id);
+    const isAlumini = alumini.find(method => method.key === id);
+    const alum = isAlumini?" (Alumini) ":"";
 
     return(
       <div
@@ -18,13 +21,15 @@ class authModal extends Component {
         className="fade modal-backdrop show specialModal"
         onClick={() => this.props.history.goBack()}
       >
+      <FadeIn>
       <div class="modal-dialog" role="document">
       <div class="modal-content" onClick={e => e.stopPropagation()}>
-          <div className="modal-header">
+      <FadeIn>
+        <div className="modal-header">
           <img className="rounded-circle mx-auto" src={require("../assets/team/"+author.key+".jpg").default} alt="thumb" style={{height:"70px"}}/>
             <div style={{flexDirection:"column"}}>
               <h5 class="modal-title">{author.title}</h5>
-              <h6 class="muted">{value[author.value]}</h6>
+              <h6 class="muted">{`${value[author.value]} ${alum}`}</h6>
               <OverlayTrigger
                 placement="right"
                 delay={{ show: 250, hide: 400 }}
@@ -41,12 +46,21 @@ class authModal extends Component {
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
+          </FadeIn>
           <div className="modal-footer">
-            <button type="button" className="btn btn-primary">Save changes</button>
-            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+          {author.links.split('\n')
+          .filter(function(str) {
+            return /\S/.test(str);
+          })
+          .map((link) => (
+            <FadeIn>
+            <a type="button" href={link.split('[').pop().split(']')[0]} className="btn btn-outline" style={{border:"solid"}} target="_blank">{link.split('[')[0]}</a>
+            </FadeIn>
+            ))}
           </div>
         </div>
         </div>
+        </FadeIn>
         </div>
     );    
     }

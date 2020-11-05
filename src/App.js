@@ -11,6 +11,8 @@ import Login from './Pages/admin/Admin';
 import PrivateRoute from './firebase/PrivateRoute';
 import Gallery from './Pages/Gallery';
 import Modal from './Components/authorModal';
+import { AnimatedRoute } from 'react-router-transition';
+
 
 class App extends Component {
   constructor(props){
@@ -33,6 +35,7 @@ class App extends Component {
     )
     return (
       <div className="App">
+
         <Switch location={isModal ? this.previousLocation : location}>
           <PrivateRoute path="/admin/publications" component={PubAdmin} />
           <PrivateRoute path="/admin/gallery" component={GalleryAdmin} />
@@ -45,12 +48,20 @@ class App extends Component {
           <Route exact path="/info/:id" component={Modal} />
           <Route path="/admin" component={Login} />
         </Switch>
-        {isModal?
+        {/* {isModal?
         <Route exact path="/info/:id" component={Modal} >
           <Modal isModal />
-        </Route>
-        : null
-      }
+        </Route> */}
+        <AnimatedRoute
+        exact path="/info/:id"
+        component={Modal}
+        atEnter={{ opacity: 0 }}
+        atLeave={{ opacity: 0 }}
+        atActive={{ opacity: 1 }}
+        className="animated-wrapper"
+        />
+        {/* : null
+      } */}
       </div>
     );
   }

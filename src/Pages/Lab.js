@@ -25,9 +25,16 @@ function Lab() {
         <div className="img-grid lab-member">
         {members.map((member) => (
           <figure className="figure">
+            <Link
+              to={{
+                pathname: `/info/${member.key}`,
+                state: { modal: true }
+              }}
+            >
             <div className="img-wrap">
               <img className="rounded" src={require("../assets/team/"+member.key+".jpg").default} alt="thumb" style={{width:"100%",height:"auto"}}/>
             </div>
+            </Link>
             <figcaption className="figure-caption text-center">
             <p>
               <Link
