@@ -25,6 +25,9 @@ body,footer{
 .mylight {
   background-color:${props=>props.theme.mode === "dark" ? "#252525":"#eeeeee"} !important;
 }
+.btn-outline {
+  color: ${props=>props.theme.mode === "dark" ? "bisque":"#000"} !important;
+}
 `
 function getInitialTheme(){
   const savedTheme = storage.getItem('theme');

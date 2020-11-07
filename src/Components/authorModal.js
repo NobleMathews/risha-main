@@ -22,14 +22,14 @@ class authModal extends Component {
         onClick={() => this.props.history.goBack()}
       >
       <FadeIn>
-      <div class="modal-dialog" role="document">
-      <div class="modal-content" onClick={e => e.stopPropagation()}>
+      <div className="modal-dialog" role="document">
+      <div className="modal-content mylight" onClick={e => e.stopPropagation()}>
       <FadeIn>
         <div className="modal-header">
           <img className="rounded-circle mx-auto" src={require("../assets/team/"+author.key+".jpg").default} alt="thumb" style={{height:"70px"}}/>
             <div style={{flexDirection:"column"}}>
-              <h5 class="modal-title">{author.title}</h5>
-              <h6 class="muted">{`${value[author.value]} ${alum}`}</h6>
+              <h5 className="modal-title">{author.title}</h5>
+              <h6 className="muted">{`${value[author.value]} ${alum}`}</h6>
               <OverlayTrigger
                 placement="right"
                 delay={{ show: 250, hide: 400 }}

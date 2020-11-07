@@ -24,9 +24,7 @@ function NavbarA() {
     return (
         <>
         <Nav className="mr-auto">
-            <NavLink activeClassName="nav-link active" className="nav-link" to="/admin/authors">Authors</NavLink>
             <NavLink activeClassName="nav-link active" className="nav-link" to="/admin/publications">Publications</NavLink>
-            <NavLink activeClassName="nav-link active" className="nav-link" to="/admin/lab">Lab</NavLink>
             <NavLink activeClassName="nav-link active" className="nav-link" to="/admin/talks">Talks</NavLink>
             <NavLink activeClassName="nav-link active" className="nav-link" to="/admin/news">News</NavLink>
             <NavLink activeClassName="nav-link active" className="nav-link" to="/admin/gallery">[Gallery]</NavLink>

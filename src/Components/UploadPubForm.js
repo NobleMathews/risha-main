@@ -1,28 +1,46 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import ProgressBar from './ProgressBarPub';
 import {FaPlusCircle} from 'react-icons/fa'
-import DatePicker from "react-datepicker";
- 
+import DatePicker from "react-datepicker"; 
 import "react-datepicker/dist/react-datepicker.css";
 
-const UploadForm = ({selectedOpt,publications}) =>{
+const UploadForm = ({setSelectedOpt,selectedOpt,publications}) =>{
+  let publication={};
 
-    const [file,setFile] = useState(null);
-    const [error,setError] = useState(null);
-    const [title,setTitle] = useState(publications?publications.title:"");
-    const [direct,setDirect] = useState(publications?publications.direct:"");
-    const [authors,setAuthors] = useState(publications?publications.authors:"");
-    const [venue,setVenue] = useState(publications?publications.venue:"");
-    const [links,setLinks] = useState(publications?publications.links:"");
-    const [pubDate, setPubDate] = useState(new Date());
+  const [file,setFile] = useState(null);
+  const [error,setError] = useState(null);
+  const [title,setTitle] = useState("");
+  const [id,setId] = useState("");
+  const [direct,setDirect] = useState("");
+  const [authors,setAuthors] = useState("");
+  const [venue,setVenue] = useState("");
+  const [links,setLinks] = useState("");
+  const [pubDate, setPubDate] = useState(new Date());
+  const [imgBypass, setBypass] = useState(false);
+
+  useEffect( () => {
+    if(publications){
+      publication=publications.find(o => o.title === selectedOpt);
+      setTitle(publication?publication.title:"");
+      setDirect(publication?publication.direct:"");
+      setAuthors(publication?publication.authors:"");
+      setVenue(publication?publication.venue:"");
+      setLinks(publication?publication.links:"");
+      setPubDate(publication?publication.createdAt.toDate():new Date());
+      setId(publication?publication.id:"")
+    }
+  }, [selectedOpt])
 
     function reset(){
+      setSelectedOpt("New");
       setTitle("");
       setLinks("");
       setVenue("");
       setAuthors("");
       setDirect("");
       setPubDate(new Date());
+      setBypass(false);
+      setId("");
     }
 
 
@@ -70,13 +88,16 @@ const UploadForm = ({selectedOpt,publications}) =>{
             <small className="text-muted unselectable">Add one image to represent your work</small>
         </div>
         <label style={{display:"inline-block"}}>
-          <input type="file" onChange={handleChange} disabled={title&&authors&&links&&venue}/>
-          <FaPlusCircle className="clickable" color={!(title&&authors&&links&&venue)?"#ddd":""} />
+          <input type="file" onChange={handleChange} disabled={title&&authors&&venue&&direct&&pubDate}/>
+          <FaPlusCircle className="clickable" color={!(title&&authors&&venue&&direct&&pubDate)?"#ddd":""} />
         </label>
+        <div className="form-check">
+          <input type="checkbox" onChange={event => setBypass(!imgBypass)} checked={imgBypass} className="form-check-input" id="exampleCheck1"/>
+        </div>
         <div className="output">
           { error && <div className="error">{ error }</div>}
           { file && <div>{ file.name }</div> }
-          { file && <ProgressBar selectedOpt={selectedOpt} file={file} setFile={setFile} direct={direct} createdAt={pubDate} title={title} authors={authors} links={links} venue={venue} setReset={reset}/> }
+          { (file||imgBypass) && <ProgressBar imgBypass={imgBypass} selectedOpt={id?id:selectedOpt} file={file} setFile={setFile} direct={direct} createdAt={pubDate} title={title} authors={authors} links={links} venue={venue} setReset={reset}/> }
         </div>
       </form>
     )

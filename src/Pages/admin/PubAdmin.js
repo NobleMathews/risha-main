@@ -87,8 +87,8 @@ const PubAdmin = () => {
     <h2>Publications - Admin</h2>
     <p>Add new publications to the showcase !!</p>
     <Dropdown options={["New"].concat(_.map(publications, 'title'))} onChange={event=>{setSelectedOpt(event.value)}} value={selectedOpt} placeholder="Select an option" />
-    {(publications&&selectedOpt!=="New") && <UploadForm selectedOpt={selectedOpt} publications={_.find(publications, 'title', selectedOpt)}/>}
-    {(publications&&selectedOpt==="New") && <UploadForm selectedOpt={selectedOpt}/>}
+    {(publications&&selectedOpt!=="New") && <UploadForm setSelectedOpt={setSelectedOpt} selectedOpt={selectedOpt} publications={publications}/>}
+    {(publications&&selectedOpt==="New") && <UploadForm setSelectedOpt={setSelectedOpt} selectedOpt={selectedOpt}/>}
     </Title>
     <Footer/>
     </>
