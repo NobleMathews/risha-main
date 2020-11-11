@@ -6,6 +6,7 @@ import NavbarL from './Components/NavbarL'
 import ReactDOM from 'react-dom';
 import {AuthProvider} from './firebase/Auth';
 import './index.css';
+import './reflec.css';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
