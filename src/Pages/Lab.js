@@ -1,7 +1,7 @@
 import React from 'react'
 import FadeIn from 'react-fade-in';
 import Footer from "../Components/Footer";
-import {Row,Container,Col,Image} from 'react-bootstrap';
+import {Row,Container,Col} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import { motion } from 'framer-motion';
 import img from "../assets/logo.png";

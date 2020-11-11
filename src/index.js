@@ -9,6 +9,8 @@ import './index.css';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
+import ScrollToTopProps from 'react-scroll-up';
+import {FaArrowAltCircleUp} from 'react-icons/fa';
 // maybe socials in nav
 
 import {ThemeProvider,createGlobalStyle} from 'styled-components';
@@ -27,6 +29,12 @@ body,footer{
 }
 .btn-outline {
   color: ${props=>props.theme.mode === "dark" ? "bisque":"#000"} !important;
+}
+
+.white-border {
+  background: ${props=>props.theme.mode === "dark" ? "#1D1F21" : "#F5F5F5"} !important;
+  padding: 3px;
+  border-radius: 50%;
 }
 `
 function getInitialTheme(){
@@ -62,7 +70,10 @@ function Main(){
         </Navbar.Collapse>
       </Navbar>
         <App />
-      </BrowserRouter>
+        <ScrollToTopProps showUnder={160}>
+          <spam className="centered-label"><FaArrowAltCircleUp size={32} className={"mx-1 white-border"}/></spam>
+        </ScrollToTopProps> 
+    </BrowserRouter>
     </AuthProvider>
     </ThemeProvider>
   );

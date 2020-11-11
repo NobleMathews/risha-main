@@ -3,6 +3,7 @@ import {BrowserRouter as Router,Switch,Route,withRouter} from "react-router-dom"
 import Main from './Pages/Main'
 import Publications from './Pages/Publications';
 import Lab from './Pages/Lab';
+import Join from './Pages/Join';
 import Talks from './Pages/Talks';
 import Press from './Pages/Press';
 import GalleryAdmin from './Pages/admin/Title';
@@ -41,6 +42,7 @@ class App extends Component {
           <PrivateRoute path="/admin/gallery" component={GalleryAdmin} />
           <Route path="/publications" component={Publications} />
           <Route path="/lab" component={Lab} />
+          <Route path="/join" component={Join} />
           <Route path="/talks" component={Talks} />
           <Route path="/news" component={Press} />
           <Route path="/gallery" component={Gallery} />
