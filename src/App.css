@@ -265,7 +265,7 @@ to   { opacity: 1; }
   -webkit-box-shadow: 0 0px 2px #e74c3c !important;
   box-shadow: 0 0px 2px #e74c3c !important;
 }
-.cf #input-submit {
+/* .cf #input-submit {
   color: white;
   transition: all 0.3s;
   background: #a8a8a8;
@@ -276,7 +276,7 @@ to   { opacity: 1; }
   -moz-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
   -webkit-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
   box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
-}
+} */
 .cf textarea {
   height: 12.5em;
 }
@@ -319,5 +319,4 @@ to   { opacity: 1; }
   font-family: "Merriweather", sans-serif;
   text-align: center;
   color: #a8a8a8;
-  text-shadow: 1px 1px 0 white;
 }

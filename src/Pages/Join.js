@@ -4,7 +4,8 @@ import Footer from "../Components/Footer";
 import {Row,Container,Col,Image} from 'react-bootstrap';
 import img from "../assets/logoRecruit.png";
 import { motion } from 'framer-motion';
-
+import kwesforms from 'kwesforms';
+kwesforms.init();
 function Join() {
   return (
     <>
@@ -129,16 +130,16 @@ function Join() {
 </div>
       </Col>
       <Col md={9} className="my-auto">
-      <form className="cf">
+      <form className="kwes-form cf" action="https://kwes.io/api/foreign/forms/0ctNQPXDL2AlBzCTLXHU">
       <div className="half left cf">
-        <input type="text" id="input-name" placeholder="Name" />
-        <input type="email" id="input-email" placeholder="Email address" />
-        <input type="text" id="input-subject" placeholder="Subject" />
+        <input type="text" id="input-name" name="input-name" rules="required|max:255" placeholder="Name" />
+        <input type="email" id="input-email" name="input-email" rules="required|email" placeholder="Email address" />
+        <input type="text" id="input-subject" name="input-subject" rules="required|max:455" placeholder="Subject" />
       </div>
       <div className="half right cf">
-        <textarea name="message" type="text" id="input-message" placeholder="Message" defaultValue={""} />
+        <textarea name="message" type="text" id="input-message" rules="required" name="input-message" placeholder="Message" defaultValue={""} />
       </div>  
-      <input type="submit" defaultValue="Submit" id="input-submit" />
+      <input type="submit" className="button-join" defaultValue="Submit" id="input-submit" />
     </form>
       </Col>
       </Row>

@@ -1,9 +1,25 @@
+.button-join{
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  font-family: sans-serif;
+}
+.button-join:hover {
+  -webkit-transform: scale(1.01) translate3d(0, 0, 0);
+          transform: scale(1.01) translate3d(0, 0, 0);
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.2), 6px 12px 12px 0 rgba(0, 0, 0, 0.25);
+  background-color: #e74c3c;
+  font-weight: bold;
+  color: white;
+}
 .reflection-container {
     position: relative;
     display: inline-block;
     vertical-align: middle;
     transform-style: preserve-3d;
     perspective: 1000px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
   }
   .reflection-container .reflection-content {
     width: 100%;
@@ -22,7 +38,7 @@
     height: 200%;
     left: -50%;
     top: -50%;
-    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2));
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1));
   }
   .reflection-container .reflection-grid-cell {
     position: absolute;
