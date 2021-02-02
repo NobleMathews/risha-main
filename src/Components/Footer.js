@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 
 const Footer = () => {
 
@@ -8,16 +8,13 @@ const Footer = () => {
     {/* <p className="text-center">
         <a href="#">Back to top</a>
       </p> */}
-      <p className="text-center text-muted">Webpage designed by              
-        <Link
+      <p className="text-center text-muted">Risha Lab              
+        <a
           className="preserve mx-1"
-          to={{
-            pathname: `/info/noble`,
-            state: { modal: true },
-          }}
+          href={"https://iittp.ac.in/"}
         >
-        Noble
-        </Link></p>
+        IIT Tirupati
+        </a></p>
     </footer>
   )
 }
