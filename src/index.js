@@ -58,7 +58,7 @@ function Main(){
       <BrowserRouter >
         <Navbar collapseOnSelect expand="lg">
         <Navbar.Brand href="/logo" className="d-flex flex-row justify-content-center align-items-center">
-        <div class="logo-image" style={{display:"inline-block", marginRight:"15px"}}>
+        <div className="logo-image" style={{display:"inline-block", marginRight:"15px"}}>
           <img src={img} style={{height:"100%"}}/>
         </div>
         {/* <b style={{display:"inline-block"}}>RISHA Lab</b> */}
@@ -78,7 +78,7 @@ function Main(){
       </Navbar>
         <App />
         <ScrollToTopProps showUnder={160}>
-          <spam className="centered-label"><FaArrowAltCircleUp size={32} className={"mx-1 white-border"}/></spam>
+          <span className="centered-label"><FaArrowAltCircleUp size={32} className={"mx-1 white-border"}/></span>
         </ScrollToTopProps> 
     </BrowserRouter>
     </AuthProvider>

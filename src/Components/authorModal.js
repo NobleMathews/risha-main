@@ -43,7 +43,7 @@ class authModal extends Component {
               </OverlayTrigger>
             </div>
             <button type="button" className="close" data-dismiss="modal" aria-label="Close"  onClick={() => this.props.history.goBack()}>
-              <span aria-hidden="true">&times;</span>
+              {/* <span aria-hidden="true">&times;</span> */}
             </button>
           </div>
           </FadeIn>
