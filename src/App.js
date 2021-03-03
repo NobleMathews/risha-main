@@ -9,11 +9,11 @@ import Press from './Pages/Press';
 import GalleryAdmin from './Pages/admin/Title';
 import PubAdmin from './Pages/admin/PubAdmin';
 import Login from './Pages/admin/Admin';
+import Logo from './Pages/AboutLogo'
 import PrivateRoute from './firebase/PrivateRoute';
 import Gallery from './Pages/Gallery';
 import Modal from './Components/authorModal';
 import { AnimatedRoute } from 'react-router-transition';
-
 
 class App extends Component {
   constructor(props){
@@ -42,6 +42,7 @@ class App extends Component {
           <PrivateRoute path="/admin/gallery" component={GalleryAdmin} />
           <Route path="/publications" component={Publications} />
           <Route path="/lab" component={Lab} />
+          <Route path="/logo" component={Logo} />
           <Route path="/join" component={Join} />
           <Route path="/talks" component={Talks} />
           <Route path="/news" component={Press} />

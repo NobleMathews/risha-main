@@ -4,7 +4,7 @@ import Footer from "../Components/Footer";
 import {Row,Container,Col} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import { motion } from 'framer-motion';
-import img from "../assets/logo.png";
+import img from "../assets/logo_min.png";
 import {members,alumini,value,sponsors} from "../data"
 
 function Lab() {
@@ -13,21 +13,22 @@ function Lab() {
     <>
     <FadeIn>
       <div className="container pub-page-main">
-      <Container>
+      {/* <Container>
       <Row>
         <Col xs={6} md={4}>
         <motion.img src={img} alt="risha_lab"
-            className="img-thumbnail"
-            style={{height:"80px"}}
+            // className="img-thumbnail"
+            style={{height:"128px"}}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
             />
         </Col>
       </Row>
-      </Container>
+      </Container> */}
         <hr/>
-        <h5>People</h5>
+        <h5>People</h5><p style={{margin:"0px"}}><b>Hover to discover</b></p>
+        <p> There is always one moment in childhood when the door opens and lets the future in ~ Graham Greene</p>
         <div className="container">
         <div className="img-grid lab-member">
         {members.map((member) => (
@@ -38,14 +39,21 @@ function Lab() {
                 state: { modal: true }
               }}
             >
-            <div className="img-wrap">
+            <div className="img-wrap hover-switch">
               {/* <img className="rounded" src={require("../assets/team/"+member.key+".jpg").default} alt="thumb" style={{width:"100%",height:"auto"}}/> */}
+
               <motion.img
                 className="rounded"
                 src={require("../assets/team/"+member.key+".jpg").default} alt="thumb" style={{width:"100%",height:"auto"}}                initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8 }}
-                />
+              />
+              <motion.img
+                className="rounded"
+                src={require("../assets/team/b_"+member.key+".jpg").default} alt="thumb" style={{width:"100%",height:"auto"}}                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.8 }}
+              />
             </div>
             </Link>
             <figcaption className="figure-caption text-center">

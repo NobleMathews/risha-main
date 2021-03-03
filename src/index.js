@@ -10,6 +10,7 @@ import './reflec.css';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
+import img from "./assets/logo.png";
 import ScrollToTopProps from 'react-scroll-up';
 import {FaArrowAltCircleUp} from 'react-icons/fa';
 // maybe socials in nav
@@ -56,7 +57,12 @@ function Main(){
     <GlobalStyle />
       <BrowserRouter >
         <Navbar collapseOnSelect expand="lg">
-        <Navbar.Brand href="/"><b>RISHA Lab</b></Navbar.Brand>
+        <Navbar.Brand href="/logo" className="d-flex flex-row justify-content-center align-items-center">
+        <div class="logo-image" style={{display:"inline-block", marginRight:"15px"}}>
+          <img src={img} style={{height:"100%"}}/>
+        </div>
+        {/* <b style={{display:"inline-block"}}>RISHA Lab</b> */}
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <NavbarL/>

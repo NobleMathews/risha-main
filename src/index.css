@@ -14,6 +14,54 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.logo-image{
+  /* width: 46px; */
+  height: 46px;
+  /* border-radius: 50%; */
+  overflow: hidden;
+  /* margin-top: -6px; */
+}
+
+@media only screen and (min-width: 768px) {
+  .big-screen {
+    display:block;
+  }
+  .small-screen {
+    display:none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .big-screen {
+    display:none;
+  }
+  .small-screen {
+    display:block;
+  }
+}
+
+/* 
+ * Position both images in same place
+*/
+/* .hover-switch > img {
+  position: absolute!important;
+  top: calc(50% - 100px)!important;
+  left: calc(50% - 100px)!important;
+} */
+/* 
+ * Show the last image by default
+*/
+.hover-switch > img:last-of-type {
+  opacity: 1!important;
+  transition: opacity 0.5s ease-in-out!important;
+  -moz-transition: opacity 0.5s ease-in-out!important;
+  -webkit-transition: opacity 0.5s ease-in-out!important;
+}
+/* 
+ * Hide the last image on hover
+*/
+.hover-switch:hover > img:last-of-type {
+  opacity: 0!important;
+}
 /* Style the links */
 a {
   color: #1570A6;
