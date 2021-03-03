@@ -19,5 +19,4 @@ jobs:
           channelId: live
           projectId: risha-lab-iittp
         env:
-          CI: false
           FIREBASE_CLI_PREVIEWS: hostingchannels
