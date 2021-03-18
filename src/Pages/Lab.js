@@ -67,7 +67,7 @@ function Lab() {
               {member.title}
               </Link>
               <br/>
-              {value[member.value]}
+              {member.email.match(/\d+/)?`${value[member.value].split(" ")[0]} 20${member.email.match(/\d+/)}`:value[member.value]}
             </p>
             </figcaption>
           </figure>

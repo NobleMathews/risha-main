@@ -13,6 +13,7 @@ import Logo from './Pages/AboutLogo'
 import PrivateRoute from './firebase/PrivateRoute';
 import Gallery from './Pages/Gallery';
 import Modal from './Components/authorModal';
+import Professor from './Pages/Sridhar';
 import { AnimatedRoute } from 'react-router-transition';
 
 class App extends Component {
@@ -47,6 +48,7 @@ class App extends Component {
           <Route path="/talks" component={Talks} />
           <Route path="/news" component={Press} />
           <Route path="/gallery" component={Gallery} />
+          <Route path="/sridhar" component={Professor} />
           <Route exact path="/" component={Main} />
           <Route exact path="/info/:id" component={Modal} />
           <Route path="/admin" component={Login} />

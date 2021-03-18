@@ -103,7 +103,7 @@ function Main() {
               <hr />
               <h2>Core Philosophy</h2>
               <p>↠ To us, impactful research stems from great problems that push our limits to go beyond stateof- the-art and state-of-the-practice! | long-term problems with realistic short-term goals</p>
-              <p>↠ <strong>"Raise your quality standards as high as you can live with, avoid wasting your time on routine problems, and always try to work as closely as possible at the boundary of your abilities. Do this, because it is the only way of discovering how that boundary should be moved forward."</strong><pre><code>- Prof. Edsger W. Dijkstra</code></pre> The foundations for my research stem from Prof. Edsger W. Dijkstra</p>
+              <p>↠ <strong>"Raise your quality standards as high as you can live with, avoid wasting your time on routine problems, and always try to work as closely as possible at the boundary of your abilities. Do this, because it is the only way of discovering how that boundary should be moved forward."</strong><code style={{display:"block"}}>- Prof. Edsger W. Dijkstra</code> The foundations for my research stem from Prof. Edsger W. Dijkstra</p>
               <p>↠ I construe this to push the boundary of the field, especially for an young and emerging discipline like software engineering in collaboration with fellow researchers in the community.</p>
               <hr />
               <div className="blog-post">
@@ -153,6 +153,10 @@ function Main() {
                 <a  className="p-2"onClick={()=>{trigger("Blog")}}>Blog</a>
                 <a className="p-2" onClick={()=>{trigger("Reads")}}>Cool Reads</a></p>
             </div>
+            <div className="p-4 mb-3 mylight rounded">
+            <h4 className="font-italic">News</h4>
+            <Ticker/>
+            </div>
             <div className="p-4">
               <h4 className="font-italic">Find us on</h4>
               <ol className="list-unstyled">
@@ -170,7 +174,6 @@ function Main() {
       </div>
     </div>
     </FadeIn>
-    <Ticker/>
     <Footer/>
     </>
   );

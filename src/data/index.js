@@ -181,7 +181,8 @@ export const alumini = [
     value: 3,
     email:'cs18m016@iittp.ac.in',
     title: 'Vartika Agrahari',
-    desc: 'Currently working in AI Sociales`' 
+    desc: 'Currently working in AI Sociales`', 
+    links:''
   },
   {
     key: 'vaishali',

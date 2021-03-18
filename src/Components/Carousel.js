@@ -9,8 +9,8 @@ export default function CarouselX   () {
 
     return (
         <Carousel>
-        {docs && docs.map(doc => (
-            <Carousel.Item interval={2500}>
+        {docs && docs.map((doc,i) => (
+            <Carousel.Item interval={2500} key={i}>
             <img
             className="rounded mx-auto d-block"
             height={height/2.2}

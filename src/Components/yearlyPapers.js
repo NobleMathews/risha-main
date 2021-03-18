@@ -24,15 +24,15 @@ const YearlyPapers = ({year,docs}) =>{
           <div className="col-9" style={{display:"flex",alignItems:"center"}} >
           <div className="container">
             <div className="text-muted">
-            {doc.authors.split(",").map((key) => (
-            <Link
+            {doc.authors.split(",").map((key,i, {length}) => (
+            <Link key={i}
             className="preserveb pr-2"
               to={{
                 pathname: `/info/${key}`,
                 state: { modal: true }
               }}
             >
-            {authors.find(method => method.key === key)&& `[${authors.find(method => method.key === key).title}]`}
+            {authors.find(method => method.key === key)&&`${authors.find(method => method.key === key).title} ${i+1 === length ? '' : ','}`}
             </Link>
             ))}
             </div>
@@ -43,8 +43,8 @@ const YearlyPapers = ({year,docs}) =>{
           .filter(function(str) {
             return /\S/.test(str);
           })
-          .map((link) => (
-            <a  className="preserveb pr-2" href={link.split('[').pop().split(']')[0]} target="_blank">{`[${link.split('[')[0]}]`}</a>
+          .map((link,i) => (
+            <a key={i} className="preserveb pr-2" href={link.split('[').pop().split(']')[0]} target="_blank">{`${link.split('[')[0]}`}</a>
             ))}
             </div>
           </div>

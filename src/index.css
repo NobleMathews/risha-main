@@ -22,6 +22,10 @@ code {
   /* margin-top: -6px; */
 }
 
+.invisible-scrollbar{
+  margin: 0px !important;
+}
+
 @media only screen and (min-width: 768px) {
   .big-screen {
     display:block;
@@ -83,6 +87,18 @@ a:hover{
   height: 1000px!important;
   background: transparent !important;
 } */
+
+.tsparticles-canvas-el{
+  position:fixed !important;
+  left:-25%;
+  top:0;
+  width:100%;
+  height:100%;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box !important;
+}
 
 .newsticker {
   position: -webkit-sticky;
