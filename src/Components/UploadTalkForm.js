@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react'
-import ProgressBar from './ProgressBarPub';
+import ProgressBar from './ProgressBarTalk';
 import {FaPlusCircle} from 'react-icons/fa'
 import DatePicker from "react-datepicker"; 
 import "react-datepicker/dist/react-datepicker.css";
@@ -61,28 +61,28 @@ const UploadForm = ({setSelectedOpt,selectedOpt,publications}) =>{
     return (
         <form>
         <div className="form-group mx-auto" style={{width:"75%"}}>
-            <input type="text" className="form-control" id="titleKeeper" name="title" onChange={event => setTitle(event.target.value)} value={title} placeholder="Please enter Paper / Publication Title ... " required/>
-            <small className="text-muted unselectable">Title of Paper / Publication</small>
+            <input type="text" className="form-control" id="titleKeeper" name="title" onChange={event => setTitle(event.target.value)} value={title} placeholder="Please enter Talk title / short info ... " required/>
+            <small className="text-muted unselectable">Title of Talk</small>
         </div>
         <div className="form-group mx-auto" style={{width:"75%"}}>
-            <input type="text" className="form-control" id="AuthKeeper" name="authors" onChange={event => setAuthors(event.target.value)} value={authors} placeholder="Please enter authors as per id registered (csv)" required/>
-            <small className="text-muted unselectable">Authors Temp</small>
+            <input type="text" className="form-control" id="AuthKeeper" name="authors" onChange={event => setAuthors(event.target.value)} value={authors} placeholder="Please enter comma separated speakers" required/>
+            <small className="text-muted unselectable">Speaker</small>
         </div>
         <div className="form-group mx-auto" style={{width:"75%"}}>
-            <input type="text" className="form-control" id="venueKeeper" name="venue" onChange={event => setVenue(event.target.value)} value={venue} placeholder="Venue / Conference / Journal as applicable ... " required/>
-            <small className="text-muted unselectable">Add venue where work was presented / published</small>
+            <input type="text" className="form-control" id="venueKeeper" name="venue" onChange={event => setVenue(event.target.value)} value={venue} placeholder="Venue as applicable ... " required/>
+            <small className="text-muted unselectable">Add venue for talk</small>
         </div>
         <div className="form-group mx-auto" style={{width:"75%"}}>
-            <input type="text" className="form-control" id="directKeeper" name="direct" onChange={event => setDirect(event.target.value)} value={direct} placeholder="Direct link to article on main host site" required/>
-            <small className="text-muted unselectable">Direct link to publication / article</small>
+            <input type="text" className="form-control" id="directKeeper" name="direct" onChange={event => setDirect(event.target.value)} value={direct} placeholder="Direct link to check out talk" required/>
+            <small className="text-muted unselectable">Direct link to talk</small>
         </div>
         <div className="form-group mx-auto" style={{width:"75%"}}>
-            <small className="text-muted unselectable">Date of publication (used for order) </small>
+            <small className="text-muted unselectable">Date of talk (used for order) </small>
             <DatePicker selected={pubDate} onChange={date => setPubDate(date)} className="mx-2"/> 
         </div>
         <div className="form-group mx-auto" style={{width:"75%"}}>
             <input type="text" className="form-control" id="captionKeeper" name="links" onChange={event => setLinks(event.target.value)} value={links} placeholder="Custom links to checkout work / paper / demo" required/>
-            <small className="text-muted unselectable">Custom Eg. ' Arxiv[https...] Youtube[link...] Code[github.link...] ' </small>
+            <small className="text-muted unselectable">Custom Eg. ' Youtube[link...] Public-GDrive[link...] ' </small>
         </div>
         <div className="form-group mx-auto" style={{width:"75%"}}>
             <small className="text-muted unselectable">Add one image to represent your work</small>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components'
-import UploadForm from "../../Components/UploadPubForm";
+import UploadForm from "../../Components/UploadTalkForm";
 import Footer from "../../Components/Footer";
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
@@ -68,7 +68,7 @@ label:hover{
 
 `;
 
-const PubAdmin = () => {
+const TalksAdmin = () => {
   const [selectedOpt,setSelectedOpt] = useState("New");
   const firestore = useFirestore();
   const [publications, setDocument] = useState();
@@ -76,7 +76,7 @@ const PubAdmin = () => {
   useEffect(()=>{
     let isSubscribed = true;
 
-    firestore.getCollection('publications',
+    firestore.getCollection('talks',
     (snap) => {
       let documents = [];
       snap.forEach(doc => {
@@ -94,8 +94,8 @@ const PubAdmin = () => {
   return (
     <>
     <Title>
-    <h2>Publications - Admin</h2>
-    <p>Add new publications to the showcase !!</p>
+    <h2>Talks - Admin</h2>
+    <p>Add new talks to the showcase !!</p>
     <Dropdown options={["New"].concat(_.map(publications, 'title'))} onChange={event=>{setSelectedOpt(event.value)}} value={selectedOpt} placeholder="Select an option" />
     {(publications&&selectedOpt!=="New") && <UploadForm setSelectedOpt={setSelectedOpt} selectedOpt={selectedOpt} publications={publications}/>}
     {(publications&&selectedOpt==="New") && <UploadForm setSelectedOpt={setSelectedOpt} selectedOpt={selectedOpt}/>}
@@ -105,4 +105,4 @@ const PubAdmin = () => {
   )
 }
 
-export default PubAdmin;
+export default TalksAdmin;

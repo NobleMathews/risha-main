@@ -1,5 +1,5 @@
 import { projectFirestore } from '../firebase/config';
-
+import * as firebase from 'firebase/app';
 
 const useFirestore = () => {
     const getDocument = (documentPath, onUpdate) => {
@@ -7,11 +7,19 @@ const useFirestore = () => {
         .doc(documentPath)
         .onSnapshot(onUpdate);
     }
-  
-    const saveDocument = (documentPath, document) => {
+    
+    const deleteDocument = (collectionPath, documentPath) =>{
       projectFirestore
+      .collection(collectionPath)
+      .doc(documentPath)
+      .delete()
+    }
+
+    const saveDocument = (collectionPath, documentPath, document) => {
+      projectFirestore
+      .collection(collectionPath)
         .doc(documentPath)
-        .set(document);
+        .set({...document, createdAt: firebase.firestore.FieldValue.serverTimestamp()});
     }
   
     const getCollection = (collectionPath, onUpdate) => {
@@ -19,15 +27,19 @@ const useFirestore = () => {
         .collection(collectionPath)
         .orderBy('createdAt', 'desc')
         .onSnapshot(onUpdate);
+      // unsubscribe();
     }
   
-    const saveCollection = (collectionPath, collection) => {
+    const saveCollection = (collectionPath, document) => {
       projectFirestore
         .collection(collectionPath)
-        .set(collection)
+        .add({
+          ...document,
+          createdAt: firebase.firestore.FieldValue.serverTimestamp()
+        })
     }
   
-    return { getDocument, saveDocument, getCollection, saveCollection }
+    return { getDocument, saveDocument, getCollection, saveCollection, deleteDocument }
   }
 
   export default useFirestore;

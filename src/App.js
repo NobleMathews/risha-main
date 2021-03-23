@@ -7,6 +7,8 @@ import Join from './Pages/Join';
 import Talks from './Pages/Talks';
 import Press from './Pages/Press';
 import GalleryAdmin from './Pages/admin/Title';
+import NewsAdmin from './Pages/admin/NewsAdmin';
+import TalksAdmin from './Pages/admin/TalksAdmin'
 import PubAdmin from './Pages/admin/PubAdmin';
 import Login from './Pages/admin/Admin';
 import Logo from './Pages/AboutLogo'
@@ -40,6 +42,8 @@ class App extends Component {
 
         <Switch location={isModal ? this.previousLocation : location}>
           <PrivateRoute path="/admin/publications" component={PubAdmin} />
+          <PrivateRoute path="/admin/news" component={NewsAdmin} />
+          <PrivateRoute path="/admin/talks" component={TalksAdmin} />
           <PrivateRoute path="/admin/gallery" component={GalleryAdmin} />
           <Route path="/publications" component={Publications} />
           <Route path="/lab" component={Lab} />
