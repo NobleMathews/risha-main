@@ -30,6 +30,7 @@ class authModal extends Component {
             <div style={{flexDirection:"column"}}>
               <h5 className="modal-title">{author.title}</h5>
               <h6 className="muted">{`${value[author.value]} ${alum}`}</h6>
+              <small style={{display:'block'}}>Currently Working on {author.desc}</small>
               <OverlayTrigger
                 placement="right"
                 delay={{ show: 250, hide: 400 }}

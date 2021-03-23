@@ -1,11 +1,30 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import NewsTicker,{Directions} from 'react-advanced-news-ticker'
-// import Ticker, { NewsTicker } from 'nice-react-ticker';
-// import icon from './news-icon.png'; // add images, please make sure they can be set as src
+import useFirestore from '../hooks/useEzStore';
+import DOMPurify from 'dompurify';
 
+export default function Ticker() {
+  const firestore = useFirestore();
+  const [news, setDocument] = useState([]);
+   
+  useEffect(()=>{
+    let isSubscribed = true;
 
-export default class App extends Component {
-  render() {
+    firestore.getCollection('news',
+    (snap) => {
+      let documents = [];
+      snap.forEach(doc => {
+        documents.push({...doc.data(), id: doc.id});
+      });
+      if (isSubscribed){
+      setDocument(documents);
+    }
+    }
+    );
+    // unsubscribe();
+    return () => (isSubscribed = false)
+  },[])
+
     return (
         // <div className="newsticker">
         //   <Ticker isNewsTicker={true}>
@@ -17,7 +36,7 @@ export default class App extends Component {
         //     <NewsTicker id="6" title="Local news coverage of tool" url=" https://iittp.ac.in/" meta="11:10:20" />
         //   </Ticker>
         // </div>
-        <>
+        <div key={news.length}>
         <NewsTicker
         rowHeight = {48}
         maxRows = {2}
@@ -30,12 +49,14 @@ export default class App extends Component {
         className = "rishaFeed"
         // style = {{marginTop: 15}}
         >
-          <div>Etiam imperdiet volutpat libero eu tristique.</div>
-          <div>Curabitur porttitor ante eget hendrerit adipiscing.</div>
-          <div>Praesent ornare nisl lorem, ut condimentum lectus gravida ut.</div>
-          <div>Nunc ultrices tortor eu massa placerat posuere.</div>
-        </NewsTicker>
-        </>
+        {news.map(news =>
+        {
+          return(
+            <div className="content" style={{textAlign:'left'}} key={news.id} dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(`${news.date} :`+news.desc)}}></div>
+          )
+        }
+        )}
+          </NewsTicker>
+        </div>
     )
-  }
 }

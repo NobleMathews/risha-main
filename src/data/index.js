@@ -3,30 +3,52 @@
 export const value=["Assistant Professor","Ph.D. Student","M.S. Student","M.Tech. Student","B.Tech. Student"] 
 export const members = [
   {
+    pub:'yes',
     key: 'sridhar',
     value: 0,
     email:'ch@iittp.ac.in',
     title: 'Sridhar Chimalakonda',
-    desc: '',
-    links:'' 
+    desc: 'Software Engineering',
+    links:`
+    LinkedIn [https://www.linkedin.com/in/sridharch]
+    Google Scholar [https://scholar.google.com/citations?user=X3AR0HgAAAAJ&hl=en]
+    Github [https://github.com/SridharChimalakonda]
+    Twitter [https://twitter.com/ChimalakondaSri]
+    ORCiD [https://orcid.org/0000-0003-0818-8178]
+    ` 
   },
   {
+    pub:'yes',
     key: 'akhila',
     value: 1,
     email:'cs19d504@iittp.ac.in',
     title: 'Venigalla Akhila Sri Manasa',
-    desc: '',
-    links:'' 
+    desc: 'Software Documentation',
+    links:`
+    LinkedIn [https://www.linkedin.com/in/akhila-sri-manasa7896]
+    Google Scholar [https://scholar.google.com/citations?user=--HXC1wAAAAJ&hl=en]
+    Github [https://github.com/AkhilaSriManasa]
+    Twitter [https://twitter.com/AkhilaSriManasa]
+    ResearchGate [https://www.researchgate.net/profile/Akhila-Sri-Manasa-Venigalla]
+    ORCiD [https://orcid.org/0000-0003-4356-0334]
+    ` 
   },
   {
+    pub:'yes',
     key: 'eashan',
     value: 2,
     email:'cs19s501@iittp.ac.in',
     title: 'A Eashaan Rao',
-    desc: '',
-    links:'' 
+    desc: 'Cross-Project Learning',
+    links:`
+    LinkedIn [www.linkedin.com/in/a-eashaan-rao-786977110]
+    Github [https://github.com/Eashurox]
+    Twitter [https://twitter.com/eashaan_a]
+    Research Gate [https://www.researchgate.net/profile/Eashaan-Rao]
+    ` 
   },
   {
+    pub: 'no',
     key: 'shriram',
     value: 2,
     email:'cs20s503@iittp.ac.in',
@@ -35,6 +57,7 @@ export const members = [
     links:'' 
   },
   {
+    pub: 'no',
     key: 'satish',
     value: 2,
     email:'cs20s502@iittp.ac.in',
@@ -43,14 +66,20 @@ export const members = [
     links:'' 
   },
   {
+    pub:'yes',
     key: 'dheeraj',
     value: 4,
     email:'cs17b028@iittp.ac.in',
     title: 'Dheeraj Vagavolu',
-    desc: '',
-    links:'' 
+    desc: 'Source Code Representation',
+    links:`
+    LinkedIn [https://www.linkedin.com/in/v-dheeraj-98a2b9166]
+    Github [https://github.com/dheerajrox]
+
+    ` 
   },
   {
+    pub: 'no',
     key: 'kowndinya',
     value: 4,
     email:'cs17b032@iittp.ac.in',
@@ -59,6 +88,7 @@ export const members = [
     links:'' 
   },
   {
+    pub: 'no',
     key: 'karthik',
     value: 4,
     email:'cs17b026@iittp.ac.in',
@@ -67,30 +97,50 @@ export const members = [
     links:'' 
   },
   {
+    pub:'yes',
     key: 'mahendran',
     value: 3,
     email:'cs19m008@iittp.ac.in',
     title: 'Mahendran N',
-    desc: '',
-    links:'' 
+    desc: 'Energy consumption, Deep Learning',
+    links:`
+    LinkedIn [https://www.linkedin.com/in/mahendran-narayanan]
+    Google Scholar [https://scholar.google.com/citations?user=c8subicAAAAJ&hl=en]
+    Github [https://github.com/mahendran-narayanan]
+    Twitter [https://twitter.com/mahendran_kct]
+    ORCiD [https://orcid.org/0000-0002-5653-7187]
+    ` 
   },
   {
+    pub:'yes',
     key: 'rishitha',
     value: 4,
     email:'cs17b014@iittp.ac.in',
     title: 'K Rishitha ',
-    desc: '',
-    links:'' 
+    desc: 'API Deprecation',
+    links:`
+    LinkedIn [https://www.linkedin.com/in/rishitha-kalicheti-0176a0179]
+    Google Scholar [https://scholar.google.com/citations?user=JUUB4ekAAAAJ&hl=en]
+    Github [https://github.com/rishitha957]
+    Research Gate [https://www.researchgate.net/profile/Rishitha-Kalicheti]
+    `, 
   },
   {
+    pub:'yes',
     key: 'aparna',
     value: 4,
     email:'cs17b005@iittp.ac.in',
     title: 'Aparna Vadlamani',
-    desc: '',
-    links:'' 
+    desc: 'API Deprecation',
+    links:`
+    LinkedIn [https://www.linkedin.com/in/aparna-vadlamani-315227192]
+    Github [https://github.com/aparnavadlamani]
+    Twitter [https://twitter.com/aparna25v]
+    ResearchGate [https://www.researchgate.net/profile/Aparna-Vadlamani]
+    ` 
   },
   {
+    pub: 'no',
     key: 'ashutosh',
     value: 4,
     email:'cs17b007@iittp.ac.in',
@@ -99,6 +149,7 @@ export const members = [
     links:'' 
   },
   {
+    pub: 'no',
     key: 'nakshatra',
     value: 4,
     email:'cs17b020@iittp.ac.in',
@@ -107,6 +158,7 @@ export const members = [
     links:'' 
   },
   {
+    pub: 'no',
     key: 'deep',
     value: 4,
     email:'cs17b011@iittp.ac.in',
@@ -115,6 +167,7 @@ export const members = [
     links:'' 
   },
   {
+    pub: 'no',
     key: 'abhishek',
     value: 4,
     email:'cs17b002@iittp.ac.in',
@@ -123,6 +176,7 @@ export const members = [
     links:'' 
   },
   {
+    pub: 'no',
     key: 'tejasva',
     value: 4,
     email:'cs17b027@iittp.ac.in',
@@ -131,31 +185,54 @@ export const members = [
     links:'' 
   },
   {
+    pub: 'yes',
+    key: 'darahas',
+    value: 4,
+    email:'cs18b007@iittp.ac.in',
+    title: 'Darahas Kopparapu',
+    desc: 'Software Engineering',
+    links:`
+    LinkedIn [https://www.linkedin.com/in/darahask]
+    Github [https://github.com/darahask]
+    ` 
+  },
+  {
+    pub:'yes',
     key: 'shruti',
     value: 4,
     email:'cs18b043@iittp.ac.in',
     title: 'Shruti Priya',
-    desc: '',
-    links:'' 
+    desc: 'Software Engineering',
+    links:`
+    LinkedIn [https://www.linkedin.com/in/shruti-priya-56b630175]
+    Github [https://github.com/shruti-shrz]
+    ` 
   },
   {
+    pub:'yes',
     key: 'shubhankar',
     value: 4,
     email:'cs18b034@iittp.ac.in',
     title: 'Shubhankar Bhadra',
-    desc: '',
-    links:'' 
+    desc: 'Empirical Study, Human Computer Interaction',
+    links:`
+    LinkedIn [https://www.linkedin.com/in/shobhi1310]
+    Github [https://github.com/shobhi1310]
+    ` 
   },
-
   {
+    pub:'yes',
     key: 'noble',
     value: 4,
     email:'ch19b023@iittp.ac.in',
     title: 'Noble Saji Mathews',
-    desc: '',
+    desc: 'Code Analysis, Software Engineering',
     links:`
     Research Gate [https://www.researchgate.net/profile/Noble_Mathews]
     Github [https://github.com/NobleMathews]
+    LinkedIn [https://www.linkedin.com/in/noble-saji-mathews]
+    Google Scholar [https://scholar.google.com/citations?user=niVr6tgAAAAJ&hl=en]
+    ORCiD [https://orcid.org/0000-0003-2266-8848]
     `
   },
 ].sort((a,b) => a.value-b.value);

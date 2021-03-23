@@ -31,7 +31,7 @@ function Lab() {
         <p> There is always one moment in childhood when the door opens and lets the future in ~ Graham Greene</p>
         <div className="container">
         <div className="img-grid lab-member">
-        {members.map((member) => (
+        {members.filter(x=>x.pub=='yes').map((member) => (
           <figure className="figure">
             <Link
               to={{
