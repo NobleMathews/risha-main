@@ -14,7 +14,8 @@ function NavbarN() {
             <NavLink activeClassName="nav-link active" className="nav-link" to="/lab">Lab</NavLink>
             <NavLink activeClassName="nav-link active" className="nav-link" to="/talks">Talks</NavLink>
             <NavLink activeClassName="nav-link active" className="nav-link" to="/news">News</NavLink>
-            <NavLink activeClassName="nav-link active" className="nav-link" to="/gallery">[Gallery]</NavLink>
+            <NavLink activeClassName="nav-link active" className="nav-link" to="/gallery">Gallery</NavLink>
+            <NavLink activeClassName="nav-link active" className="nav-link" to="/open">Open Positions</NavLink>
             <NavLink activeClassName="nav-link active" className="nav-link" to="/join">Join Us</NavLink>
         </Nav>
     )
@@ -28,6 +29,7 @@ function NavbarA() {
             <NavLink activeClassName="nav-link active" className="nav-link" to="/admin/talks">Talks</NavLink>
             <NavLink activeClassName="nav-link active" className="nav-link" to="/admin/news">News</NavLink>
             <NavLink activeClassName="nav-link active" className="nav-link" to="/admin/gallery">[Gallery]</NavLink>
+            <NavLink activeClassName="nav-link active" className="nav-link" to="/admin/open">Open Positions</NavLink>
         </Nav>
         <Nav className="justify-content-end">
             <NavLink activeClassName="nav-link active" className="centered-label"  to="/admin" onClick={()=>{projectAuth.signOut()}}><FiLogOut/> LOGOUT</NavLink>

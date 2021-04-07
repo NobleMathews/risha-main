@@ -60,7 +60,7 @@ function Publication() {
               </p>
               <hr/>
         </div>
-        <CategoryFilter categoryList={['SE','ET','HCI','ER']} />
+        <CategoryFilter categoryList={['SE','ET','HCI','C&S']} />
         <SearchBar
            style={{backgroundColor:"var(--color-card)", marginBottom:"30px"}}
             value={search}

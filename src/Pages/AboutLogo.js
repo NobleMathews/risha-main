@@ -14,12 +14,15 @@ function Logo() {
       <div className="container pub-page-main">
       <Container>
       <div className="small-screen">
+      <figure>
       <motion.img src={img} alt="risha_lab"
             style={{maxWidth:"100%", maxHeight:"70vh"}}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
       />
+              <figcaption >Designed by <a href="/info/noble">Noble</a></figcaption>
+        </figure>
         <hr/>
         <h5>About the Logo</h5>
         <ul>
@@ -36,12 +39,15 @@ function Logo() {
       </div>
       <Row className="big-screen">
         <Col xs={6} md={6} className={"mx-auto text-center"}>
+        <figure>
         <motion.img src={img} alt="risha_lab"
             style={{maxWidth:"50vw", maxHeight:"80vh", position:"fixed", left:"25px"}}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
             />
+        <figcaption style={{bottom:"25px", position:"fixed", left:"25px"}}>Designed by <a href="/info/noble">Noble</a></figcaption>
+        </figure>
         </Col>
         <Col>
         <hr/>

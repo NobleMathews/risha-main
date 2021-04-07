@@ -153,7 +153,9 @@ function Main() {
                 <a  className="p-2"onClick={()=>{trigger("Blog")}}>Blog</a>
                 <a className="p-2" onClick={()=>{trigger("Reads")}}>Cool Reads</a></p>
             </div>
-            <div className="p-4 mb-3 mylight rounded">
+            <div className="p-4 mb-3 mylight rounded" onClick={(e)=>{e.preventDefault();
+            window.location.href='/news';
+            }} style={{cursor:"pointer"}}>
             <h4 className="font-italic">News</h4>
             <Ticker/>
             </div>

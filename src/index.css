@@ -31,12 +31,12 @@ code {
     display:block;
   }
   .small-screen {
-    display:none;
+    display:none !important;
   }
 }
 @media only screen and (max-width: 768px) {
   .big-screen {
-    display:none;
+    display:none !important;
   }
   .small-screen {
     display:block;

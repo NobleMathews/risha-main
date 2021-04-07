@@ -52,7 +52,7 @@ export default function Ticker() {
         {news.map(news =>
         {
           return(
-            <div className="content" style={{textAlign:'left'}} key={news.id} dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(`${news.date} :`+news.desc)}}></div>
+            <div className="content" onClick="return false" style={{textAlign:'left'}} key={news.id} dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(`${news.date} :`+news.desc)}}></div>
           )
         }
         )}

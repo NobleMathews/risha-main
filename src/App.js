@@ -10,12 +10,14 @@ import GalleryAdmin from './Pages/admin/Title';
 import NewsAdmin from './Pages/admin/NewsAdmin';
 import TalksAdmin from './Pages/admin/TalksAdmin'
 import PubAdmin from './Pages/admin/PubAdmin';
+import OpenAdmin from './Pages/admin/OpenAdmin'
 import Login from './Pages/admin/Admin';
 import Logo from './Pages/AboutLogo'
 import PrivateRoute from './firebase/PrivateRoute';
 import Gallery from './Pages/Gallery';
 import Modal from './Components/authorModal';
 import Professor from './Pages/Sridhar';
+import Open from './Pages/Open';
 import { AnimatedRoute } from 'react-router-transition';
 
 class App extends Component {
@@ -44,6 +46,7 @@ class App extends Component {
           <PrivateRoute path="/admin/publications" component={PubAdmin} />
           <PrivateRoute path="/admin/news" component={NewsAdmin} />
           <PrivateRoute path="/admin/talks" component={TalksAdmin} />
+          <PrivateRoute path="/admin/open" component={OpenAdmin} />
           <PrivateRoute path="/admin/gallery" component={GalleryAdmin} />
           <Route path="/publications" component={Publications} />
           <Route path="/lab" component={Lab} />
@@ -53,6 +56,7 @@ class App extends Component {
           <Route path="/news" component={Press} />
           <Route path="/gallery" component={Gallery} />
           <Route path="/sridhar" component={Professor} />
+          <Route path="/open" component={Open} />
           <Route exact path="/" component={Main} />
           <Route exact path="/info/:id" component={Modal} />
           <Route path="/admin" component={Login} />
