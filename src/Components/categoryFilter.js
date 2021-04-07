@@ -1,17 +1,22 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 import kebabCase from 'lodash/kebabCase';
 
-const CategoryFilter = ({ categoryList }) => {
+const CategoryFilter = ({ categoryList, onRequestSearch, resetTags }) => {
   const categoryRef = useRef(null);
   const ALL_CATEGORY_NAME = 'All';
-  const isActive = ({ isCurrent }) =>
-    isCurrent ? { id: 'active', tabIndex: -1 } : {};
+  // const isActive = ({ isCurrent }) =>
+  //   isCurrent ? { id: 'active', tabIndex: -1 } : {};
+  const [selectedOptions, setOptions] = useState(ALL_CATEGORY_NAME);
+
+  const handleOptionsSelected = event => {
+      setOptions(event.target.name);
+  };
 
   return (
     <Nav aria-label="Category Filter" style={{marginBottom:"0.5rem"}}>
       {/* <CategoryTitle>Filter :</CategoryTitle> */}
-      <CategoryButton getProps={isActive} to="/">
+      <CategoryButton className={selectedOptions==(ALL_CATEGORY_NAME)||resetTags?"sel":"uns"} onClick={(e)=>{handleOptionsSelected(e),onRequestSearch(ALL_CATEGORY_NAME)}} name={ALL_CATEGORY_NAME} to="/">
         {ALL_CATEGORY_NAME}
       </CategoryButton>
       <Divider />
@@ -25,8 +30,8 @@ const CategoryFilter = ({ categoryList }) => {
             {
               return (
                 <li key={fieldValue}>
-                  <CategoryButton2
-                    getProps={isActive}
+                  <CategoryButton2 className={selectedOptions==(fieldValue)&&!resetTags?"sel":"uns"} onClick={(e)=>{handleOptionsSelected(e),onRequestSearch(fieldValue)}}
+                    name={fieldValue}
                     to={`/category/${kebabCase(fieldValue)}/`}
                   >
                     {fieldValue}
@@ -37,8 +42,8 @@ const CategoryFilter = ({ categoryList }) => {
             else{
               return (
                 <li key={fieldValue}>
-                  <CategoryButton
-                    getProps={isActive}
+                  <CategoryButton className={selectedOptions==(fieldValue)&&!resetTags?"sel":"uns"} onClick={(e)=>{handleOptionsSelected(e),onRequestSearch(fieldValue)}}
+                    name={fieldValue}
                     to={`/category/${kebabCase(fieldValue)}/`}
                   >
                     {fieldValue}

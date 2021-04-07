@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import useStorage from '../hooks/useStoragePub'
 
-const ProgressBar=({imgBypass,selectedOpt,file,setFile,direct,createdAt,title,authors,links,venue,setReset})=>{
-    const {url,progress}=useStorage(imgBypass,selectedOpt,file,title,direct,createdAt,authors,links,venue);
+const ProgressBar=({imgBypass,selectedOpt,file,setFile,direct,createdAt,title,authors,links,venue,selectedTags,setReset})=>{
+    const {url,progress}=useStorage(imgBypass,selectedOpt,file,title,direct,createdAt,authors,links,venue,selectedTags);
 
     useEffect(()=>{
         if(url){

@@ -6,7 +6,7 @@ import useFirestore from '../hooks/useFirestore';
 import YearlyPapers from "../Components/yearlyPapers";
 import CategoryFilter from '../Components/categoryFilter';
 import SearchBar from "material-ui-search-bar";
-import {authors} from "../data"
+import {authors, categories} from "../data"
 
 function Publication() {
 
@@ -15,6 +15,7 @@ function Publication() {
   const [search, setSearch] = useState("");
   const [fdata, setFdata] = useState([]);
   const [arr, setArr] = useState([]);
+  const [fall, resetTags] = useState(false);
 
   function toDateTime(secs) {
     var t = new Date(1970, 0, 1); // Epoch
@@ -34,6 +35,21 @@ function Publication() {
   const scrollToRef = (ref) => scroll.scrollTo(ref.current.offsetTop)   
   const executeScroll = (index) => scrollToRef(elRefs.current[index])
 
+  function doTags(search){
+    resetTags(false);
+    let filteredDocs = docs.filter((obj) => {
+      if(search!="All"){
+        if(new Set(obj.selectedTags).has(search)) {
+          return obj;
+        }
+      }
+      else{
+        return obj
+      }
+    });
+    setFdata(filteredDocs);
+    setArr([...new Set(filteredDocs.map(function(e){return toDateTime(e.createdAt.seconds)}))]);
+  }
   function doSomethingWith(search){
     let AoW = search.trim().split(" ");
     let filteredDocs = docs.filter((obj) => {
@@ -43,6 +59,7 @@ function Publication() {
     });
     setFdata(filteredDocs);
     setArr([...new Set(filteredDocs.map(function(e){return toDateTime(e.createdAt.seconds)}))]);
+    resetTags(true);
   }
 
   return (
@@ -60,7 +77,7 @@ function Publication() {
               </p>
               <hr/>
         </div>
-        <CategoryFilter categoryList={['SE','ET','HCI','C&S']} />
+        <CategoryFilter categoryList={categories} onRequestSearch={(s) => doTags(s)} resetTags={fall}/>
         <SearchBar
            style={{backgroundColor:"var(--color-card)", marginBottom:"30px"}}
             value={search}

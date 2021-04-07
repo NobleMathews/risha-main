@@ -3,6 +3,7 @@ import ProgressBar from './ProgressBarPub';
 import {FaPlusCircle} from 'react-icons/fa'
 import DatePicker from "react-datepicker"; 
 import "react-datepicker/dist/react-datepicker.css";
+import {categories} from '../data';
 
 const UploadForm = ({setSelectedOpt,selectedOpt,publications}) =>{
   let publication={};
@@ -17,6 +18,7 @@ const UploadForm = ({setSelectedOpt,selectedOpt,publications}) =>{
   const [links,setLinks] = useState("");
   const [pubDate, setPubDate] = useState(new Date());
   const [imgBypass, setBypass] = useState(false);
+  const [selectedOptions, setOptions] = useState(new Set());
 
   useEffect( () => {
     if(publications){
@@ -27,7 +29,8 @@ const UploadForm = ({setSelectedOpt,selectedOpt,publications}) =>{
       setVenue(publication?publication.venue:"");
       setLinks(publication?publication.links:"");
       setPubDate(publication?publication.createdAt.toDate():new Date());
-      setId(publication?publication.id:"")
+      setId(publication?publication.id:"");
+      setOptions(publication?new Set(publication.selectedTags):new Set());
     }
   }, [selectedOpt])
 
@@ -41,10 +44,25 @@ const UploadForm = ({setSelectedOpt,selectedOpt,publications}) =>{
       setPubDate(new Date());
       setBypass(false);
       setId("");
+      setOptions(new Set());
     }
 
 
     const types=['image/png','image/jpeg','image/jpg']
+
+    const handleOptionsSelected = event => {
+      // Since we cannot mutate the state value directly better to instantiate new state with the values of the state
+      const opts = new Set(selectedOptions);
+  
+      if (opts.has(event.target.name)) {
+        opts.delete(event.target.name);
+        setOptions(opts);
+      } else {
+        opts.add(event.target.name);
+        setOptions(opts);
+      }
+
+    };
 
     const handleChange = (e) => {
         let selected = e.target.files[0];
@@ -60,6 +78,24 @@ const UploadForm = ({setSelectedOpt,selectedOpt,publications}) =>{
 // update methods | separate admin page for author data to finally make multi dropdown
     return (
         <form>
+          <table className = "table">
+          <tr className = "active">
+            {categories.map((category, index) => {
+              return(
+                <th key={index}>
+                <div className = "radio">
+                    <input type="radio" 
+                    name={category}
+                    checked={selectedOptions.has(category)}
+                    onClick={handleOptionsSelected}
+                    />{category}
+                </div>
+              </th>
+              );
+            })
+            }
+          </tr>
+          </table>
         <div className="form-group mx-auto" style={{width:"75%"}}>
             <input type="text" className="form-control" id="titleKeeper" name="title" onChange={event => setTitle(event.target.value)} value={title} placeholder="Please enter Paper / Publication Title ... " required/>
             <small className="text-muted unselectable">Title of Paper / Publication</small>
@@ -97,7 +133,7 @@ const UploadForm = ({setSelectedOpt,selectedOpt,publications}) =>{
         <div className="output">
           { error && <div className="error">{ error }</div>}
           { file && <div>{ file.name }</div> }
-          { (file||imgBypass) && <ProgressBar imgBypass={imgBypass} selectedOpt={id?id:selectedOpt} file={file} setFile={setFile} direct={direct} createdAt={pubDate} title={title} authors={authors} links={links} venue={venue} setReset={reset}/> }
+          { (file||imgBypass) && <ProgressBar imgBypass={imgBypass} selectedOpt={id?id:selectedOpt} file={file} setFile={setFile} direct={direct} createdAt={pubDate} title={title} authors={authors} links={links} venue={venue} selectedTags={Array.from(selectedOptions)} setReset={reset}/> }
         </div>
       </form>
     )

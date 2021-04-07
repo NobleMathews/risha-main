@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Merriweather);
-
+input[type=radio]{
+  display: inline-block !important;
+}
+.sel{
+  color: red!important;
+}
 .App {
   text-align: center;
 }

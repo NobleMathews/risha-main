@@ -328,3 +328,5 @@ export const sponsors = [
 ]
 
 export const authors = members.concat(alumini,collaborators);
+
+export const categories = ['SE','ET','HCI','C&S'];
