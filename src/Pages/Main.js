@@ -95,7 +95,7 @@ function Main() {
             </h3>
             <div className="blog-post">
               <h2 className="blog-post-title">Welcome to RISHA Lab</h2>
-              <p className="blog-post-meta">Research in Intelligent Software and Human Analytics</p>
+              <p className="blog-post-meta">Research in Intelligent Software & Human Analytics Lab</p>
               <hr />
               <Carousel />
               <hr />
