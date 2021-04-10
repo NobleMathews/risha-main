@@ -36,8 +36,8 @@ export const members = [
   {
     pub:'yes',
     key: 'eashan',
-    value: 2,
-    email:'cs19s501@iittp.ac.in',
+    value: 1,
+    email:'cs21d002@iittp.ac.in',
     title: 'A Eashaan Rao',
     desc: 'Cross-Project Learning',
     links:`

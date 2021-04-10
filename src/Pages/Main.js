@@ -91,13 +91,19 @@ function Main() {
         />
         <div className="row">
           <div className="col-md-8 blog-main">
-            <h3 className="pb-4 mb-4 font-italic border-bottom">
-            </h3>
+            <h3 className="pb-4 mb-4 font-italic"></h3>
             <div className="blog-post">
               <h2 className="blog-post-title">Welcome to RISHA Lab</h2>
               <p className="blog-post-meta">Research in Intelligent Software & Human Analytics Lab</p>
               <hr />
               <Carousel />
+              <p style={{
+                color:"#efb6b2",
+                fontSize: "1.2rem",
+                letterSpacing: "2px",
+                fontWeight: "normal",
+                marginBottom: "0px"
+              }}>#WeAreRisha</p>
               <hr />
               <p>Who are we ? We are a dynamic research group at the Indian Institute of Technology, Tirupati. Our aim is to explore and understand the expand the boundaries of human computer interaction, including  research, software engineering and building tools to help the society.</p>
               <hr />
@@ -138,8 +144,8 @@ function Main() {
               <Row className="my-3">
                 <Col className="mx-auto">
                 <Image  className="testermain" src="https://2020.msrconf.org/getProfileImage/sridharchimalakonda/76c8c23f-1094-41a3-ac57-9d38bf899419/small.jpg?1596264188000" alt="LabHead" roundedCircle />
-                <p className="ml-1 tester-sub mb-0">Associate Professor, Department of Computer Science & Engineering <a className="preserve">IIT Tirupati, India</a></p>
-                <p className="ml-1 tester-sub mb-0">Email: <a className="preserve">ch@iittp.ac.in</a></p>
+                <p className="ml-1 tester-sub mb-0">Assistant Professor, Department of Computer Science & Engineering <a className="preserveb">IIT Tirupati, India</a></p>
+                <p className="ml-1 tester-sub mb-0">Email: <a className="preserveb">ch@iittp.ac.in</a></p>
                 </Col>
               </Row>
             </Container>
