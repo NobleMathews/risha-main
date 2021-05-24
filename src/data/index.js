@@ -22,7 +22,7 @@ export const members = [
     key: 'akhila',
     value: 1,
     email:'cs19d504@iittp.ac.in',
-    title: 'Venigalla Akhila Sri Manasa',
+    title: 'Akhila Sri Manasa Venigalla',
     desc: 'Software Documentation',
     links:`
     LinkedIn [https://www.linkedin.com/in/akhila-sri-manasa7896]

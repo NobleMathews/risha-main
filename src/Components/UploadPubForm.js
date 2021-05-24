@@ -79,6 +79,7 @@ const UploadForm = ({setSelectedOpt,selectedOpt,publications}) =>{
     return (
         <form>
           <table className = "table">
+          <tbody>
           <tr className = "active">
             {categories.map((category, index) => {
               return(
@@ -86,6 +87,7 @@ const UploadForm = ({setSelectedOpt,selectedOpt,publications}) =>{
                 <div className = "radio">
                     <input type="radio" 
                     name={category}
+                    onChange={()=>{return;}}
                     checked={selectedOptions.has(category)}
                     onClick={handleOptionsSelected}
                     />{category}
@@ -95,6 +97,7 @@ const UploadForm = ({setSelectedOpt,selectedOpt,publications}) =>{
             })
             }
           </tr>
+          </tbody>
           </table>
         <div className="form-group mx-auto" style={{width:"75%"}}>
             <input type="text" className="form-control" id="titleKeeper" name="title" onChange={event => setTitle(event.target.value)} value={title} placeholder="Please enter Paper / Publication Title ... " required/>

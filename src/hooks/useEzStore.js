@@ -12,7 +12,11 @@ const useFirestore = () => {
       projectFirestore
       .collection(collectionPath)
       .doc(documentPath)
-      .delete()
+      .delete().then(() => {
+        console.log("Document successfully deleted!");
+    }).catch((error) => {
+        console.error("Error removing document: ", error);
+    });
     }
 
     const saveDocument = (collectionPath, documentPath, document) => {

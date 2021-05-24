@@ -67,7 +67,10 @@ label:hover{
 `;
 
 const GalleryAdmin = () => {
-  const [selectedImg,setSelectedImg] = useState(null);
+  const [selectedImg,setSelectedImg] = useState("");
+  const [selectedKey,setSelectedKey] = useState("");
+  const [selectedCaption,setSelectedCaption] = useState("");
+
   return (
     <>
     <Title>
@@ -75,8 +78,8 @@ const GalleryAdmin = () => {
       <h2>Main Gallery - Admin</h2>
       <p>Upload images to be displayed in mainpage gallery </p>
       <UploadForm />
-      <ImageGrid setSelectedImg={setSelectedImg}/>
-      {selectedImg&& <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />}
+      <ImageGrid setSelectedImg={setSelectedImg} setSelectedKey={setSelectedKey} setSelectedCaption={setSelectedCaption}/>
+      {selectedImg&& <Modal selectedCaption={selectedCaption} selectedImg={selectedImg} selectedKey={selectedKey} setSelectedKey={setSelectedKey} setSelectedImg={setSelectedImg} setSelectedCaption={setSelectedCaption} isEdit={true} />}
     </Title>
     <Footer/>
     </>

@@ -10,7 +10,7 @@ export default function CarouselX   () {
     return (
         <Carousel>
         {docs && docs.map((doc,i) => (
-            <Carousel.Item interval={2500} key={i}>
+            <Carousel.Item interval={2500} key={i} style={{cursor:"pointer"}} onClick={(e)=>{e.preventDefault(); window.location.href='/gallery';}}>
             <img
             className="rounded mx-auto d-block"
             height={height/2.2}

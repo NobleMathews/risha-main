@@ -6,7 +6,7 @@ const UploadForm = () =>{
 
     const [file,setFile] = useState(null);
     const [error,setError] = useState(null);
-    const [caption,setCaption] = useState(null);
+    const [caption,setCaption] = useState("");
 
     const types=['image/png','image/jpeg','image/jpg']
 

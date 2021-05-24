@@ -21,7 +21,7 @@ function Logo() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
       />
-              <figcaption >Designed by <a href="/info/noble">Noble</a></figcaption>
+              <figcaption >Website and Logo designed by <a href="/info/noble">Noble</a></figcaption>
         </figure>
         <hr/>
         <h5>About the Logo</h5>
@@ -31,7 +31,7 @@ function Logo() {
           <li><b>The box with the enclosed graph</b> depicts our focus on analytics focus. The bow shape in the curve calls out to the historic teacher Dronacharya from Hindu mythology. Thus the black pedestal is symbolic of our lab’s efforts to achieve a state of perfect knowledge and teaching it to the world from an Indian context through the various research publications by the lab</li>
           <li><b>Red nib:</b> Red is a color of passion and energy, the nib of a fountain pen is symbolic of writing and the glowing bulb represents new ideas. Overall it is representative of our zeal in writing to spread new ideas.</li>
           <li><b>The black maze:</b> The maze used in the logo is one with no entry and exit (it is a trap) and symbolizes confusion. The red arrows pierce through the trap in all directions and continue forward and thus creating a way out by expanding the boundaries depicted by the double-headed arrows.</li>
-          <li><b>The double-headed arrow</b> widens the gaps as it proceeds to signify helping others by opening new areas and build upon our work as well.</li>
+          <li><b>The double-headed arrow</b> widens the gaps as it proceeds to signify helping others by opening new areas and build upon our work as well. The double heads also highlight our aim towards both short and longterm goals.</li>
           <li>At the core is a <b>glowing crystal</b> with multiple colors derived from a peacock palette to signify the wide areas of work done and ideas, few networking rings rotate around the same as well.</li>
           <li><b>Mandalam:</b> The shiny core of the logo is surrounded by a mandalam. This symbol taken from Hindu mysticism represents the universe and the circular design symbolizes that everything is connected in the cycle of life. We believe that nothing in this world can be studied with a silo mentality  and everything is connected. We at RISHA lab open to all irrespective of their area of study as long as they share the zeal to enrich the world of computers with their own unique touch.</li>
         </ul>

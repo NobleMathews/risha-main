@@ -66,14 +66,16 @@ label:hover{
 `;
 
 const Gallery = () => {
-  const [selectedImg,setSelectedImg] = useState(null);
+  const [selectedImg,setSelectedImg] = useState("");
+  const [selectedKey,setSelectedKey] = useState("");
+  const [selectedCaption,setSelectedCaption] = useState("");
   return (
     <>
     <Title>
       <h1>#WeAreRisha</h1>
       <h2>Gallery</h2>
-      <ImageGrid setSelectedImg={setSelectedImg}/>
-      {selectedImg&& <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />}
+      <ImageGrid setSelectedImg={setSelectedImg} setSelectedKey={setSelectedKey} setSelectedCaption={setSelectedCaption}/>
+      {selectedImg&& <Modal selectedCaption={selectedCaption} selectedImg={selectedImg} selectedKey={selectedKey} setSelectedKey={setSelectedKey} setSelectedImg={setSelectedImg} setSelectedCaption={setSelectedCaption} isEdit={false} />}
     </Title>
     <Footer/>
     </>
