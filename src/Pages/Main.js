@@ -113,8 +113,8 @@ function Main() {
         <hr/>
         <h5>Collaborators / Sponsors</h5>
         <div className="card-group">
-        {sponsors.map((sponsor) => (
-          <div className="card m-2 px-3">
+        {sponsors.map((sponsor,i) => (
+          <div className="card m-2 px-3" key={i}>
             <div className="d-flex align-items-center" style={{height:"150px"}}>
             <a href={sponsor.redirect} target="_blank">
             <img className="card-img my-auto" src={require(`../assets/sponsors/${sponsor.src}`).default} alt={sponsor.title} />
@@ -180,15 +180,19 @@ function Main() {
               <p><a className="preserveb" href="/ch" style={{fontWeight:"bold"}}>About Me</a></p>
             </Container>
             </div>
-              {/* <div className="p-4 mb-3 mylight rounded">
-              <h4 className="font-italic">About me</h4>
-                <p className="mx-auto">
+              <div className="p-4 mb-3 mylight rounded">
+              {/* <h4 className="font-italic">About me</h4> */}
+              <a className="p-2 preserveb">View Upcoming Deadlines</a>
+                {/* <p className="mx-auto">
                 <a  className="p-2" onClick={()=>{trigger("Bio")}}>Bio</a>
                 <a className="p-2" onClick={()=>{trigger("Teaching")}}>Teaching</a>
                 <a  className="p-2" onClick={()=>{trigger("CV")}}>CV</a></p><p>
                 <a  className="p-2"onClick={()=>{trigger("Blog")}}>Blog</a>
-                <a className="p-2" onClick={()=>{trigger("Reads")}}>Cool Reads</a></p>
-            </div> */}
+                <a className="p-2" onClick={()=>{trigger("Reads")}}>Cool Reads</a></p> */}
+            </div>
+            <div className="p-4 mb-3 mylight rounded">
+              <a className="p-2" href="/calendar">Learning Resources</a>
+            </div>
             <div className="p-4 mb-3 mylight rounded" onClick={(e)=>{e.preventDefault(); window.location.href='/news';}} style={{cursor:"pointer"}}>
             <h4 className="font-italic">News</h4>
             <Ticker/>

@@ -8,6 +8,7 @@ import Talks from './Pages/Talks';
 import Press from './Pages/Press';
 import GalleryAdmin from './Pages/admin/Title';
 import NewsAdmin from './Pages/admin/NewsAdmin';
+import Calendar from './Pages/Calendar';
 import TalksAdmin from './Pages/admin/TalksAdmin'
 import PubAdmin from './Pages/admin/PubAdmin';
 import OpenAdmin from './Pages/admin/OpenAdmin'
@@ -54,6 +55,7 @@ class App extends Component {
           <Route path="/join" component={Join} />
           <Route path="/talks" component={Talks} />
           <Route path="/news" component={Press} />
+          <Route path="/calendar" component={Calendar} />
           <Route path="/gallery" component={Gallery} />
           <Route path="/ch" component={Professor} />
           <Route path="/open" component={Open} />
