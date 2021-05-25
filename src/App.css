@@ -129,7 +129,13 @@ h1, h2, h3, h4, h5, h6 {
 .blog-footer p:last-child {
   margin-bottom: 0;
 }
-
+.rishaFeed{
+  height: 30vh!important;
+}
+.card-header{
+  background-color: transparent!important;
+  border: none!important;
+}
 .preserve
 {
     text-decoration: none !important;
@@ -138,7 +144,9 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
 }
 
-
+a:hover{
+  text-decoration: none!important;
+}
 .preserveb
 {
     text-decoration: none !important;

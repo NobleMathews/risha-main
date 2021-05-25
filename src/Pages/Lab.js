@@ -27,7 +27,10 @@ function Lab() {
       </Row>
       </Container> */}
         <hr/>
-        <h5>People</h5><p style={{margin:"0px"}}><b>Hover to discover</b></p>
+        <h2 className="blog-post-title">Lab Members</h2>
+        <hr/>
+
+        <p style={{margin:"0px"}}><b>Hover to discover</b></p>
         <p> There is always one moment in childhood when the door opens and lets the future in ~ Graham Greene</p>
         <div className="container">
         <div className="img-grid lab-member">
@@ -92,7 +95,7 @@ function Lab() {
         ))}
         </ul>
         <hr/>
-        <h5>Collaborator / Sponsors</h5>
+        {/* <h5>Collaborator / Sponsors</h5>
         <div className="card-group">
         {sponsors.map((sponsor) => (
           <div className="card m-2 px-3">
@@ -103,7 +106,7 @@ function Lab() {
             </div>
           </div>
         ))}
-        </div>
+        </div> */}
 
     </div>
     </FadeIn>

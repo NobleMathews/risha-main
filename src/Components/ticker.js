@@ -38,8 +38,8 @@ export default function Ticker() {
         // </div>
         <div key={news.length}>
         <NewsTicker
-        rowHeight = {48}
-        maxRows = {2}
+        rowHeight = {60}
+        // maxRows = {2}
         speed = {600}
         direction = {Directions.UP}
         duration = {4000}
@@ -52,7 +52,7 @@ export default function Ticker() {
         {news.map(news =>
         {
           return(
-            <div className="content" onClick="return false" style={{textAlign:'left'}} key={news.id} dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(`${news.date} :`+news.desc)}}></div>
+            <div className="content" onClick={()=>{return false}} style={{textAlign:'left'}} key={news.id} dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(`${news.date} :`+news.desc)}}></div>
           )
         }
         )}

@@ -69,7 +69,7 @@ function Publication() {
         <hr/>
         {/*  className="blog-post" */}
         <div>
-              <h2 className="blog-post-title">All Publications</h2>
+              <h2 className="blog-post-title">All Publications & Tools</h2>
               <p className="blog-post-meta">
               {arr.map((el, i) => (
               <a className="preserveb mx-1" key={i} onClick={()=>{executeScroll(i)}}>{`[ ${el} ]`}</a> 

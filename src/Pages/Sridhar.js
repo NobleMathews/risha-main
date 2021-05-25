@@ -3,6 +3,7 @@ import { Timeline, Event } from "react-timeline-scribble";
 import { Header } from '../Components/header';
 import { UserProfile } from '../Components/body';
 import {Row,Container,Col} from 'react-bootstrap';
+import Talks from '../Pages/Talks';
 
 function Professor() {
   return (
@@ -39,6 +40,7 @@ function Professor() {
     </Fragment>
       </Col>
       <Col md={6} className="my-auto">
+      <Talks></Talks>
       </Col>
       </Row>
     </Container>

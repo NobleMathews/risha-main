@@ -1,12 +1,14 @@
 import React from "react";
-import {Container,Row,Col,Image} from 'react-bootstrap';
+import {Container,Row,Col,Image, Accordion, Card} from 'react-bootstrap';
 import Footer from "../Components/Footer";
 import Ticker from '../Components/ticker';
 import Carousel from "../Components/Carousel";
 import ShowMoreText from 'react-show-more-text';
 import MainModal from '../Components/ModalM';
+import FeatPub from '../Pages/FeatPub';
 import FadeIn from 'react-fade-in';
 import {FaGithub,FaTwitter,FaFacebook} from 'react-icons/fa';
+import {sponsors} from "../data"
 
 const markdown = `**"The best thing a teacher can do is to bring out the best in students in best ways!!!"**.
 
@@ -107,6 +109,29 @@ function Main() {
               <hr />
               <p>Who are we ? We are a dynamic research group at the Indian Institute of Technology, Tirupati. Our aim is to explore and understand the expand the boundaries of human computer interaction, including  research, software engineering and building tools to help the society.</p>
               <hr />
+        <FeatPub/>
+        <hr/>
+        <h5>Collaborators / Sponsors</h5>
+        <div className="card-group">
+        {sponsors.map((sponsor) => (
+          <div className="card m-2 px-3">
+            <div className="d-flex align-items-center" style={{height:"150px"}}>
+            <a href={sponsor.redirect} target="_blank">
+            <img className="card-img my-auto" src={require(`../assets/sponsors/${sponsor.src}`).default} alt={sponsor.title} />
+            </a> 
+            </div>
+          </div>
+        ))}
+        </div>
+        <hr/>
+              <Accordion defaultActiveKey="1">
+              <Card>
+                <Accordion.Toggle as={Card.Header} eventKey="0">
+                  Lab Philosophy & Areas of Interest
+                </Accordion.Toggle>
+                <Accordion.Collapse eventKey="0">
+              <>
+              <hr/>
               <h2>Core Philosophy</h2>
               <p>↠ To us, impactful research stems from great problems that push our limits to go beyond stateof- the-art and state-of-the-practice! | long-term problems with realistic short-term goals</p>
               <p>↠ <strong>"Raise your quality standards as high as you can live with, avoid wasting your time on routine problems, and always try to work as closely as possible at the boundary of your abilities. Do this, because it is the only way of discovering how that boundary should be moved forward."</strong><code style={{display:"block"}}>- Prof. Edsger W. Dijkstra</code> The foundations for my research stem from Prof. Edsger W. Dijkstra</p>
@@ -134,6 +159,10 @@ function Main() {
               <h3>Fusion of Software Engineering and Educational Technologies</h3>
               <p>Software is omnipresent today! from simple apps in smart phones to mission-critical systems developed by millions of engineers and end users from all walks of life. On the other hand, software is quite effort-intensive, increasingly complex [millions of lines of code?], buggy and never comes with any warranties/guaranties. It is here, I wish to address interesting and significant research challenges in the area of software engineering and computing. Specifically, I am interested to empirically and qualitatively investigate novel ways for improving quality of software while facilitating reuse through design of frameworks, platforms and tools. I am also keen to explore computing challenges from the largely unexplored research area of educational technologies and computing education in India. I see interdisciplinary research as a critical way forward to drive my research spanning across software engineering, educational technologies and human-computer interaction.</p>
               </ShowMoreText>
+              </>
+              </Accordion.Collapse>
+              </Card>
+            </Accordion>
               <hr />
               </div>
           </div>{/* /.blog-main */}
