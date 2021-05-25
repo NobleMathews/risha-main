@@ -1,3 +1,21 @@
+#cloud-intro{
+  position: relative;
+  height: 100%;
+  background: url(https://static.radulescu.me/examples/clouds/clouds1000.png);
+  background: url(https://static.radulescu.me/examples/clouds/clouds1000.png) 0 200px,
+              url(https://static.radulescu.me/examples/clouds/clouds1200_1.png) 0 300px,
+              url(https://static.radulescu.me/examples/clouds/clouds1000_blur3.png) 100px 250px;
+	animation: wind 20s linear infinite;
+}
+@keyframes wind{
+  0% {
+    background-position: 0 200px, 0 300px, 100px 250px;
+  }
+  100% {
+    background-position: 1000px 200px, 1200px 300px, 1100px 250px;
+  }
+
+}
 .button-join{
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
@@ -8,6 +26,20 @@
           transform: scale(1.01) translate3d(0, 0, 0);
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.2), 6px 12px 12px 0 rgba(0, 0, 0, 0.25);
   background-color: #e74c3c;
+  font-weight: bold;
+  color: white;
+}
+.button-check{
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  font-family: sans-serif;
+  background-color: #69C7FF;
+}
+.button-check:hover {
+  -webkit-transform: scale(1.01) translate3d(0, 0, 0);
+          transform: scale(1.01) translate3d(0, 0, 0);
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.2), 6px 12px 12px 0 rgba(0, 0, 0, 0.25);
+  background-color: green;
   font-weight: bold;
   color: white;
 }

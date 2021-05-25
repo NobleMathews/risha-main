@@ -132,16 +132,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .preserve
 {
-    text-decoration: none;
+    text-decoration: none !important;
     border-bottom: 1px solid #ccc;
     color: inherit;
+    cursor: pointer;
 }
 
 
 .preserveb
 {
-    text-decoration: none;
+    text-decoration: none !important;
     color: inherit;
+    cursor: pointer;
 }
 
 .unselectable {

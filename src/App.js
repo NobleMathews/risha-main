@@ -55,7 +55,7 @@ class App extends Component {
           <Route path="/talks" component={Talks} />
           <Route path="/news" component={Press} />
           <Route path="/gallery" component={Gallery} />
-          <Route path="/sridhar" component={Professor} />
+          <Route path="/ch" component={Professor} />
           <Route path="/open" component={Open} />
           <Route exact path="/" component={Main} />
           <Route exact path="/info/:id" component={Modal} />

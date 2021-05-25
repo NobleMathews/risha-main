@@ -1,7 +1,7 @@
 import React from "react";
 import FadeIn from 'react-fade-in';
 import Footer from "../Components/Footer";
-import {Row,Container,Col,Image} from 'react-bootstrap';
+import {Row,Container,Col} from 'react-bootstrap';
 import img from "../assets/logoRecruit.png";
 import { motion } from 'framer-motion';
 import kwesforms from 'kwesforms';
@@ -13,7 +13,7 @@ function Join() {
       <hr/>
       <div className="container pub-page-main">
   <div>
-    <h1 className="cfh">Contact Us</h1>
+    {/* <h1 className="cfh">Contact Us</h1> */}
     <Container>
       <Row>
       <Col md={3} className="my-auto">
@@ -130,7 +130,10 @@ function Join() {
 </div>
       </Col>
       <Col md={9} className="my-auto">
-      <form className="kwes-form cf" action="https://kwes.io/api/foreign/forms/0ctNQPXDL2AlBzCTLXHU">
+        {/* https://theconfuzedsourcecode.wordpress.com/2019/11/11/you-may-restfully-submit-to-your-google-forms/ */}
+      {/* <form className="kwes-form cf" action="https://kwes.io/api/foreign/forms/0ctNQPXDL2AlBzCTLXHU"> */}
+      <form className="cf">
+      <input type="button" className="button-check" defaultValue="Checkout Open Positions" onClick={(e)=>{e.preventDefault(); window.location.href='/open';}}/>
       <div className="half left cf">
         <input type="text" id="input-name" name="input-name" rules="required|max:255" placeholder="Name" />
         <input type="email" id="input-email" name="input-email" rules="required|email" placeholder="Email address" />
@@ -147,7 +150,7 @@ function Join() {
   </div>
   </div>
   </FadeIn>
-    {/* <Footer/> */}
+    <Footer/>
     </>
   );
 }

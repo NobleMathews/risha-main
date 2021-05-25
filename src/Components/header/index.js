@@ -22,8 +22,9 @@ export const Header = () =>
     <>
     {/* <Canvas/> */}
     <StyledHeader>
-      <StyledBackground>
-        <LogoAsci></LogoAsci>
+      <StyledBackground className={"cloud-container"}>
+        {/* <LogoAsci/> */}
+        <div id="cloud-intro"></div>
       </StyledBackground>
       <ProfileImage imageUrl={imageUrl} />
     </StyledHeader>

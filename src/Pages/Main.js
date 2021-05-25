@@ -144,13 +144,14 @@ function Main() {
               <Row className="my-3">
                 <Col className="mx-auto">
                 <Image  className="testermain" src="https://2020.msrconf.org/getProfileImage/sridharchimalakonda/76c8c23f-1094-41a3-ac57-9d38bf899419/small.jpg?1596264188000" alt="LabHead" roundedCircle />
-                <p className="ml-1 tester-sub mb-0">Assistant Professor, Department of Computer Science & Engineering <a className="preserveb">IIT Tirupati, India</a></p>
-                <p className="ml-1 tester-sub mb-0">Email: <a className="preserveb">ch@iittp.ac.in</a></p>
+                <p className="ml-1 tester-sub mb-0">Assistant Professor, Department of Computer Science & Engineering <a className="preserveb" target="_blank" referrerPolicy="no-referrer" href="https://www.iittp.ac.in">IIT Tirupati, India</a></p>
+                <p className="ml-1 tester-sub mb-0">Email: <a className="preserveb" href="mailto:ch@iittp.ac.in">ch@iittp.ac.in</a></p>
                 </Col>
               </Row>
+              <p><a className="preserveb" href="/ch" style={{fontWeight:"bold"}}>About Me</a></p>
             </Container>
             </div>
-              <div className="p-4 mb-3 mylight rounded">
+              {/* <div className="p-4 mb-3 mylight rounded">
               <h4 className="font-italic">About me</h4>
                 <p className="mx-auto">
                 <a  className="p-2" onClick={()=>{trigger("Bio")}}>Bio</a>
@@ -158,7 +159,7 @@ function Main() {
                 <a  className="p-2" onClick={()=>{trigger("CV")}}>CV</a></p><p>
                 <a  className="p-2"onClick={()=>{trigger("Blog")}}>Blog</a>
                 <a className="p-2" onClick={()=>{trigger("Reads")}}>Cool Reads</a></p>
-            </div>
+            </div> */}
             <div className="p-4 mb-3 mylight rounded" onClick={(e)=>{e.preventDefault(); window.location.href='/news';}} style={{cursor:"pointer"}}>
             <h4 className="font-italic">News</h4>
             <Ticker/>

@@ -2,15 +2,19 @@ import React, { Fragment } from "react";
 import { Timeline, Event } from "react-timeline-scribble";
 import { Header } from '../Components/header';
 import { UserProfile } from '../Components/body';
+import {Row,Container,Col} from 'react-bootstrap';
 
 function Professor() {
   return (
     <>
     <Header />
     <UserProfile />
-    <h1>Teaching Timeline</h1>
+    <Container>
+      <Row>
+      <Col md={6} className="my-auto">
+      <h1>Teaching Timeline</h1>
     <Fragment>
-        <div style={{width:"30vw"}}>
+        <div>
         <Timeline >
         <Event interval={"2016 – 2018"} title={"Lorem"} subtitle={"Ipsum"}>
             dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
@@ -33,6 +37,11 @@ function Professor() {
         </Timeline>
         </div>
     </Fragment>
+      </Col>
+      <Col md={6} className="my-auto">
+      </Col>
+      </Row>
+    </Container>
     </>
   );
 }

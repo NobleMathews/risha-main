@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { FaLinkedin } from 'react-icons/fa';
 
 const StyledSocialArea = styled.div`
   padding: 2rem;
@@ -30,9 +31,13 @@ export const SocialArea = ({ socialLinks }) => (
         role="link"
         target="_blank"
         key={index}
-        className={`icon fa ${icon}`}
         href={link}
-      />
+      >
+      {icon=="FaLinkedin"?
+        <FaLinkedin/>:
+        <FaTwitterSquare/>
+      }
+      </StyledMedia>
     ))}
   </StyledSocialArea>
 );
