@@ -58,6 +58,15 @@ export const members = [
   },
   {
     pub: 'no',
+    key: 'chaitanya',
+    value: 2,
+    email:'cs18s502@iittp.ac.in',
+    title: 'Chaitanya S. Lakkundi',
+    desc: '',
+    links:'' 
+  },
+  {
+    pub: 'no',
     key: 'satish',
     value: 2,
     email:'cs20s502@iittp.ac.in',
@@ -294,6 +303,14 @@ export const alumini = [
     desc: '', 
     links:''
        
+  },
+  {
+    key: 'jskreddy',
+    value: 4,
+    email:'cs16b012@iittp.ac.in',
+    title:'Jakku Sai Krupa Reddy',
+    desc:'',
+    llinks:''
   },
   {
     key: 'sandeep',

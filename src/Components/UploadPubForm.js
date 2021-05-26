@@ -3,18 +3,24 @@ import ProgressBar from './ProgressBarPub';
 import {FaPlusCircle} from 'react-icons/fa'
 import DatePicker from "react-datepicker"; 
 import "react-datepicker/dist/react-datepicker.css";
-import {categories} from '../data';
+import {categories, authors} from '../data';
+import { Multiselect } from 'multiselect-react-dropdown'; 
 
 const UploadForm = ({setSelectedOpt,selectedOpt,publications}) =>{
   let publication={};
+  const authid_array = authors.map((value) => value.key);
 
   const [file,setFile] = useState(null);
   const [error,setError] = useState(null);
   const [title,setTitle] = useState("");
   const [id,setId] = useState("");
   const [direct,setDirect] = useState("");
-  const [authors,setAuthors] = useState("");
+
+  const [authorsi,setAuthors] = useState("");
+  const [authors_opt,setAuthorsOpt] = useState([]);
+
   const [venue,setVenue] = useState("");
+  const [imgText,setImgText] = useState("");
   const [links,setLinks] = useState("");
   const [pubDate, setPubDate] = useState(new Date());
   const [imgBypass, setBypass] = useState(false);
@@ -26,7 +32,11 @@ const UploadForm = ({setSelectedOpt,selectedOpt,publications}) =>{
       setTitle(publication?publication.title:"");
       setDirect(publication?publication.direct:"");
       setAuthors(publication?publication.authors:"");
+      setAuthorsOpt(publication?publication.authors.split(",").map(function (value) {
+        return value.trim();
+      }):[])
       setVenue(publication?publication.venue:"");
+      setImgText(publication?publication.url:"");
       setLinks(publication?publication.links:"");
       setPubDate(publication?publication.createdAt.toDate():new Date());
       setId(publication?publication.id:"");
@@ -39,7 +49,9 @@ const UploadForm = ({setSelectedOpt,selectedOpt,publications}) =>{
       setTitle("");
       setLinks("");
       setVenue("");
+      setImgText("");
       setAuthors("");
+      setAuthorsOpt([]);
       setDirect("");
       setPubDate(new Date());
       setBypass(false);
@@ -47,6 +59,22 @@ const UploadForm = ({setSelectedOpt,selectedOpt,publications}) =>{
       setOptions(new Set());
     }
 
+    // check if an element exists in array using a comparer function
+    // comparer : function(currentElement)
+    Array.prototype.inArray = function(comparer) { 
+      for(var i=0; i < this.length; i++) { 
+          if(comparer(this[i])) return true; 
+      }
+      return false; 
+    }; 
+
+    // adds an element to the array if it does not already exist using a comparer 
+    // function
+    Array.prototype.pushIfNotExist = function(element, comparer) { 
+      if (!this.inArray(comparer)) {
+          this.push(element);
+      }
+    };
 
     const types=['image/png','image/jpeg','image/jpg']
 
@@ -75,6 +103,18 @@ const UploadForm = ({setSelectedOpt,selectedOpt,publications}) =>{
           setError('Please select an image file (png or jpg)');
         }
     };
+    const onSelect = (selectedList, selectedItem)=>{
+      if(!selectedList.includes(selectedItem)) selectedList.push(selectedItem);
+      setAuthorsOpt(selectedList);
+      setAuthors(selectedList.join(","));
+    }
+    const onRemove = (selectedList, selectedItem)=>{
+      if(selectedList.includes(selectedItem)) selectedList = selectedList.filter(function(item) {
+        return item !== selectedItem
+      })
+      setAuthorsOpt(selectedList);
+      setAuthors(selectedList.join(","));
+    }
 // update methods | separate admin page for author data to finally make multi dropdown
     return (
         <form>
@@ -104,7 +144,16 @@ const UploadForm = ({setSelectedOpt,selectedOpt,publications}) =>{
             <small className="text-muted unselectable">Title of Paper / Publication</small>
         </div>
         <div className="form-group mx-auto" style={{width:"75%"}}>
-            <input type="text" className="form-control" id="AuthKeeper" name="authors" onChange={event => setAuthors(event.target.value)} value={authors} placeholder="Please enter authors as per id registered (csv)" required/>
+            
+            {/* <input type="text" className="form-control" id="AuthKeeper" name="authors" onChange={event => setAuthors(event.target.value)} value={authorsi} placeholder="Please enter authors as per id registered (csv)" required/> */}
+            <input type="text" className="form-control" id="AuthKeeper" name="authors" value={authorsi} placeholder="Please enter authors as per id registered (csv)" readOnly/>
+            
+            <Multiselect isObject={false} options={authid_array} key={authors_opt.length||0} 
+              onSelect={onSelect}
+              onRemove={onRemove}
+              selectedValues={authors_opt}
+              placeholder="Author List"
+            />
             <small className="text-muted unselectable">Authors Temp</small>
         </div>
         <div className="form-group mx-auto" style={{width:"75%"}}>
@@ -117,7 +166,7 @@ const UploadForm = ({setSelectedOpt,selectedOpt,publications}) =>{
         </div>
         <div className="form-group mx-auto" style={{width:"75%"}}>
             <small className="text-muted unselectable">Date of publication (used for order) </small>
-            <DatePicker selected={pubDate} onChange={date => setPubDate(date)} className="mx-2"/> 
+            <DatePicker dateFormat={'dd/MM/yyyy'} selected={pubDate} onChange={date => setPubDate(date)} className="mx-2"/> 
         </div>
         <div className="form-group mx-auto" style={{width:"75%"}}>
             <input type="text" className="form-control" id="captionKeeper" name="links" onChange={event => setLinks(event.target.value)} value={links} placeholder="Custom links to checkout work / paper / demo" required/>
@@ -131,12 +180,19 @@ const UploadForm = ({setSelectedOpt,selectedOpt,publications}) =>{
           <FaPlusCircle className="clickable" color={!(title&&authors&&venue&&direct&&pubDate)?"#ddd":""} />
         </label>
         <div className="form-check">
+          <div className="form-group mx-auto" style={{width:"75%"}}>
+              {imgText&&
+              <img style={{height:"100px"}} src={imgText}/>
+              }
+              <input type="text" className="form-control" id="venueKeeper" name="text_img" onChange={event => setImgText(event.target.value)} value={imgText} placeholder="Image link" readOnly/>
+              <small className="text-muted unselectable">Use Checkbox if you want to bypass new image upload - adding an external url for image is disabled contact admin to enable</small>
+          </div>
           <input type="checkbox" onChange={event => setBypass(!imgBypass)} checked={imgBypass} className="form-check-input" id="exampleCheck1"/>
         </div>
         <div className="output">
           { error && <div className="error">{ error }</div>}
           { file && <div>{ file.name }</div> }
-          { (file||imgBypass) && <ProgressBar imgBypass={imgBypass} selectedOpt={id?id:selectedOpt} file={file} setFile={setFile} direct={direct} createdAt={pubDate} title={title} authors={authors} links={links} venue={venue} selectedTags={Array.from(selectedOptions)} setReset={reset}/> }
+          { (file||imgBypass) && <ProgressBar imgBypass={imgBypass} imgText={imgText} selectedOpt={id?id:selectedOpt} file={file} setFile={setFile} direct={direct} createdAt={pubDate} title={title} authors={authorsi} links={links} venue={venue} selectedTags={Array.from(selectedOptions)} setReset={reset}/> }
         </div>
       </form>
     )

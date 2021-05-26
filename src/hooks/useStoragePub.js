@@ -1,7 +1,7 @@
 import {useState,useEffect} from 'react';
 import {projectStorage,projectFirestore} from '../firebase/config';
 
-const useStorage=(imgBypass,selectedOpt,file,title,direct,createdAt,authors,links,venue,selectedTags)=>{
+const useStorage=(imgText,imgBypass,selectedOpt,file,title,direct,createdAt,authors,links,venue,selectedTags)=>{
     const [progress,setProgress]=useState(0);
     const [error,setError]=useState(null);
     const [url,setUrl]=useState(null);
@@ -23,7 +23,7 @@ const useStorage=(imgBypass,selectedOpt,file,title,direct,createdAt,authors,link
             });
         }
         else{
-            const url = 'https://firebasestorage.googleapis.com/v0/b/risha-lab-server.appspot.com/o/placeholder.png?alt=media&token=f7b4c0ab-89a8-43a6-8b7c-88a1f156f1ce';
+            let url = `${imgText}`||'https://firebasestorage.googleapis.com/v0/b/risha-lab-server.appspot.com/o/placeholder.png?alt=media&token=f7b4c0ab-89a8-43a6-8b7c-88a1f156f1ce';
             selectedOpt==="New"?collectionRef.add({url,title,direct,createdAt,authors,links,venue,selectedTags}):collectionRef.doc(selectedOpt).set({url,title,direct,createdAt,authors,links,venue,selectedTags});
             setProgress(100);
             setUrl(url);
