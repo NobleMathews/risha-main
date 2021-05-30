@@ -4,12 +4,19 @@ import Footer from "../Components/Footer";
 import Ticker from '../Components/ticker';
 import Carousel from "../Components/Carousel";
 import ShowMoreText from 'react-show-more-text';
+import Masonry from 'react-masonry-css'
 import MainModal from '../Components/ModalM';
 import FeatPub from '../Pages/FeatPub';
 import FadeIn from 'react-fade-in';
 import { FaGithub, FaTwitter, FaFacebook } from 'react-icons/fa';
 import { sponsors } from "../data"
 
+const breakpointColumnsObj = {
+  default: 4,
+  1100: 3,
+  700: 3,
+  500: 2
+};
 const markdown = `**"The best thing a teacher can do is to bring out the best in students in best ways!!!"**.
 
 > I believe that teaching should inspire students beyond grades and jobs, instill foundations for life and push boundaries! I explored few experiments during my teaching, some worked and some did not! It is exciting and challenging to be a faculty during this emerging times!
@@ -173,8 +180,24 @@ function Main() {
                   <FeatPub />
                   <hr />
                   <h5>Collaborators / Sponsors</h5>
+                  <hr />
                   <div className="card-group">
+                  <Masonry
+                    breakpointCols={breakpointColumnsObj}
+                    className="my-masonry-grid"
+                    columnClassName="my-masonry-grid_column"
+                  >
                     {sponsors.map((sponsor, i) => (
+                      <div className="card m-0 p-1" key={i}>
+                        <div className="d-flex align-items-center">
+                          <a href={sponsor.redirect} target="_blank">
+                            <img className="card-img my-auto" src={require(`../assets/sponsors/${sponsor.src}`).default} alt={sponsor.title} />
+                          </a>
+                        </div>
+                      </div>
+                    ))}
+                  </Masonry>
+                    {/* {sponsors.map((sponsor, i) => (
                       <div className="card m-2 px-3" key={i}>
                         <div className="d-flex align-items-center" style={{ height: "150px" }}>
                           <a href={sponsor.redirect} target="_blank">
@@ -182,7 +205,7 @@ function Main() {
                           </a>
                         </div>
                       </div>
-                    ))}
+                    ))} */}
                   </div>
                 </div>
               </div>{/* /.blog-main */}
@@ -226,7 +249,7 @@ function Main() {
                 {/* <div className="p-4 mb-3 mylight rounded">
                   <a className="p-2" href="/calendar">Learning Resources</a>
                 </div> */}
-                <div className="p-4 mb-3 mylight rounded" onClick={(e) => { e.preventDefault(); window.location.href = '/news'; }} style={{ cursor: "pointer" }}>
+                <div className="py-4 mb-3 mylight rounded" onClick={(e) => { e.preventDefault(); window.location.href = '/news'; }} style={{ cursor: "pointer", paddingRight:"10px" }}>
                   <h4 className="font-italic">News</h4>
                   <Ticker />
                 </div>

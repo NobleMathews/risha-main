@@ -251,7 +251,7 @@ export const alumini = [
     value: 4,
     email:'tee15b007@iittp.ac.in',
     title: 'Akash Dhasade',
-    desc: '', 
+    desc: '↠ Software Engineer (iManage) ↠ PhD (ETH, Zurich)', 
     links:''
   },
   {
@@ -267,7 +267,7 @@ export const alumini = [
     value: 3,
     email:'cs18m016@iittp.ac.in',
     title: 'Vartika Agrahari',
-    desc: 'Currently working in AI Sociales`', 
+    desc: '↠ AI Sociales`', 
     links:''
   },
   {
@@ -341,6 +341,21 @@ export const sponsors = [
   src:"codechef.png",
   redirect:"",
   title:"Codechef",
+  },
+  {
+    src:"rlf.jpg",
+    redirect:"",
+    title:"Richard Lounsbery Foundation",
+  },
+  {
+    src:"accenturelabs.png",
+    redirect:"",
+    title:"Accenture Labs",
+  },
+  {
+    src:"earthwatch.png",
+    redirect:"",
+    title:"Earthwatch Foundation",
   },
 ]
 

@@ -90,7 +90,7 @@ function Lab() {
               >
               {member.title}
               </Link>
-              <p style={{display:"inline"}}>{` (${value[member.value].split(" ")[0]} 20${member.email.match(/\d+/)}) ${member.desc}`}</p>
+              <p style={{display:"inline"}}>{` (${value[member.value].split(" ")[0]} 20${member.email.match(/\d+/)} ${member.desc})`}</p>
           </li>
         ))}
         </ul>
