@@ -78,7 +78,7 @@ function Lab() {
         </div>
         </div>
         <hr/>
-        <h5>Past Students</h5>
+        <h5>Alumini</h5>
         <ul>
         {alumini.map((member) => (
           <li>

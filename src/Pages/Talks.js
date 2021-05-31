@@ -57,7 +57,7 @@ function Talks() {
 
     </div>
     </FadeIn>
-    {/* <Footer/> */}
+    <Footer/>
     </>
   );
 }

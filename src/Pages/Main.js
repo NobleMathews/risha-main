@@ -83,6 +83,7 @@ function Main() {
     }
     setModalShow(true)
   }
+  var flags = {};
   return (
     <>
       <FadeIn>
@@ -187,10 +188,16 @@ function Main() {
                     className="my-masonry-grid"
                     columnClassName="my-masonry-grid_column"
                   >
-                    {sponsors.map((sponsor, i) => (
+                    {sponsors.filter(function(entry) {
+                          if (flags[entry.title]) {
+                              return false;
+                          }
+                          flags[entry.title] = true;
+                          return true;
+                      }).map((sponsor, i) => (
                       <div className="card m-0 p-1" key={i}>
                         <div className="d-flex align-items-center">
-                          <a href={sponsor.redirect} target="_blank">
+                          <a href={sponsor.redirect}>
                             <img className="card-img my-auto" src={require(`../assets/sponsors/${sponsor.src}`).default} alt={sponsor.title} />
                           </a>
                         </div>

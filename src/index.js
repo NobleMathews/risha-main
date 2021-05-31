@@ -25,6 +25,13 @@ body,footer{
   background-color: ${props=>props.theme.mode === "dark" ? "#1D1F21" : "#F5F5F5"} !important;
   color: ${props=>props.theme.mode === "dark" ? "#F5F5F5":"#1D1F21"} !important;
 }
+table {
+  border-color: ${props=>props.theme.mode === "dark" ? "#F5F5F5":"#1D1F21"} !important;
+}
+th,
+td {
+  border-color: ${props=>props.theme.mode === "dark" ? "#F5F5F5":"#1D1F21"} !important;
+}
 .cloud-container{
 	background: linear-gradient(to bottom, ${props=>props.theme.mode === "dark" ? "#007ced":"#007ced"} 1%, ${props=>props.theme.mode === "dark" ? "#1D1F21":"#F5F5F5"} 100%) !important;
 }

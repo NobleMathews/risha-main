@@ -12,6 +12,7 @@ function NavbarN() {
             <NavLink activeClassName="nav-link active" className="nav-link" exact to="/">Home</NavLink>
             <NavLink activeClassName="nav-link active" className="nav-link" to="/publications">Publications</NavLink>
             <NavLink activeClassName="nav-link active" className="nav-link" to="/lab">People</NavLink>
+            <NavLink activeClassName="nav-link active" className="nav-link" to="/collaborations">Collaborations</NavLink>
             {/* Shift to sirs page */}
             {/* <NavLink activeClassName="nav-link active" className="nav-link" to="/calendar">Calendar</NavLink> */}
             {/* <NavLink activeClassName="nav-link active" className="nav-link" to="/news">News</NavLink> */}

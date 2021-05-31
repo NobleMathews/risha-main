@@ -6,6 +6,7 @@ import Lab from './Pages/Lab';
 import Join from './Pages/Join';
 import Talks from './Pages/Talks';
 import Press from './Pages/Press';
+import Collaborators from './Pages/Collaborators';
 import GalleryAdmin from './Pages/admin/Title';
 import NewsAdmin from './Pages/admin/NewsAdmin';
 import Calendar from './Pages/Calendar';
@@ -55,6 +56,7 @@ class App extends Component {
           <Route path="/join" component={Join} />
           <Route path="/talks" component={Talks} />
           <Route path="/news" component={Press} />
+          <Route path="/collaborations" component={Collaborators} />
           <Route path="/calendar" component={Calendar} />
           <Route path="/gallery" component={Gallery} />
           <Route path="/ch" component={Professor} />

@@ -328,33 +328,52 @@ export const collaborators = [
 
 export const sponsors = [
   {
+  project:"",
+  duration:"",
   src:"waterloo.jpg",
-  redirect:"",
+  redirect:"/collaborations",
   title:"University of Waterloo",
   },
   {
+  project:"A Novel Approach for Bug Localization",
+  duration:"Nov 2019 to Nov 2020",
   src:"bosch.png",
-  redirect:"",
+  redirect:"/collaborations",
   title:"Bosch",
   },
   {
+    project:"An Approach for Incremental Generation of Knowledge Graphs from Source Code and Requirements",
+    duration:"Nov 2020 to Nov 2021",
+    src:"bosch.png",
+    redirect:"/collaborations",
+    title:"Bosch",
+  },
+  {
+  project:"Software Reuse and Quality Analysis of an Online Coding Platform",
+  duration:"April 2019 to April 2022",
   src:"codechef.png",
-  redirect:"",
+  redirect:"/collaborations",
   title:"Codechef",
   },
   {
+  project:"SurviveCovid-19++ - A Game for Improving Awareness of Social Distancing and Health Measures for Covid-19 Pandemic",
+  duration:"May 2020 to April 2021",
     src:"rlf.jpg",
-    redirect:"",
+    redirect:"/collaborations",
     title:"Richard Lounsbery Foundation",
   },
   {
+  project:"Discovering Energy-Hungry Patterns in Machine Learning Driven Software Systems",
+  duration:"May 2021 to May 2022",
     src:"accenturelabs.png",
-    redirect:"",
+    redirect:"/collaborations",
     title:"Accenture Labs",
   },
   {
+  project:"AiR: Pollution Visualizer expansion towards climate literacy",
+  duration:"May 2021 to May 2022",
     src:"earthwatch.png",
-    redirect:"",
+    redirect:"/collaborations",
     title:"Earthwatch Foundation",
   },
 ]
