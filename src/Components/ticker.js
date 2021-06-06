@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import NewsTicker,{Directions} from 'react-advanced-news-ticker'
+// import NewsTicker,{Directions} from 'react-advanced-news-ticker'
+import Slider from "react-slick";
 import useFirestore from '../hooks/useEzStore';
 import DOMPurify from 'dompurify';
 
@@ -24,7 +25,16 @@ export default function Ticker() {
     // unsubscribe();
     return () => (isSubscribed = false)
   },[])
-
+    const settings = {
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplaySpeed: 2500,
+      vertical: true,
+      verticalSwiping: true,
+      arrows: false,
+      autoplay: true
+    };
     return (
         // <div className="newsticker">
         //   <Ticker isNewsTicker={true}>
@@ -37,26 +47,27 @@ export default function Ticker() {
         //   </Ticker>
         // </div>
         <div key={news.length}>
-        <NewsTicker
-        rowHeight = {60}
-        // maxRows = {2}
-        speed = {600}
-        direction = {Directions.UP}
-        duration = {4000}
-        autoStart = {true}
-        pauseOnHover = {true}
-        id = "risha_news"
-        className = "rishaFeed"
+        <Slider className = "rishaFeed"
+        {...settings}
+        // rowHeight = {60}
+        // maxRows = {10}
+        // speed = {600}
+        // direction = {Directions.UP}
+        // duration = {10000}
+        // autoStart = {true}
+        // pauseOnHover = {true}
+        // id = "risha_news"
+        // className = "rishaFeed"
         // style = {{marginTop: 15}}
         >
         {news.map(news =>
         {
           return(
-            <div className="content" onClick={()=>{return false}} style={{textAlign:'left'}} key={news.id} dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(`${news.date} :`+news.desc)}}></div>
+            <div className="content" onClick={()=>{return false}} style={{textAlign:'left'}} key={news.id} dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(`<b>${news.date}</b> :`+news.desc)}}></div>
           )
         }
         )}
-          </NewsTicker>
+          </Slider>
         </div>
     )
 }

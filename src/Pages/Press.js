@@ -39,7 +39,7 @@ function Press() {
       <div className="container pub-page-main">
         <hr/>
         <div>
-              <h2 className="blog-post-title">Risha Lab in the News</h2>
+              <h2 className="blog-post-title">Risha Lab News</h2>
               <hr/>
         </div>
       {news?.length > 0 ? (

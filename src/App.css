@@ -149,7 +149,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 }
 .rishaFeed{
-  height: 30vh!important;
+  /* height: 100vh!important;
+   */
+   text-align: left;
+  overflow: hidden;
+  padding: 0px 15px;
 }
 .card-header{
   background-color: transparent!important;
