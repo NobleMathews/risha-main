@@ -48,13 +48,16 @@ export const members = [
     ` 
   },
   {
-    pub: 'no',
+    pub: 'yes',
     key: 'shriram',
     value: 2,
     email:'cs20s503@iittp.ac.in',
     title: 'Shriram Shridhar Shanbhag',
-    desc: '',
-    links:'' 
+    desc: 'Software Engineering',
+    links:`
+    LinkedIn [https://www.linkedin.com/in/shriram-shanbhag-9a8138103/]
+    Github [https://github.com/tritims]
+    ` 
   },
   {
     pub: 'no',
@@ -242,6 +245,17 @@ export const members = [
     LinkedIn [https://www.linkedin.com/in/noble-saji-mathews]
     Google Scholar [https://scholar.google.com/citations?user=niVr6tgAAAAJ&hl=en]
     ORCiD [https://orcid.org/0000-0003-2266-8848]
+    `
+  },
+  {
+    pub:'yes',
+    key: 'ishaan',
+    value: 4,
+    email:'cs20b018@iittp.ac.in',
+    title: 'Kulkarni ishaan Meghshyam',
+    desc: 'Web Accessibility Testing Software',
+    links:`
+    Github [https://github.com/IshaanKulkarni]
     `
   },
 ].sort((a,b) => a.value-b.value);

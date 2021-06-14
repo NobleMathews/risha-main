@@ -128,12 +128,58 @@ function Join() {
             />
   </div>
 </div>
+      <p className="mt-4">
+      We, at the RISHA Lab aspire to work to the best of our abilities and currently have multiple open positions for broadly in the areas of Software Engineering, Educational Technologies and Human-Computer Interaction! Have a look at RISHA Lab Open House video (2020) and Core Principles to understand who we are, what we do, what you can do! <a href="https://docs.google.com/spreadsheets/d/1K8raZO0wWKfOOHuKxoNxvQwgZABIPoXCMe6hN-Z0Zus/edit?usp=sharing" referrerPolicy="no-referrer" target="_blank">Here</a> are some broad project ideas and you can propose your own!!! 
+      </p>
+      <p>Developer Interns positions are available only for IITT students who have stellar programming skills!</p>
+      <form className="cf">
+      <input type="button" className="button-check" defaultValue="Checkout Open Positions" onClick={(e)=>{e.preventDefault(); window.location.href='/open';}}/>
+      </form>
       </Col>
       <Col md={9} className="my-auto">
         {/* https://theconfuzedsourcecode.wordpress.com/2019/11/11/you-may-restfully-submit-to-your-google-forms/ */}
       {/* <form className="kwes-form cf" action="https://kwes.io/api/foreign/forms/0ctNQPXDL2AlBzCTLXHU"> */}
+      <Container style={{textAlign:"left"}}>
+        <Row style={{fontWeight:"bold"}}>
+          <Col className={"border py-2"}>Why RISHA Lab?</Col>
+          <Col className={"border py-2"}>What are we looking for?</Col>
+        </Row>
+        <Row >
+        <Col className={"border py-2"}>
+        <ul style={{listStyle:"inside"}}>
+        <li>Better job/research prospects by building a strong work profile! </li>
+        <li>20+ publications in top-class conferences/journals such as ICSE, FSE, MSR, EASE, CSCW, CSUR and so on (last 2 years)</li>
+        <li>20+ development projects/tools - Most of our projects result in tools/software </li>
+        <li>The lab is in news for its work on using computing for society (The Hindu, NDTV, IndianExpress, Times of India, The Hans India, ETV, DD, The Hans,  and so on) - We need to have a page for press and link all articles in that page, link that page in news itself</li>
+        <li>International Research Collaborations (University of Waterloo)</li>
+        <li>Industry Collaborations (Bosch, Accenture Labs…)</li>
+        <li>We also have mini-projects in Educational Technologies and Human-Computer Interaction for around 4-6 months.</li>
+        </ul>
+        </Col>
+        <Col className={"border py-2"}>
+        We are always looking for enthusiastic students for Developer Interns (3 to 6 months), Research Interns (6 to 12 months), UG Research Interns (2 years - main goal is to nurture for higher studies) in addition to B.Tech projects, M.Tech projects, MS/PhD (checkout official IITT admissions channel). 
+        <p>What you must have?</p>
+        <ul style={{listStyle:"inside"}}>
+        <li>Coding & Development </li>
+        <li>Critical Thinking</li>
+        <li>Quick learner</li>
+        <li>Reading & Writing Papers (scientific) </li>
+        <li>Formalisms (scientific perspective)</li>
+        </ul>
+        <p>
+        <b>Note1:</b> Most of our research projects have a major software development component, application of AI/ML, NLP techniques, and any other advances required for accomplishing project goals.
+        </p>
+        <p>
+        <b>Note2:</b> If you are not willing to do your best, move beyond your comfort zone, and are not persistent to do your best work, please do not contact us! 
+        </p>
+
+
+        </Col>
+        </Row>
+        <Row className={"py-2"}>If interested, please fill this form! 
+      </Row>
+      </Container>
       <form className="cf">
-      <input type="button" className="button-check" defaultValue="Checkout Open Positions" onClick={(e)=>{e.preventDefault(); window.location.href='/open';}}/>
       <div className="half left cf">
         <input type="text" id="input-name" name="input-name" rules="required|max:255" placeholder="Name" />
         <input type="email" id="input-email" name="input-email" rules="required|email" placeholder="Email address" />

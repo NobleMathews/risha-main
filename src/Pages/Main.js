@@ -122,17 +122,18 @@ function Main() {
                   <div className={"show-grid"}>
                   <Container style={{textAlign:"left"}}>
                     <Row style={{fontWeight:"bold"}}>
-                      <Col>Software Engineering </Col>
-                      <Col>Computing for Society</Col>
+                      <Col className={"border py-2"}>Software Engineering </Col>
+                      <Col className={"border py-2"}>Computing for Society</Col>
                     </Row>
-                    <Row style={{padding:"10px 0px"}}>
-                      <Col>We research effective and scalable ways to help developers improve quality of software by qualitatively and quantitatively analyzing a diversified range of software artifacts [such as code, commits, bugs, logs, patterns, designs and so on] in millions of software repositories</Col>
-                      <Col>Design of technologies to facilitate personalized life long learning for 7.1+ billion learners</Col>
+                    <Row >
+                      <Col className={"border py-2"}>We research effective and scalable ways to help developers improve quality of software by qualitatively and quantitatively analyzing a diversified range of software artifacts [such as code, commits, bugs, logs, patterns, designs and so on] in millions of software repositories</Col>
+                      <Col className={"border py-2"}>We leverage advances in computing (such as Software Engineering, Artificial Intelligence, Augmented Reality, Visualization, Social Media Analytics, User Interfaces) to address societal challenges currently in the domains of (i) education (ii) environment (iii) healthcare and (iv) cultural heritage. </Col>
                     </Row>
-                    <Row style={{padding:"10px 0px"}}>
-                      <Col>ø Empirical Software Engineering, Software Quality, Patterns, Documentation, Modernizing legacy code, APIs, Summarization, Software Architecture, AI for SE, SE for AI, Energy-Aware Software Engineering  and Tools</Col>
-                      <Col>ø Ontologies, Gamification, Personalized Learning, Virtual & Augmented Reality for Story Telling, Virtual Labs, Human Computer Interaction for Usability of Government and Mobile Apps</Col>
+                    <Row >
+                      <Col className={"border py-2"}>ø Empirical Software Engineering, Software Quality, Patterns, Documentation, Modernizing legacy code, APIs, Summarization, Software Architecture, AI for SE, SE for AI, Energy-Aware Software Engineering  and Tools</Col>
+                      <Col className={"border py-2"}>ø Educational Technologies, Learning Analytics, Personalized Learning, Gamification, Ontologies, Virtual & Augmented Reality, Virtual Labs, User Interfaces, Human Computer Interaction, Usability </Col>
                     </Row>
+                    <Row className={"py-2"}>Read more : <a style={{padding:"0px 10px"}} href="https://drive.google.com/file/d/1vhOLuns4Z3DLfx6j3D4JhHkjewh_wU5M/view?usp=sharing" target="_blank" referrerPolicy="no-referrer">Research Statement</a></Row>
                   </Container>
                   </div>
                   <hr />

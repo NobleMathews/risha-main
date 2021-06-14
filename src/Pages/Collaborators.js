@@ -98,6 +98,17 @@ function Collaborators() {
   return (
     <>
     <FadeIn>
+      <div className="container" style={{textAlign:"left"}}>
+      <p>
+      Software is omnipresent today in all walks of life. On the other hand, software is quite effort-intensive, increasingly complex and buggy! Our lab focuses on cutting edge research and develops tools in multiple areas of Software Engineering (SE) such as Bug Detection, Code Comprehension, Semantic Code Search, API Deprecation, AI for SE, SE for AI, Energy-Aware Software Engineering, Modernizing legacy code and so on!
+      </p>
+      <p>
+      There are tremendous opportunities to create impact on industry projects by leveraging these advances, and this is where we do consulting and collaborative projects with industry for solid outcomes. Please reach out to me!
+      </p>
+      <p>
+      Our other thrust area is Computing for Society (specifically Educational Technologies and Human-Computer Interaction), where we had decent impact in terms of developing multiple solutions (YTCoder, SurviveCovid-19, Mood of India,...) and we will be happy to collaborate with Corporate Social Responsibility (CSR) of organizations and NGOs.    
+      </p>
+      </div>
       <div className="container pub-page-main">
         <hr/>
     <Styles>

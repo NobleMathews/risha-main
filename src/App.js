@@ -2,6 +2,7 @@ import React,{ Component } from 'react';
 import {BrowserRouter as Router,Switch,Route,withRouter} from "react-router-dom";
 import Main from './Pages/Main'
 import Publications from './Pages/Publications';
+import Slam from './Pages/SlamBook';
 import Lab from './Pages/Lab';
 import Join from './Pages/Join';
 import Talks from './Pages/Talks';
@@ -56,6 +57,7 @@ class App extends Component {
           <Route path="/join" component={Join} />
           <Route path="/talks" component={Talks} />
           <Route path="/news" component={Press} />
+          <Route path="/slam" component={Slam} />
           <Route path="/collaborations" component={Collaborators} />
           <Route path="/calendar" component={Calendar} />
           <Route path="/gallery" component={Gallery} />
