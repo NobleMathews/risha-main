@@ -44,6 +44,9 @@ td {
 .btn-outline {
   color: ${props=>props.theme.mode === "dark" ? "bisque":"#000"} !important;
 }
+hr {
+  border-top-color: ${props=>props.theme.mode === "dark" ? "bisque":"default"} !important;;
+}
 .MuiIconButton-root,.MuiInput-input{
   color: ${props=>props.theme.mode === "dark" ? "#F5F5F5":"#1D1F21"} !important;
 }
