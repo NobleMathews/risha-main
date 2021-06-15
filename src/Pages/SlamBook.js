@@ -61,7 +61,7 @@ export default function Slam() {
 		<div className="sticky" style={{transform:`rotate(${randomNumber(-3,3)}deg)`,filter:`hue-rotate(${randomNumber(1,720)}deg)`}} role="textbox"> Sirs Comments</div>
 		</div>
 		<div className="p-2" style={{textAlign:"left"}}>
-		<p><b>What was he most memorable thing for you as a part of Risha Lab ?</b></p>
+		<p><b>What was the most memorable thing for you as a part of Risha Lab ?</b></p>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sapien augue, rutrum sollicitudin turpis sit amet, vehicula ullamcorper nibh. Ut vel nibh sem. Morbi facilisis quis diam et sagittis. Pellentesque quis egestas nulla. Suspendisse rhoncus mollis felis nec posuere. Sed sed nulla nunc. Nam aliquam neque vel ipsum volutpat, eu facilisis nibh tristique. Mauris ut mollis tortor. Morbi vestibulum est ut diam sagittis blandit. Nullam tincidunt lacus sed tortor condimentum, id tincidunt ex tincidunt. Mauris mauris metus, pharetra sagittis diam quis, iaculis dignissim tellus. Mauris interdum tellus nec orci iaculis eleifend. Donec sed porta eros. Vestibulum nisi mi, mollis sit amet quam id, malesuada blandit tortor. Sed elit justo, rutrum non mollis sit amet, ultrices in ligula.</p>
 		<p><b>Any things that you feel you got to experience only because of your time here ?</b></p>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sapien augue, rutrum sollicitudin turpis sit amet, vehicula ullamcorper nibh. Ut vel nibh sem. Morbi facilisis quis diam et sagittis. Pellentesque quis egestas nulla. Suspendisse rhoncus mollis felis nec posuere. Sed sed nulla nunc. Nam aliquam neque vel ipsum volutpat, eu facilisis nibh tristique. Mauris ut mollis tortor. Morbi vestibulum est ut diam sagittis blandit. Nullam tincidunt lacus sed tortor condimentum, id tincidunt ex tincidunt. Mauris mauris metus, pharetra sagittis diam quis, iaculis dignissim tellus. Mauris interdum tellus nec orci iaculis eleifend. Donec sed porta eros. Vestibulum nisi mi, mollis sit amet quam id, malesuada blandit tortor. Sed elit justo, rutrum non mollis sit amet, ultrices in ligula.</p>
@@ -88,7 +88,7 @@ export default function Slam() {
 		<a style={{display:"block"}}>↠ Test</a>
 		</FadeIn>
 		<hr/>
-        <a style={{fontWeight:"bold"}}>Enter your own experiences</a>
+        {/* <a style={{fontWeight:"bold"}}>Enter your own experiences</a> */}
         </div>
 		</div>
 	</div>

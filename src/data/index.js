@@ -281,7 +281,7 @@ export const alumini = [
     value: 3,
     email:'cs18m016@iittp.ac.in',
     title: 'Vartika Agrahari',
-    desc: '↠ AI Sociales`', 
+    desc: '↠ Factset', 
     links:''
   },
   {
@@ -342,11 +342,13 @@ export const collaborators = [
 
 export const sponsors = [
   {
-  project:"",
-  duration:"",
+  project:"Academic",
+  duration:"May 2019 - Present",
   src:"waterloo.jpg",
   redirect:"/collaborations",
   title:"University of Waterloo",
+  link:"https://cs.uwaterloo.ca/~m2nagapp/index.html",
+  collaborator:"Mei Nagappan",
   },
   {
   project:"A Novel Approach for Bug Localization",
@@ -354,6 +356,7 @@ export const sponsors = [
   src:"bosch.png",
   redirect:"/collaborations",
   title:"Bosch",
+  link:"https://www.bosch.com/research/",
   },
   {
     project:"An Approach for Incremental Generation of Knowledge Graphs from Source Code and Requirements",
@@ -361,13 +364,15 @@ export const sponsors = [
     src:"bosch.png",
     redirect:"/collaborations",
     title:"Bosch",
+    link:"https://www.bosch.com/research/",
   },
   {
   project:"Software Reuse and Quality Analysis of an Online Coding Platform",
   duration:"April 2019 to April 2022",
   src:"codechef.png",
   redirect:"/collaborations",
-  title:"Codechef",
+  title:"CodeChef",
+  link:"https://www.codechef.com/",
   },
   {
   project:"SurviveCovid-19++ - A Game for Improving Awareness of Social Distancing and Health Measures for Covid-19 Pandemic",
@@ -375,6 +380,7 @@ export const sponsors = [
     src:"rlf.jpg",
     redirect:"/collaborations",
     title:"Richard Lounsbery Foundation",
+    link:"https://www.rlounsbery.org/",
   },
   {
   project:"Discovering Energy-Hungry Patterns in Machine Learning Driven Software Systems",
@@ -382,6 +388,7 @@ export const sponsors = [
     src:"accenturelabs.png",
     redirect:"/collaborations",
     title:"Accenture Labs",
+    link:"https://labs.accenture.com/",
   },
   {
   project:"AiR: Pollution Visualizer expansion towards climate literacy",
@@ -389,6 +396,7 @@ export const sponsors = [
     src:"earthwatch.png",
     redirect:"/collaborations",
     title:"Earthwatch Foundation",
+    link:"https://earthwatch.org/",
   },
 ]
 

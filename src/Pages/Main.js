@@ -116,7 +116,7 @@ function Main() {
                   }}>#WeAreRisha</p>
                   <hr />
                   <p style={{ textAlign: "left" }}>
-                    We are here to aspire high, set benchmarks and give our best towards creating a remarkable impact in research, development and society! Our primary research goal is to expand the boundaries of Software Engineering, with a focus on cutting edge research, and building tools, and to leverage the power of computing to help society (Educational Technologies and Human-Computer Interaction).
+                    We are here to aspire high, set benchmarks and give our best towards creating a remarkable impact in research, development and society! Our primary research goal is to expand the boundaries of <b>Software Engineering</b>, with a focus on cutting edge research, and building tools, and to leverage the power of computing to help society (<b>Educational Technologies</b> and <b>Human-Computer Interaction</b>).
               </p>
                   <hr />
                   <div className={"show-grid"}>
@@ -130,8 +130,8 @@ function Main() {
                       <Col className={"border py-2"}>We leverage advances in computing (such as Software Engineering, Artificial Intelligence, Augmented Reality, Visualization, Social Media Analytics, User Interfaces) to address societal challenges currently in the domains of (i) education (ii) environment (iii) healthcare and (iv) cultural heritage. </Col>
                     </Row>
                     <Row >
-                      <Col className={"border py-2"}>ø Empirical Software Engineering, Software Quality, Patterns, Documentation, Modernizing legacy code, APIs, Summarization, Software Architecture, AI for SE, SE for AI, Energy-Aware Software Engineering  and Tools</Col>
-                      <Col className={"border py-2"}>ø Educational Technologies, Learning Analytics, Personalized Learning, Gamification, Ontologies, Virtual & Augmented Reality, Virtual Labs, User Interfaces, Human Computer Interaction, Usability </Col>
+                      <Col className={"border py-2"}><b>Current Research Areas :</b> Empirical Software Engineering, Software Quality, Patterns, Documentation, Modernizing legacy code, APIs, Summarization, Software Architecture, AI for SE, SE for AI, Energy-Aware Software Engineering  and Tools</Col>
+                      <Col className={"border py-2"}><b>Current Research Areas :</b> Educational Technologies, Learning Analytics, Personalized Learning, Gamification, Ontologies, Virtual & Augmented Reality, Virtual Labs, User Interfaces, Human Computer Interaction, Usability </Col>
                     </Row>
                     <Row className={"py-2"}>Read more : <a style={{padding:"0px 10px"}} href="https://drive.google.com/file/d/1vhOLuns4Z3DLfx6j3D4JhHkjewh_wU5M/view?usp=sharing" target="_blank" referrerPolicy="no-referrer">Research Statement</a></Row>
                   </Container>
@@ -146,9 +146,8 @@ function Main() {
                         <>
                           <hr />
                           {/* <h2>Core Philosophy</h2> */}
-                          <p>↠ To us, impactful research stems from great problems that push our limits to go beyond stateof- the-art and state-of-the-practice! | long-term problems with realistic short-term goals</p>
-                          <p>↠ <strong>"Raise your quality standards as high as you can live with, avoid wasting your time on routine problems, and always try to work as closely as possible at the boundary of your abilities. Do this, because it is the only way of discovering how that boundary should be moved forward."</strong><code style={{ display: "block" }}>- Prof. Edsger W. Dijkstra</code> The foundations for my research stem from Prof. Edsger W. Dijkstra</p>
-                          <p>↠ I construe this to push the boundary of the field, especially for an young and emerging discipline like software engineering in collaboration with fellow researchers in the community.</p>
+                          <p>↠ To us, impactful research stems from great problems that push our limits to go beyond state-of- the-art and state-of-the-practice! | long-term problems with realistic short-term goals.</p>
+                          <p>↠  The question we ask is: <strong>“Is this the best I(we) can do?”</strong> - We recursively ask this question in our journey until we reach our boundary and till we make a significant impact through research (Software Engineering), development and eventually to society!</p>
                           <hr />
                           {/* 
               <div className="blog-post">
@@ -224,12 +223,13 @@ function Main() {
                     <Row className="my-3">
                       <Col className="mx-auto">
                         <Image className="testermain" src="https://2020.msrconf.org/getProfileImage/sridharchimalakonda/76c8c23f-1094-41a3-ac57-9d38bf899419/small.jpg?1596264188000" alt="LabHead" roundedCircle />
-                        <p className="ml-1 tester-sub mb-0">Assistant Professor, Department of Computer Science & Engineering <a className="preserveb" target="_blank" referrerPolicy="no-referrer" href="https://www.iittp.ac.in">IIT Tirupati, India</a></p>
+                        <p className="ml-1 tester-sub mb-0">Assistant Professor,<br/> Department of Computer Science & Engineering <a style={{display:"block"}} className="preserveb" target="_blank" referrerPolicy="no-referrer" href="https://www.iittp.ac.in">IIT Tirupati, India</a></p>
                         <p className="ml-1 tester-sub mb-0">Email: <a className="preserveb" href="mailto:ch@iittp.ac.in">ch@iittp.ac.in</a></p>
                       </Col>
                     </Row>
-                    <p><a className="preserveb" target="_blank" referrerPolicy="no-referrer" href="https://researchweb.iiit.ac.in/~sridhar_ch/home.html" style={{ fontWeight: "bold" }}>About Me</a></p>
-                    <p><a className="preserveb" href="/talks" style={{ fontWeight: "bold" }}>Talks</a></p>
+                    <p style={{display:"inline-block"}}><a className="preserveb" target="_blank" referrerPolicy="no-referrer" href="https://researchweb.iiit.ac.in/~sridhar_ch/home.html" style={{ fontWeight: "bold" }}>About Me</a></p>
+                    <p style={{display:"inline-block",padding:"0 10px"}}>|</p>
+                    <p style={{display:"inline-block"}}><a className="preserveb" href="/talks" style={{ fontWeight: "bold" }}>Talks</a></p>
                   </Container>
                 </div>
                 {/* <div className="p-4 mb-3 mylight rounded"> */}
@@ -237,14 +237,14 @@ function Main() {
                 <Row className="mb-3">
                   <Col>
                   <div className="p-4 mylight rounded" style={{height:"100%"}}>
-                  <a className="p-2 preserveb" href="/calendar">Upcoming Deadlines</a>
+                  <a className="p-2 preserveb" href="/calendar">Upcoming Conference Deadlines</a>
                   </div>
                   </Col>
-                  <Col>
+                  {/* <Col>
                   <div className="p-4 mylight rounded" style={{height:"100%"}}>
                   <a className="p-2" href="/resources">Learning Resources</a>
                   </div>
-                  </Col>
+                  </Col> */}
                 </Row>
                   {/* <a className="p-2 preserveb">View Upcoming Deadlines</a> */}
                   {/* <p className="mx-auto">

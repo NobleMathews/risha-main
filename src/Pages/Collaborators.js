@@ -93,7 +93,25 @@ function Collaborators() {
         ]
   )
 
-  const data = React.useMemo(() => sponsors.filter(sponsor=>sponsor.project), [])
+  const columns2 = React.useMemo(
+    () => [ 
+          {
+            Header: 'Collaborator',
+            accessor: 'collaborator',
+          },
+          {
+            Header: 'Affiliation',
+            accessor: 'title',
+          },
+          {
+            Header: 'Duration',
+            accessor: 'duration',
+          },
+        ]
+  )
+
+  const data = React.useMemo(() => sponsors.filter(sponsor=>sponsor.project!=="Academic"), [])
+  const data2 = React.useMemo(() => sponsors.filter(sponsor=>sponsor.project=="Academic"), [])
 
   return (
     <>
@@ -111,8 +129,13 @@ function Collaborators() {
       </div>
       <div className="container pub-page-main">
         <hr/>
+    <h3>Industry Collaborations</h3>
     <Styles>
       <Table columns={columns} data={data} />
+    </Styles>
+    <h3>Academic Collaborations</h3>
+    <Styles>
+      <Table columns={columns2} data={data2} />
     </Styles>
     </div>
     </FadeIn>
