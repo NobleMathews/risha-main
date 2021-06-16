@@ -390,14 +390,14 @@ export const sponsors = [
     title:"Accenture Labs",
     link:"https://labs.accenture.com/",
   },
-  {
-  project:"AiR: Pollution Visualizer expansion towards climate literacy",
-  duration:"May 2021 to May 2022",
-    src:"earthwatch.png",
-    redirect:"/collaborations",
-    title:"Earthwatch Foundation",
-    link:"https://earthwatch.org/",
-  },
+  // {
+  // project:"AiR: Pollution Visualizer expansion towards climate literacy",
+  // duration:"May 2021 to May 2022",
+  //   src:"earthwatch.png",
+  //   redirect:"/collaborations",
+  //   title:"Earthwatch Foundation",
+  //   link:"https://earthwatch.org/",
+  // },
 ]
 
 export const authors = members.concat(alumini,collaborators);
