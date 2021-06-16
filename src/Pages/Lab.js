@@ -31,7 +31,8 @@ function Lab() {
         <hr/>
 
         <p style={{margin:"0px"}}><b>Hover to discover</b></p>
-        <p> There is always one moment in childhood when the door opens and lets the future in ~ Graham Greene</p>
+        {/* <p> There is always one moment in childhood when the door opens and lets the future in ~ Graham Greene</p> */}
+        <p>Rejuvenate the childhood moments of your life! We do it!</p>
         <div className="container">
         <div className="img-grid lab-member">
         {members.filter(x=>x.pub=='yes').map((member) => (
