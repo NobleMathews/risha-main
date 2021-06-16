@@ -32,7 +32,7 @@ function Lab() {
 
         <p style={{margin:"0px"}}><b>Hover to discover</b></p>
         {/* <p> There is always one moment in childhood when the door opens and lets the future in ~ Graham Greene</p> */}
-        <p>Ignite your passion and chase your dreams! We are children at heart in the <b>#RishaFamily!</b></p>
+        <p>Ignite your passion and chase your dreams! We do it in the <b>#RishaFamily</b>!</p>
         <div className="container">
         <div className="img-grid lab-member">
         {members.filter(x=>x.pub=='yes').map((member) => (
