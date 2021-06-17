@@ -1,9 +1,19 @@
 import React from 'react'
 import FadeIn from 'react-fade-in';
 import styled from 'styled-components'
+import { NavLink } from 'react-bootstrap';
 import { useTable } from 'react-table'
 import {sponsors} from "../data"
 import Footer from "../Components/Footer";
+
+function NavLinkButton({
+  row: data,
+  }) { 
+    const application = data.original
+    return (
+        <NavLink href={application.link} referrerPolicy="no-referrer" target="_blank">{application.project=="Academic"?application.collaborator:application.title}</NavLink >
+    )
+}
 
 function Table({ columns, data }) {
   // Use the state and functions returned from useTable to build your UI
@@ -85,6 +95,7 @@ function Collaborators() {
           {
             Header: 'Collaborator',
             accessor: 'title',
+            Cell: NavLinkButton
           },
           {
             Header: 'Duration',
@@ -98,6 +109,7 @@ function Collaborators() {
           {
             Header: 'Collaborator',
             accessor: 'collaborator',
+            Cell: NavLinkButton
           },
           {
             Header: 'Affiliation',

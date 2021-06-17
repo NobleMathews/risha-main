@@ -248,7 +248,7 @@ function Main(){
     <AuthProvider>
     <GlobalStyle />
       <BrowserRouter >
-        <Navbar style={{ backgroundColor:  isDarkMode? "#1D1F21" : "#F5F5F5"}} sticky="top" collapseOnSelect expand="lg">
+        <Navbar variant={isDarkMode?"dark":"light"} style={{ backgroundColor:  isDarkMode? "#1D1F21" : "#F5F5F5"}} sticky="top" collapseOnSelect expand="lg">
         <Navbar.Brand href="/logo" className="d-flex flex-row justify-content-center align-items-center">
         <div className="logo-image" style={{display:"inline-block", marginRight:"15px"}}>
           {isDarkMode?
