@@ -133,7 +133,7 @@ function Join() {
       </p>
       <p>Developer Intern positions are available only for IITT students who have stellar programming skills!</p>
       <form className="cf">
-      <input type="button" className="button-check" defaultValue="Checkout Open Positions" onClick={(e)=>{e.preventDefault(); window.location.href='/open';}}/>
+      <input type="button" className="button-check" defaultValue="Open Positions" onClick={(e)=>{e.preventDefault(); window.location.href='/open';}}/>
       </form>
       </Col>
       <Col md={9} className="my-auto">
@@ -179,15 +179,19 @@ function Join() {
         <Row className={"py-2"}>If interested, please fill this form! 
       </Row>
       </Container>
-      <form className="cf">
+      <form className="cf" method={"POST"} action="https://docs.google.com/forms/d/1NFyVrt7ZnGoD0oYEb8TRB2RKmwNuc0-o6iRgsXvwG-0/formResponse" >
       <div className="half left cf">
-        <input type="text" id="input-name" name="input-name" rules="required|max:255" placeholder="Name" />
-        <input type="email" id="input-email" name="input-email" rules="required|email" placeholder="Email address" />
-        <input type="text" id="input-subject" name="input-subject" rules="required|max:455" placeholder="Subject" />
+        <input type="text" id="input-name" name="entry.1129554748" placeholder="Name" />
+        <input type="email" id="input-email" name="entry.1216214704" placeholder="Email address" />
+        <input type="text" id="input-mob" name="entry.400633797" placeholder="Mobile Number" />
+        <input type="text" id="input-ed" name="entry.410725514" placeholder="Highest level of education" />
+        <input type="text" id="input-interest" name="entry.1395231050" placeholder="Interested Position / Other"/>
+        <input type="text" id="input-cv" name="entry.1452408299" placeholder="Link to CV"/>
       </div>
       <div className="half right cf">
-        <textarea name="message" type="text" id="input-message" rules="required" name="input-message" placeholder="Message" defaultValue={""} />
-      </div>  
+        <textarea name="message" type="text" id="input-message" rules="required" name="entry.352421593" placeholder="Why are you interested in working with RISHA Lab ?" defaultValue={""} />
+        <textarea name="message" type="text" id="input-message2" rules="required" name="entry.529764944" placeholder="Please mention your past experiences in the domain of interest. Why are you qualified to work in said area ?" defaultValue={""} />
+      </div> 
       <input type="submit" className="button-join" defaultValue="Submit" id="input-submit" />
     </form>
       </Col>
