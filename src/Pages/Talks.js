@@ -56,8 +56,8 @@ function Talks() {
         {arr.map((el, i) => (
         <div key={i}>
         {/* <h2 ref={elRefs.current[i]}>{el}</h2> */}
-        <YearlyPapers year={el} docs={fdata}/>
-        <hr/>
+        <YearlyPapers year={el} docs={fdata} style={"talks"}/>
+        {/* <hr/> */}
         </div>
         ))}
 

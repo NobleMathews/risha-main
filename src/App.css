@@ -1,5 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Merriweather);
 
+.hidden {position:absolute;visibility:hidden;opacity:0;}
+
+.modal-dialog{
+  margin: 72px auto !important;
+}
+
 .my-masonry-grid {
   display: -webkit-box; /* Not needed if autoprefixing */
   display: -ms-flexbox; /* Not needed if autoprefixing */

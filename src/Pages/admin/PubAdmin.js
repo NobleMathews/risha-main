@@ -39,7 +39,7 @@ form{
 label input{
   display: none;
 }
-label{
+label:not(.btn){
   display: block;
   width: 30px;
   height: 30px;
@@ -49,7 +49,6 @@ label{
   font-weight: bold;
   font-size: 32px;
 }
-
 label span{
   display: inline-block;
   vertical-align:top;

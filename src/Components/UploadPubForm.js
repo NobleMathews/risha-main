@@ -187,7 +187,8 @@ const UploadForm = ({setSelectedOpt,selectedOpt,publications}) =>{
               <input type="text" className="form-control" id="venueKeeper" name="text_img" onChange={event => setImgText(event.target.value)} value={imgText} placeholder="Image link" readOnly/>
               <small className="text-muted unselectable">Use Checkbox if you want to bypass new image upload - adding an external url for image is disabled contact admin to enable</small>
           </div>
-          <input type="checkbox" onChange={event => setBypass(!imgBypass)} checked={imgBypass} className="form-check-input" id="exampleCheck1"/>
+          <input type="checkbox" onChange={event => setBypass(!imgBypass)} checked={imgBypass} className="form-check-input hidden" id="exampleCheck1"name="exampleCheck1"/>
+          <label className="btn btn-outline-primary" for="exampleCheck1">Bypass field check and Submit</label>
         </div>
         <div className="output">
           { error && <div className="error">{ error }</div>}

@@ -8,7 +8,7 @@ import Masonry from 'react-masonry-css'
 import MainModal from '../Components/ModalM';
 import FeatPub from '../Pages/FeatPub';
 import FadeIn from 'react-fade-in';
-import { FaGithub, FaTwitter, FaFacebook } from 'react-icons/fa';
+import { FaGithub, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { sponsors } from "../data"
 
 const breakpointColumnsObj = {
@@ -264,9 +264,9 @@ function Main() {
                 <div className="p-4">
                   <h4 className="font-italic">Find us on</h4>
                   <ol className="list-unstyled">
-                    <li><a href="#"><FaGithub /> GitHub</a></li>
-                    <li><a href="#"><FaTwitter /> Twitter</a></li>
-                    <li><a href="#"><FaFacebook /> Facebook</a></li>
+                    <li><a href="https://twitter.com/rishalab"><FaTwitter /> Twitter</a></li>
+                    <li><a href="https://www.youtube.com/channel/UCcetB0OV3W1iUK69JRHHLTw"><FaYoutube /> Youtube</a></li>
+                    <li><a href="https://github.com/RISHA-LAB-IITT"><FaGithub /> GitHub</a></li>
                   </ol>
                 </div>
                 {/* <div className="p-4 mb-3 mylight rounded">

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import {authors} from "../data"
 import {Link} from 'react-router-dom';
 
-const YearlyPapers = ({year,docs}) =>{
+const YearlyPapers = ({year,docs,style}) =>{
     return (
         <>
         {docs && docs
@@ -15,7 +15,7 @@ const YearlyPapers = ({year,docs}) =>{
           <div className="col-3 my-3">
             <motion.img src={doc.url} alt="publication_img"
             className="img-fluid"
-            style={{width:"100%",height:"150px", backgroundColor:"white", borderRadius:"10px"}}
+            style={{width:"100%",height:style=="talks"?"":"150px", backgroundColor:"white", borderRadius:"10px"}}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1 }}

@@ -46,7 +46,7 @@ function Logo() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
             />
-        <figcaption style={{bottom:"25px", position:"fixed", left:"25px"}}>Designed by <a href="/info/noble">Noble</a></figcaption>
+        <figcaption style={{bottom:"25px", position:"fixed", left:"25px"}}>Website and Logo designed by <a href="/info/noble">Noble</a></figcaption>
         </figure>
         </Col>
         <Col>
