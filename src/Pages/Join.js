@@ -4,8 +4,6 @@ import Footer from "../Components/Footer";
 import {Row,Container,Col} from 'react-bootstrap';
 import img from "../assets/logoRecruit.png";
 import { motion } from 'framer-motion';
-import kwesforms from 'kwesforms';
-kwesforms.init();
 function Join() {
   return (
     <>
