@@ -55,6 +55,7 @@
     "remark-gfm": "^1.0.0",
     "styled-components": "^5.2.0",
     "styled-theming": "^2.2.0",
+    "tabletop": "^1.6.3",
     "use-dark-mode": "^2.3.1",
     "web-vitals": "^0.2.4"
   },
