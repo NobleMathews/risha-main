@@ -127,12 +127,13 @@ function Join() {
   </div>
 </div>
       <p className="mt-4">
-      We, at the RISHA Lab aspire to work to the best of our abilities and currently have multiple open positions for broadly in the areas of Software Engineering, Educational Technologies and Human-Computer Interaction! Have a look at RISHA Lab Open House video (2020) and Core Principles to understand who we are, what we do, what you can do! <a href="https://docs.google.com/spreadsheets/d/1K8raZO0wWKfOOHuKxoNxvQwgZABIPoXCMe6hN-Z0Zus/edit?usp=sharing" referrerPolicy="no-referrer" target="_blank">Here</a> are some broad project ideas and you can propose your own!!! 
+      We, at the RISHA Lab aspire to work to the best of our abilities and currently have multiple open positions for broadly in the areas of Software Engineering, Educational Technologies and Human-Computer Interaction! Have a look at RISHA Lab Open House video (2020) and Core Principles to understand who we are, what we do, what you can do! Checkout our publications and research agenda to get an idea of some of our work!
+      {/* <a href="https://docs.google.com/spreadsheets/d/1K8raZO0wWKfOOHuKxoNxvQwgZABIPoXCMe6hN-Z0Zus/edit?usp=sharing" referrerPolicy="no-referrer" target="_blank">Here</a> are some broad project ideas and you can propose your own!!!  */}
       </p>
       <p>Developer Intern positions are available only for IITT students who have stellar programming skills!</p>
-      <form className="cf">
+      {/* <form className="cf">
       <input type="button" className="button-check" defaultValue="Open Positions" onClick={(e)=>{e.preventDefault(); window.location.href='/open';}}/>
-      </form>
+      </form> */}
       </Col>
       <Col md={9} className="my-auto">
         {/* https://theconfuzedsourcecode.wordpress.com/2019/11/11/you-may-restfully-submit-to-your-google-forms/ */}

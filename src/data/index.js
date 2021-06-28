@@ -79,37 +79,6 @@ export const members = [
   },
   {
     pub:'yes',
-    key: 'dheeraj',
-    value: 4,
-    email:'cs17b028@iittp.ac.in',
-    title: 'Dheeraj Vagavolu',
-    desc: 'Source Code Representation',
-    links:`
-    LinkedIn [https://www.linkedin.com/in/v-dheeraj-98a2b9166]
-    Github [https://github.com/dheerajrox]
-
-    ` 
-  },
-  {
-    pub: 'no',
-    key: 'kowndinya',
-    value: 4,
-    email:'cs17b032@iittp.ac.in',
-    title: 'Kowndinya Boyalakuntla',
-    desc: '',
-    links:'' 
-  },
-  {
-    pub: 'no',
-    key: 'karthik',
-    value: 4,
-    email:'cs17b026@iittp.ac.in',
-    title: 'Karthik Chandra',
-    desc: '',
-    links:'' 
-  },
-  {
-    pub:'yes',
     key: 'mahendran',
     value: 3,
     email:'cs19m008@iittp.ac.in',
@@ -122,79 +91,6 @@ export const members = [
     Twitter [https://twitter.com/mahendran_kct]
     ORCiD [https://orcid.org/0000-0002-5653-7187]
     ` 
-  },
-  {
-    pub:'yes',
-    key: 'rishitha',
-    value: 4,
-    email:'cs17b014@iittp.ac.in',
-    title: 'K Rishitha ',
-    desc: 'API Deprecation',
-    links:`
-    LinkedIn [https://www.linkedin.com/in/rishitha-kalicheti-0176a0179]
-    Google Scholar [https://scholar.google.com/citations?user=JUUB4ekAAAAJ&hl=en]
-    Github [https://github.com/rishitha957]
-    Research Gate [https://www.researchgate.net/profile/Rishitha-Kalicheti]
-    `, 
-  },
-  {
-    pub:'yes',
-    key: 'aparna',
-    value: 4,
-    email:'cs17b005@iittp.ac.in',
-    title: 'Aparna Vadlamani',
-    desc: 'API Deprecation',
-    links:`
-    LinkedIn [https://www.linkedin.com/in/aparna-vadlamani-315227192]
-    Github [https://github.com/aparnavadlamani]
-    Twitter [https://twitter.com/aparna25v]
-    ResearchGate [https://www.researchgate.net/profile/Aparna-Vadlamani]
-    ` 
-  },
-  {
-    pub: 'no',
-    key: 'ashutosh',
-    value: 4,
-    email:'cs17b007@iittp.ac.in',
-    title: 'Ashutosh Rajput',
-    desc: '',
-    links:'' 
-  },
-  {
-    pub: 'no',
-    key: 'nakshatra',
-    value: 4,
-    email:'cs17b020@iittp.ac.in',
-    title: 'Nakshatra Gupta',
-    desc: '',
-    links:'' 
-  },
-  {
-    pub: 'no',
-    key: 'deep',
-    value: 4,
-    email:'cs17b011@iittp.ac.in',
-    title: 'Deep Ghadiyali',
-    desc: '',
-    links:'' 
-  },
-  {
-    pub: 'no',
-    key: 'abhishek',
-    value: 4,
-    email:'cs17b002@iittp.ac.in',
-    title: 'Abhishek Kumar',
-    desc: '',
-    links:'' 
-  },
-  {
-    pub: 'no',
-    key: 'tejasva',
-    value: 4,
-    email:'cs17b027@iittp.ac.in',
-    title: 'Tejasva Motsara',
-    desc: '',
-    links:'' 
   },
   {
     pub: 'yes',
@@ -277,11 +173,115 @@ export const alumini = [
     links:''
   },
   {
+    pub:'yes',
+    key: 'dheeraj',
+    value: 4,
+    email:'cs17b028@iittp.ac.in',
+    title: 'Dheeraj Vagavolu',
+    desc: '↠ Masters at University of Waterloo, Canada',
+    links:`
+    LinkedIn [https://www.linkedin.com/in/v-dheeraj-98a2b9166]
+    Github [https://github.com/dheerajrox]
+
+    ` 
+  },
+  {
+    pub: 'no',
+    key: 'kowndinya',
+    value: 4,
+    email:'cs17b032@iittp.ac.in',
+    title: 'Kowndinya Boyalakuntla',
+    desc: '',
+    links:'' 
+  },
+  {
+    pub: 'no',
+    key: 'karthik',
+    value: 4,
+    email:'cs17b026@iittp.ac.in',
+    title: 'Karthik Chandra',
+    desc: '',
+    links:'' 
+  },
+  {
+    pub:'yes',
+    key: 'rishitha',
+    value: 4,
+    email:'cs17b014@iittp.ac.in',
+    title: 'K Rishitha ',
+    desc: '↠ Software developer at UBS, Pune',
+    links:`
+    LinkedIn [https://www.linkedin.com/in/rishitha-kalicheti-0176a0179]
+    Google Scholar [https://scholar.google.com/citations?user=JUUB4ekAAAAJ&hl=en]
+    Github [https://github.com/rishitha957]
+    Research Gate [https://www.researchgate.net/profile/Rishitha-Kalicheti]
+    `, 
+  },
+  {
+    pub:'yes',
+    key: 'aparna',
+    value: 4,
+    email:'cs17b005@iittp.ac.in',
+    title: 'Aparna Vadlamani',
+    desc: '↠ SDE at Reliance Jio',
+    links:`
+    LinkedIn [https://www.linkedin.com/in/aparna-vadlamani-315227192]
+    Github [https://github.com/aparnavadlamani]
+    Twitter [https://twitter.com/aparna25v]
+    ResearchGate [https://www.researchgate.net/profile/Aparna-Vadlamani]
+    ` 
+  },
+  {
+    pub: 'no',
+    key: 'ashutosh',
+    value: 4,
+    email:'cs17b007@iittp.ac.in',
+    title: 'Ashutosh Rajput',
+    desc: '↠ Civil Services',
+    links:'' 
+  },
+  {
+    pub: 'no',
+    key: 'nakshatra',
+    value: 4,
+    email:'cs17b020@iittp.ac.in',
+    title: 'Nakshatra Gupta',
+    desc: '',
+    links:'' 
+  },
+  {
+    pub: 'no',
+    key: 'deep',
+    value: 4,
+    email:'cs17b011@iittp.ac.in',
+    title: 'Deep Ghadiyali',
+    desc: '↠ Software Engineer',
+    links:'' 
+  },
+  {
+    pub: 'no',
+    key: 'abhishek',
+    value: 4,
+    email:'cs17b002@iittp.ac.in',
+    title: 'Abhishek Kumar',
+    desc: '',
+    links:'' 
+  },
+  {
+    pub: 'no',
+    key: 'tejasva',
+    value: 4,
+    email:'cs17b027@iittp.ac.in',
+    title: 'Tejasva Motsara',
+    desc: '',
+    links:'' 
+  },
+  {
     key: 'vartika',
     value: 3,
     email:'cs18m016@iittp.ac.in',
     title: 'Vartika Agrahari',
-    desc: '↠ Factset', 
+    desc: '↠ ML Engineer at Factset Systems Ltd, Hyderabad', 
     links:''
   },
   {
@@ -289,7 +289,15 @@ export const alumini = [
     value: 4,
     email:'cs16b015@iittp.ac.in',
     title: 'Vaishali Kamal Khanve', 
-    desc: '', 
+    desc: '↠ Samsung R&D Institute Noida', 
+    links:''  
+  },
+  {
+    key: 'nikhil',
+    value: 4,
+    email:'tee15b014@iittp.ac.in',
+    title: 'Nikhil Sharma', 
+    desc: '↠  Senior Software Engineer at Envestnet Yodlee', 
     links:''  
   },
   {
@@ -305,7 +313,7 @@ export const alumini = [
     value: 4,
     email:'cs16b026@iittp.ac.in',
     title: 'Sangle Shubham Rajendra',
-    desc: '', 
+    desc: '↠ Platform Security Engineer, Versa-Networks', 
     links:''  
      
   },
@@ -314,7 +322,7 @@ export const alumini = [
     value: 4,
     email:'cs16b013@iittp.ac.in',
     title: 'K Saran Teja Reddy',
-    desc: '', 
+    desc: '↠ Software Engineer', 
     links:''
        
   },
@@ -331,7 +339,7 @@ export const alumini = [
     value: 4,
     email:'cs16b017@iittp.ac.in',
     title: 'Sandeep Muvva',
-    desc: '', 
+    desc: '↠ IT Software Engineer at UBS', 
     links:'' 
       
   }

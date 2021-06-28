@@ -5,6 +5,7 @@ import slamCoverl from './slamimg/border2l.png'
 import FadeIn from 'react-fade-in';
 import Footer from "../Components/Footer";
 import Tabletop from "tabletop";
+import {Spinner} from "react-bootstrap";
 
 export default function Slam() {
 	// const firestore = useFirestore();
@@ -54,7 +55,7 @@ export default function Slam() {
   return (
 	<>
 	<Section>
-	{data[iSlam] &&
+	{false &&
 	<div className="container">
 		{/* <div className="row">
         <h1>Woof</h1>
@@ -124,6 +125,11 @@ export default function Slam() {
         </div>
 		</div>
 	</div>
+	}
+	{!data[iSlam] &&
+	  <Spinner animation="border" role="status">
+		<span className="sr-only">Loading...</span>
+	  </Spinner>
 	}
 	</Section>
 	<Footer/>
