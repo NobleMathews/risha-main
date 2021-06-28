@@ -118,46 +118,9 @@ hr {
 
   --color-outline: rgba(0,125,250,0.6);
 
-  body.light {
-    --color-highlight:#ddd;
-    --color-text: #1d1d1d;
-    --color-text-2: #1d1d1d;
-    --color-text-3: #696969;
-    --color-white: #ffffff;
-    --color-nav-bar: rgba(255, 255, 255, 0.7);
-    --color-nav-border: rgba(200, 200, 200, 0.7);
-    --color-category-button: #fff;
-    --color-category-button2: #fdffbc;
-    --color-background: #f2f2f2;
-    --color-post-background: #ffffff;
-    --color-card: #ffffff;
-    --color-code: #f2f2f2;
-    --color-code-block: #fafafa;
-    --color-code-highlight: rgba(0, 0, 0, 0.05);
-    --color-code-highlight-border: rgba(0, 0, 0, 0.2);
-    --color-gray-1: #f2f2f2;
-    --color-gray-2: #e0e0e0;
-    --color-gray-3: #d1d1d1;
-    --color-gray-4: #868686;
-    --color-gray-5: #6e6e6e;
-    --color-gray-6: #696969;
-    --color-divider: rgba(0, 0, 0, 0.15);
-    --color-dimmed: rgba(0, 0, 0, 0.15);
-    --color-floating-button: rgba(255, 255, 255, 0.7);
-    --color-floating-button-hover: rgba(50, 50, 50, 0.7);
-    --color-floating-button-border: rgba(230, 230, 230, 0.7);
-    --color-floating-button-border-hover: rgba(255, 255, 255, 0.2);
-    --color-floating-button-text: #202020;
-    --color-floating-button-text-hover: #f2f2f2;
-    --color-floating-button-shadow: rgba(0, 0, 0, 0.2);
-    --color-floating-button-shadow-hover: rgba(0, 0, 0, 0.4);
-    --color-blue: #0066cc;
-    --color-icon: #2c2c2c;
-    --dark-obj: none;
-    --light-obj: block;
-  }
-
-  body.dark {
+  ${props=>props.theme.mode === "dark" && 
+  `
+  body {
     --color-highlight:#000;
     --color-text: #e6e6e6;
     --color-text-2: #d1d1d1;
@@ -196,6 +159,48 @@ hr {
     --light-obj: none;
     /* --font-weight-bold: 600; */
   }
+  `}
+  ${props=>props.theme.mode != "dark" && 
+  `
+  body {
+    --color-highlight:#ddd;
+    --color-text: #1d1d1d;
+    --color-text-2: #1d1d1d;
+    --color-text-3: #696969;
+    --color-white: #ffffff;
+    --color-nav-bar: rgba(255, 255, 255, 0.7);
+    --color-nav-border: rgba(200, 200, 200, 0.7);
+    --color-category-button: #fff;
+    --color-category-button2: #fdffbc;
+    --color-background: #f2f2f2;
+    --color-post-background: #ffffff;
+    --color-card: #ffffff;
+    --color-code: #f2f2f2;
+    --color-code-block: #fafafa;
+    --color-code-highlight: rgba(0, 0, 0, 0.05);
+    --color-code-highlight-border: rgba(0, 0, 0, 0.2);
+    --color-gray-1: #f2f2f2;
+    --color-gray-2: #e0e0e0;
+    --color-gray-3: #d1d1d1;
+    --color-gray-4: #868686;
+    --color-gray-5: #6e6e6e;
+    --color-gray-6: #696969;
+    --color-divider: rgba(0, 0, 0, 0.15);
+    --color-dimmed: rgba(0, 0, 0, 0.15);
+    --color-floating-button: rgba(255, 255, 255, 0.7);
+    --color-floating-button-hover: rgba(50, 50, 50, 0.7);
+    --color-floating-button-border: rgba(230, 230, 230, 0.7);
+    --color-floating-button-border-hover: rgba(255, 255, 255, 0.2);
+    --color-floating-button-text: #202020;
+    --color-floating-button-text-hover: #f2f2f2;
+    --color-floating-button-shadow: rgba(0, 0, 0, 0.2);
+    --color-floating-button-shadow-hover: rgba(0, 0, 0, 0.4);
+    --color-blue: #0066cc;
+    --color-icon: #2c2c2c;
+    --dark-obj: none;
+    --light-obj: block;
+  }
+  `}
 }
 
 *:focus:not(:focus-visible) {
@@ -227,10 +232,10 @@ function getInitialTheme(){
 
 function Main(){
   const [isDarkMode, setIsDarkMode] = useState(getInitialTheme);
-  const darkMode = useDarkMode(isDarkMode, {classNameDark:"dark",classNameLight:"light"});
   useEffect(()=>{
     storage.setItem('theme',isDarkMode);
   },[isDarkMode]);
+  // var darkMode = useDarkMode(isDarkMode, {classNameDark:"dark",classNameLight:"light"});
   var theme = isDarkMode?{device: {
     xs: '419px',
     sm: '767px',
@@ -262,9 +267,10 @@ function Main(){
         <Navbar.Collapse id="responsive-navbar-nav">
           <NavbarL/>
           <div className="mr-auto navbar-nav"></div>
+          {/* darkMode.toggle(e) */}
           <Nav>
             <DarkModeToggle
-              onChange={e => { setIsDarkMode(e); darkMode.toggle(e)}}
+              onChange={e => { setIsDarkMode(e);}}
               checked={isDarkMode}
               size={60}
             />
