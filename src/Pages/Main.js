@@ -133,7 +133,7 @@ function Main() {
                       <Col className={"border py-2"}><b>Current Research Areas :</b> Empirical Software Engineering, Modernizing legacy code, Novel Source Code Representations, Semantic Code Search, Code Smells, Summarization, Software Documentation, Architecture, Quality, Cross-Project Learning, Bug Localization, Knowledge Graphs,, AI for SE, SE for AI, Energy-Aware Software Engineering and Tools</Col>
                       <Col className={"border py-2"}><b>Current Research Areas :</b> Educational Technologies, Learning Analytics, Personalized Learning, Gamification, Ontologies, Virtual & Augmented Reality, Virtual Labs, User Interfaces, Human Computer Interaction, Usability </Col>
                     </Row>
-                    <Row className={"py-2"}>Read more : <a style={{padding:"0px 10px"}} href="https://drive.google.com/file/d/1owGFJEfal-J9wRkIIi1N4Ybkp7WSbGAM/view?usp=sharing" target="_blank" referrerPolicy="no-referrer">Research Statement</a></Row>
+                    <Row className={"py-2"}>Read more : <a style={{padding:"0px 10px"}} href="https://drive.google.com/file/d/1owGFJEfal-J9wRkIIi1N4Ybkp7WSbGAM/view?usp=sharing" target="_blank" referrerPolicy="no-referrer">Research Agenda</a></Row>
                   </Container>
                   </div>
                   <hr />
