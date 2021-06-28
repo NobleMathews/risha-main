@@ -55,7 +55,7 @@ export default function Slam() {
   return (
 	<>
 	<Section>
-	{false &&
+	{data[iSlam] &&
 	<div className="container">
 		{/* <div className="row">
         <h1>Woof</h1>
