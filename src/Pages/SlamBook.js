@@ -14,7 +14,22 @@ export default function Slam() {
 	// 	let isSubscribed = true;
 	const [data, setData] = useState([]);
 	const [iSlam, setSlam] = useState(0);
-
+	const [isMobile, setIsMobile] = useState(false)
+ 
+	//choose the screen size 
+	const handleResize = () => {
+	  if (window.innerWidth < 720) {
+		  setIsMobile(true)
+	  } else {
+		  setIsMobile(false)
+	  }
+	}
+	
+	// create an event listener
+	useEffect(() => {
+	  window.addEventListener("resize", handleResize)
+	})
+	
 	const handler = (index) => {
 		setSlam(index);
 	}
@@ -45,18 +60,22 @@ export default function Slam() {
         <h1>Woof</h1>
 		</div> */}
         <div className="row">
-		<div className="col-9">
-        <h3>The Risha Slambook</h3>
+		<div className="col-8">
+        <h3>The RISHA Slambook</h3>
 		<hr/>
 		<FadeIn>
-		<div className="d-flex bd-highlight align-items-center">
+		<div style={{textAlign:"left"}} className={!isMobile?"d-flex bd-highlight align-items-center":""}>
+		<div  className="p-2 foto" style={{background:`#fff url(http://drive.google.com/uc?export=view&id=${data[iSlam]["Your current photo"].split("?id=")[1]}) no-repeat center`,transform:`rotate(${random}deg) translate(${random2}px, ${random3}px)`}}></div>
 		<div className="p-2 flex-grow-1" style={{textAlign:"left"}}>
 		<p><b>Name: </b>{data[iSlam]["Your Name"]}</p>
 		<p><b>Birth Date: </b>{data[iSlam]["Your date of birth"]}</p>
+		<p><b>Course IITT: </b>{data[iSlam]["Course you were enrolled in"]} {data[iSlam]["Year of passing out"]}</p>
 		<p><b>Current Location: </b>{data[iSlam]["Career path followed after IITT"]}</p>
 		</div>
-		<div  className="p-2 foto" style={{background:`#fff url(http://drive.google.com/uc?export=view&id=${data[iSlam]["Your current photo"].split("?id=")[1]}) no-repeat center`,transform:`rotate(${random}deg) translate(${random2}px, ${random3}px)`}}></div>
 		</div>
+		{/* </div>
+		<div  className="p-2 foto" style={{background:`#fff url(http://drive.google.com/uc?export=view&id=${data[iSlam]["Your current photo"].split("?id=")[1]}) no-repeat center`,transform:`rotate(${random}deg) translate(${random2}px, ${random3}px)`}}></div>
+		</div> */}
 		{/* <div className="d-flex bd-highlight align-items-center"> */}
 		<>
 		<div className="sticky-container mb-3">
@@ -94,7 +113,7 @@ export default function Slam() {
 		</>
 		</FadeIn>
 		</div>
-        <div className="col-3">
+        <div className="col-4">
         <h3>Index</h3>
         <hr/>
 		{data.map((item, i) => (
@@ -123,17 +142,21 @@ export default function Slam() {
 	content:"↠ ";
  }
 
- .col-9{
-    border: 30px solid transparent;
-    padding: 15px;
-    border-image: url(${slamCoverr}) 320 round;
- }
 
- .col-3{
-    border: 30px solid transparent;
-    padding: 15px;
-    border-image: url(${slamCoverl}) 320 round;
- }
+ @media screen and (min-width: 500px) {
+	.col-8{
+		border: 30px solid transparent;
+		padding: 15px;
+		border-image: url(${slamCoverr}) 320 round;
+	 }
+	
+	 .col-4{
+		border: 30px solid transparent;
+		padding: 15px;
+		border-image: url(${slamCoverl}) 320 round;
+	 }
+  }
+
  .foto {
     background: #fff;
     width: 150px;
