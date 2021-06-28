@@ -79,7 +79,7 @@ function Lab() {
         </div>
         </div>
         <hr/>
-        <h5>Alumini</h5>
+        <h5>Alumni</h5>
         <ul>
         {alumini.map((member) => (
           <li>
