@@ -6,6 +6,7 @@ import FadeIn from 'react-fade-in';
 import Footer from "../Components/Footer";
 import Tabletop from "tabletop";
 import {Spinner} from "react-bootstrap";
+import _ from 'lodash';
 
 export default function Slam() {
 	// const firestore = useFirestore();
@@ -14,7 +15,7 @@ export default function Slam() {
 	// useEffect(()=>{
 	// 	let isSubscribed = true;
 	const [data, setData] = useState([]);
-	const [iSlam, setSlam] = useState(0);
+	const [iSlam, setSlam] = useState(null);
 	const [isMobile, setIsMobile] = useState(false)
  
 	//choose the screen size 
@@ -28,7 +29,9 @@ export default function Slam() {
 	
 	// create an event listener
 	useEffect(() => {
-	  window.addEventListener("resize", handleResize)
+		['resize','load'].forEach( evt => 
+	  window.addEventListener(evt, handleResize)
+		);
 	})
 	
 	const handler = (index) => {
@@ -40,7 +43,12 @@ export default function Slam() {
 		  key: "1LNOpfed9Ua83C9CdnlvBRHBzJSqcjo_2P88qkdXogRA",
 		  simpleSheet: true
 		})
-		  .then((data) => setData(data))
+		  .then((data) => {
+			setSlam(data[Math.floor(Math.random() * data.length)]);
+			const fdata = _.orderBy(data,'Year of pas	sing out','desc');
+			const gdata = _.groupBy(fdata,"Course you were enrolled in");
+			return setData(gdata)
+			})
 		  .catch((err) => console.warn(err));
 	  }, []);
 
@@ -55,7 +63,7 @@ export default function Slam() {
   return (
 	<>
 	<Section>
-	{data[iSlam] &&
+	{iSlam &&
 	<div className="container">
 		{/* <div className="row">
         <h1>Woof</h1>
@@ -66,47 +74,47 @@ export default function Slam() {
 		<hr/>
 		<FadeIn>
 		<div style={{textAlign:"left"}} className={!isMobile?"d-flex bd-highlight align-items-center":""}>
-		<div  className="p-2 foto" style={{background:`#fff url(http://drive.google.com/uc?export=view&id=${data[iSlam]["Your current photo"].split("?id=")[1]}) no-repeat center`,transform:`rotate(${random}deg) translate(${random2}px, ${random3}px)`}}></div>
+		<div  className="p-2 foto" style={{background:`#fff url(http://drive.google.com/uc?export=view&id=${iSlam["Your current photo"].split("?id=")[1]}) no-repeat center`,transform:`rotate(${random}deg) translate(${random2}px, ${random3}px)`}}></div>
 		<div className="p-2 flex-grow-1" style={{textAlign:"left"}}>
-		<p><b>Name: </b>{data[iSlam]["Your Name"]}</p>
-		<p><b>Birth Date: </b>{data[iSlam]["Your date of birth"]}</p>
-		<p><b>Course IITT: </b>{data[iSlam]["Course you were enrolled in"]} {data[iSlam]["Year of passing out"]}</p>
-		<p><b>Current Location: </b>{data[iSlam]["Career path followed after IITT"]}</p>
+		<p><b>Name: </b>{iSlam["Your Name"]}</p>
+		<p><b>Birth Date: </b>{iSlam["Your date of birth"]}</p>
+		<p><b>Course IITT: </b>{iSlam["Course you were enrolled in"]} {iSlam["Year of passing out"]}</p>
+		<p><b>Current Location: </b>{iSlam["Career path followed after IITT"]}</p>
 		</div>
 		</div>
 		{/* </div>
-		<div  className="p-2 foto" style={{background:`#fff url(http://drive.google.com/uc?export=view&id=${data[iSlam]["Your current photo"].split("?id=")[1]}) no-repeat center`,transform:`rotate(${random}deg) translate(${random2}px, ${random3}px)`}}></div>
+		<div  className="p-2 foto" style={{background:`#fff url(http://drive.google.com/uc?export=view&id=${iSlam["Your current photo"].split("?id=")[1]}) no-repeat center`,transform:`rotate(${random}deg) translate(${random2}px, ${random3}px)`}}></div>
 		</div> */}
 		{/* <div className="d-flex bd-highlight align-items-center"> */}
 		<>
 		<div className="sticky-container mb-3">
-		{ data[iSlam]["How would you summarize your time here in one line ?"] &&
-		<div className="sticky" style={{transform:`rotate(${randomNumber(-3,3)}deg)`,filter:`hue-rotate(${randomNumber(1,720)}deg)`, width:"auto", height:"auto"}} role="textbox"> 📌 <br/> {data[iSlam]["How would you summarize your time here in one line ?"]}</div>
+		{ iSlam["How would you summarize your time here in one line ?"] &&
+		<div className="sticky" style={{transform:`rotate(${randomNumber(-3,3)}deg)`,filter:`hue-rotate(${randomNumber(1,720)}deg)`, width:"auto", height:"auto"}} role="textbox"> 📌 <br/> {iSlam["How would you summarize your time here in one line ?"]}</div>
 		}
-		{ data[iSlam]["Sirs Comment"] &&
-		<div className="sticky" style={{transform:`rotate(${randomNumber(-3,3)}deg)`,filter:`hue-rotate(${randomNumber(1,720)}deg)`, width:"auto", height:"auto"}} role="textbox"> <b>Sir's Comments</b> <br/> {data[iSlam]["Sirs Comment"]}</div>
+		{ iSlam["Sirs Comment"] &&
+		<div className="sticky" style={{transform:`rotate(${randomNumber(-3,3)}deg)`,filter:`hue-rotate(${randomNumber(1,720)}deg)`, width:"auto", height:"auto"}} role="textbox"> <b>Sir's Comments</b> <br/> {iSlam["Sirs Comment"]}</div>
 		}
 		</div>
 		<div className="p-2" style={{textAlign:"left"}}>
-		{data[iSlam]["What was the most memorable thing for you as a part of Risha Lab ?"] &&
+		{iSlam["What was the most memorable thing for you as a part of Risha Lab ?"] &&
 		<>
 		<p><b>What was the most memorable thing for you as a part of Risha Lab ?</b></p>
-		<p>{data[iSlam]["What was the most memorable thing for you as a part of Risha Lab ?"]}</p>
+		<p>{iSlam["What was the most memorable thing for you as a part of Risha Lab ?"]}</p>
 		</>
-		}{data[iSlam]["Any things that you feel you got to experience only because of your time here ?"] &&
+		}{iSlam["Any things that you feel you got to experience only because of your time here ?"] &&
 		<>
 		<p><b>Any things that you feel you got to experience only because of your time here ?</b></p>
-		<p>{data[iSlam]["Any things that you feel you got to experience only because of your time here ?"]}</p>
+		<p>{iSlam["Any things that you feel you got to experience only because of your time here ?"]}</p>
 		</>
-		}{data[iSlam]["Did you enjoy your time here overall, what all inspired you and do you have any regrets of not having done something ?"] &&
+		}{iSlam["Did you enjoy your time here overall, what all inspired you and do you have any regrets of not having done something ?"] &&
 		<>
 		<p><b>Did you enjoy your time here overall, what all inspired you and do you have any regrets of not having done something ?</b></p>
-		<p>{data[iSlam]["Did you enjoy your time here overall, what all inspired you and do you have any regrets of not having done something ?"]}</p>
+		<p>{iSlam["Did you enjoy your time here overall, what all inspired you and do you have any regrets of not having done something ?"]}</p>
 		</>
-		}{data[iSlam]["Anything you would like to share with a fresher based on your experiences ?"] &&
+		}{iSlam["Anything you would like to share with a fresher based on your experiences ?"] &&
 		<>
 		<p><b>Anything you would like to share with a fresher based on your experiences ?</b></p>
-		<p>{data[iSlam]["Anything you would like to share with a fresher based on your experiences ?"]}</p>
+		<p>{iSlam["Anything you would like to share with a fresher based on your experiences ?"]}</p>
 		</>
 		}
 		</div>
@@ -117,16 +125,26 @@ export default function Slam() {
         <div className="col-4">
         <h3>Index</h3>
         <hr/>
-		{data.map((item, i) => (
-		<p key={i} className={"slamIndex"} style={{display:"block",fontWeight:"bold", cursor:"pointer"}} onClick={() => handler(i)}>{item["Your Name"]}</p>
-      	))}
+		{
+		// data.map((item, i) => (
+		Object.entries(data).sort((a,b) => b[0].localeCompare(a[0])).map(([key, value]) => {
+			return(
+			<>
+			<h6 style={{textAlign:"left", fontWeight:"bold"}} key = {key}>{key}</h6>
+			{value.map((item, i) => (
+			 <p key={i} className={"slamIndex"} style={{display:"block",fontWeight:"bold", cursor:"pointer"}} onClick={() => handler(item)}>{item["Your Name"]}</p>
+			))}
+			</>)
+		})
+      	// ))
+		  }
 		<hr/>
         {/* <a style={{fontWeight:"bold"}}>Enter your own experiences</a> */}
         </div>
 		</div>
 	</div>
 	}
-	{!data[iSlam] &&
+	{!iSlam &&
 	  <Spinner animation="border" role="status">
 		<span className="sr-only">Loading...</span>
 	  </Spinner>
