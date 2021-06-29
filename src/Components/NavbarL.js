@@ -6,14 +6,14 @@ import {FiLogOut} from 'react-icons/fi'
 import {projectAuth} from '../firebase/config'
 import PrivateRoute from '../firebase/PrivateRoute';
 
-function NavbarN() {
+function NavbarN(props) {
     return (
         <Nav className="mr-auto">
-            <NavLink activeClassName="nav-link active" className="nav-link" exact to="/">Home</NavLink>
-            <NavLink activeClassName="nav-link active" className="nav-link" to="/publications">Publications</NavLink>
-            <NavLink activeClassName="nav-link active" className="nav-link" to="/lab">People</NavLink>
-            <NavLink activeClassName="nav-link active" className="nav-link" to="/collaborations">Collaborations</NavLink>
-            <NavLink activeClassName="nav-link active" className="nav-link" to="/slam">SlamBook</NavLink>
+            <NavLink onClick={props.closeN} activeClassName="nav-link active" className="nav-link" exact to="/">Home</NavLink>
+            <NavLink onClick={props.closeN} activeClassName="nav-link active" className="nav-link" to="/publications">Publications</NavLink>
+            <NavLink onClick={props.closeN} activeClassName="nav-link active" className="nav-link" to="/lab">People</NavLink>
+            <NavLink onClick={props.closeN} activeClassName="nav-link active" className="nav-link" to="/collaborations">Collaborations</NavLink>
+            <NavLink onClick={props.closeN} activeClassName="nav-link active" className="nav-link" to="/slam">SlamBook</NavLink>
             {/* Shift to sirs page */}
             {/* <NavLink activeClassName="nav-link active" className="nav-link" to="/calendar">Calendar</NavLink> */}
             {/* <NavLink activeClassName="nav-link active" className="nav-link" to="/news">News</NavLink> */}
@@ -41,11 +41,13 @@ function NavbarA() {
     )
 }
 
-export default function NavbarL() {
+export default function NavbarL(props) {
     return (
         <Switch>
             <PrivateRoute path="/admin" component={NavbarA} />
-            <Route path="/" component={NavbarN} />
+            <Route path="/"   render={() => (
+                <NavbarN closeN={props.closeN}/>
+            )} />
         </Switch>
     )
 }

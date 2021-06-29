@@ -18,6 +18,11 @@ export default function Ticker() {
         documents.push({...doc.data(), id: doc.id});
       });
       if (isSubscribed){
+        documents.sort(function compare(b, a) {
+          var dateA = new Date(a.date);
+          var dateB = new Date(b.date);
+          return dateA - dateB;
+        });
       setDocument(documents);
     }
     }

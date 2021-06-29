@@ -232,6 +232,12 @@ function getInitialTheme(){
 
 function Main(){
   const [isDarkMode, setIsDarkMode] = useState(getInitialTheme);
+  const [expanded, setExpanded] = useState(false);
+
+  const closeN = () =>{
+    setTimeout(() => {setExpanded(expanded ? false : "expanded")}, 150)
+  }
+
   useEffect(()=>{
     storage.setItem('theme',isDarkMode);
   },[isDarkMode]);
@@ -253,7 +259,7 @@ function Main(){
     <AuthProvider>
     <GlobalStyle />
       <BrowserRouter >
-        <Navbar variant={isDarkMode?"dark":"light"} style={{ backgroundColor:  isDarkMode? "#1D1F21" : "#F5F5F5"}} sticky="top" collapseOnSelect expand="lg">
+        <Navbar expanded={expanded} variant={isDarkMode?"dark":"light"} style={{ backgroundColor:  isDarkMode? "#1D1F21" : "#F5F5F5"}} sticky="top" collapseOnSelect expand="lg">
         <Navbar.Brand href="/logo" className="d-flex flex-row justify-content-center align-items-center">
         <div className="logo-image" style={{display:"inline-block", marginRight:"15px"}}>
           {isDarkMode?
@@ -263,14 +269,14 @@ function Main(){
         </div>
         {/* <b style={{display:"inline-block"}}>RISHA Lab</b> */}
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => closeN()}/>
         <Navbar.Collapse id="responsive-navbar-nav">
-          <NavbarL/>
+          <NavbarL closeN={closeN}/>
           <div className="mr-auto navbar-nav"></div>
           {/* darkMode.toggle(e) */}
-          <Nav>
+          <Nav style={{padding:"10px"}}>
             <DarkModeToggle
-              onChange={e => { setIsDarkMode(e);}}
+              onChange={e => { setIsDarkMode(e);closeN()}}
               checked={isDarkMode}
               size={60}
             />
