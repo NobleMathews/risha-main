@@ -18,6 +18,16 @@ export const members = [
     ` 
   },
   {
+    pub:'no',
+    key: 'kvn',
+    value: 0,
+    email:'',
+    title: 'Kesav V. Nori',
+    desc: 'Software Engineering, Educational Technologies',
+    links:`
+     ` 
+  },
+  {
     pub:'yes',
     key: 'akhila',
     value: 1,
