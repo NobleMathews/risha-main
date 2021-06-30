@@ -9,7 +9,8 @@ import MainModal from '../Components/ModalM';
 import FeatPub from '../Pages/FeatPub';
 import FadeIn from 'react-fade-in';
 import { FaGithub, FaTwitter, FaYoutube } from 'react-icons/fa';
-import { sponsors } from "../data"
+import {BiLinkExternal} from 'react-icons/bi';
+import { sponsors } from "../data";
 
 const breakpointColumnsObj = {
   default: 4,
@@ -258,7 +259,7 @@ function Main() {
                   <a className="p-2" href="/calendar">Learning Resources</a>
                 </div> */}
                 <div className="py-4 mb-3 mylight rounded" onClick={(e) => { e.preventDefault(); window.location.href = '/news'; }} style={{ cursor: "pointer", paddingRight:"10px" }}>
-                  <h4 className="font-italic">News</h4>
+                  <h4 className="font-italic">News - <BiLinkExternal/></h4>
                   <Ticker />
                 </div>
                 <div className="p-4">
