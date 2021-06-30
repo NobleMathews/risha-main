@@ -19,7 +19,7 @@ function NavbarN(props) {
             {/* <NavLink activeClassName="nav-link active" className="nav-link" to="/news">News</NavLink> */}
             {/* <NavLink activeClassName="nav-link active" className="nav-link" to="/gallery">Gallery</NavLink> */}
             {/* <NavLink activeClassName="nav-link active" className="nav-link" to="/open">Open Positions</NavLink> */}
-            <NavLink activeClassName="nav-link active" className="nav-link" to="/join">Join Us</NavLink>
+            <NavLink onClick={props.closeN} activeClassName="nav-link active" className="nav-link" to="/join">Join Us</NavLink>
         </Nav>
     )
 }
