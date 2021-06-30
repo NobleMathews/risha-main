@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { ProfileImage } from './profile-image'
 import {Canvas} from './canvas'
-import imageUrl from '../../assets/team/sridhar.jpg'
 import { headerHeight } from '../body/styleguide/breakpoints'
 import {LogoAsci} from './test'
 
@@ -26,7 +25,7 @@ export const Header = () =>
         {/* <LogoAsci/> */}
         <div id="cloud-intro"></div>
       </StyledBackground>
-      <ProfileImage imageUrl={imageUrl} />
+      <ProfileImage imageUrl={'/images/team/sridhar.jpg'} />
     </StyledHeader>
     </>
   )

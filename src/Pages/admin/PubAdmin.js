@@ -98,6 +98,9 @@ const PubAdmin = () => {
     <Dropdown options={["New"].concat(_.map(publications, 'title'))} onChange={event=>{setSelectedOpt(event.value)}} value={selectedOpt} placeholder="Select an option" />
     {(publications&&selectedOpt!=="New") && <UploadForm setSelectedOpt={setSelectedOpt} selectedOpt={selectedOpt} publications={publications}/>}
     {(publications&&selectedOpt==="New") && <UploadForm setSelectedOpt={setSelectedOpt} selectedOpt={selectedOpt}/>}
+    {selectedOpt!=="New"&&
+      <button className="btn mb-3 btn-primary btn-danger" onClick={()=>{firestore.deleteDocument("publications",_.find(publications,['title',selectedOpt]).id);setSelectedOpt("New")}}>Delete</button>
+    }
     </Title>
     <Footer/>
     </>

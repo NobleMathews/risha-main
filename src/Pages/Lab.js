@@ -50,19 +50,21 @@ function Lab() {
                     }}
                   >
                     <div className="img-wrap hover-switch">
-                      {/* <img className="rounded" src={require("../assets/team/"+member.key+".jpg").default} alt="thumb" style={{width:"100%",height:"auto"}}/> */}
+                      {/* <img className="rounded" src={require("/images/team/"+member.key+".jpg").default} alt="thumb" style={{width:"100%",height:"auto"}}/> */}
 
                       <motion.img
                         className="rounded"
-                        src={require("../assets/team/" + member.key + ".jpg").default} alt="thumb" style={{ width: "100%", height: "auto" }} initial={{ opacity: 0 }}
+                        src={"/images/team/" + member.key + ".jpg"} alt="thumb" style={{ width: "100%", height: "auto" }} initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.8 }}
+                        onError={ (e) => e.target.src = '/images/team/default.jpg' }
                       />
                       <motion.img
                         className="rounded"
-                        src={require("../assets/team/b_" + member.key + ".jpg").default} alt="thumb" style={{ width: "100%", height: "auto" }} initial={{ opacity: 0 }}
+                        src={"/images/team/b_" + member.key + ".jpg"} alt="thumb" style={{ width: "100%", height: "auto" }} initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.8 }}
+                        onError={ (e) => e.target.src = '/images/team/default.jpg' }
                       />
                     </div>
                   </Link>

@@ -26,7 +26,8 @@ class authModal extends Component {
       <div className="modal-content mylight" onClick={e => e.stopPropagation()}>
       <FadeIn>
         <div className="modal-header">
-          <img className="rounded-circle mx-auto" src={require("../assets/team/"+author.key+".jpg").default} alt="thumb" style={{height:"70px"}}/>
+          {/* require("/images/team/default.jpg").default */}
+          <img className="rounded-circle mx-auto" src={"/images/team/"+author.key+".jpg"} alt="thumb" style={{height:"70px"}} onError={ (e) => e.target.src = '/images/team/default.jpg' }/>
             <div style={{flexDirection:"column"}}>
               <h5 className="modal-title">{author.title}</h5>
               <h6 className="muted">{`${value[author.value]} ${alum}`}</h6>
@@ -49,7 +50,7 @@ class authModal extends Component {
           </div>
           </FadeIn>
           <div className="modal-footer">
-          {author.links.split('\n')
+          {author.links?.split('\n')
           .filter(function(str) {
             return /\S/.test(str);
           })

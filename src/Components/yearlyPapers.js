@@ -38,7 +38,7 @@ const YearlyPapers = ({year,docs,style}) =>{
             </div>
             <p className="mb-0"><a className="preserveb font-weight-bold" href={doc.direct} target="_blank">{doc.title}</a></p>
             <p className="mb-1" >{doc.venue}</p>
-            <p className="mb-1" >{doc.createdAt.toDate().toDateString()}</p>
+            <p className="mb-1" >{doc.createdAt.toDate().toDateString().slice(4)}</p>
             <div className="text-muted">
             {doc.links.split(']')
           .filter(function(str) {

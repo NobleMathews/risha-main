@@ -1,6 +1,6 @@
 // key identifies file name for image and is used in every href
 // value 
-export const value=["Assistant Professor","Ph.D. Student","M.S. Student","M.Tech. Student","B.Tech. Student"] 
+export const value=["Assistant Professor","Ph.D. Student","M.S. Student","M.Tech. Student","B.Tech. Student","Collaborator"] 
 export const members = [
   {
     pub:'yes',
@@ -20,7 +20,7 @@ export const members = [
   {
     pub:'no',
     key: 'kvn',
-    value: 0,
+    value: 5,
     email:'',
     title: 'Kesav V. Nori',
     desc: 'Software Engineering, Educational Technologies',
