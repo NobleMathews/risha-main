@@ -154,7 +154,7 @@ const UploadForm = ({setSelectedOpt,selectedOpt,publications}) =>{
               selectedValues={authors_opt}
               placeholder="Author List"
             />
-            <small className="text-muted unselectable">Authors Temp</small>
+            <small className="text-muted unselectable">Authors Details</small>
         </div>
         <div className="form-group mx-auto" style={{width:"75%"}}>
             <input type="text" className="form-control" id="venueKeeper" name="venue" onChange={event => setVenue(event.target.value)} value={venue} placeholder="Venue / Conference / Journal as applicable ... " required/>

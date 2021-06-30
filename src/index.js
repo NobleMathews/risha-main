@@ -71,6 +71,12 @@ hr {
 //   content:url(${props=>props.theme.mode === "dark"? logo_dark:logo_light});
 // }
 
+.optionListContainer{
+  background-color: var(--color-background);
+}
+.search-wrapper input{
+  color: ${props=>props.theme.mode === "dark" ? "#F5F5F5":"#1D1F21"} !important;
+}
 :root {
 
   --header-height: 300px;
