@@ -5,7 +5,9 @@
 .modal-dialog{
   margin: 72px auto !important;
 }
-
+.MuiTimelineItem-content p{
+  word-break: break-all !important;
+}
 .my-masonry-grid {
   display: -webkit-box; /* Not needed if autoprefixing */
   display: -ms-flexbox; /* Not needed if autoprefixing */

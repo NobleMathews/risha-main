@@ -11,19 +11,31 @@ import TimelineContent from '@material-ui/lab/TimelineContent';
 import TimelineDot from '@material-ui/lab/TimelineDot';
 import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent';
 import Typography from '@material-ui/core/Typography';
+import { LinkPreview } from '@dhaiwat10/react-link-preview';
+import Masonry from 'react-masonry-css'
+
+const getUrls = require('get-urls');
+const breakpointColumnsObj = {
+  default: 3,
+  1200: 3,
+  800: 2,
+  500: 1
+};
 
 function Press() {
   const firestore = useFirestore();
   const [news, setDocument] = useState([]);
-   
+  const [links, setLinks] = useState([]);
   useEffect(()=>{
     let isSubscribed = true;
 
     firestore.getCollection('news',
     (snap) => {
       let documents = [];
+      let arrLinks = [];
       snap.forEach(doc => {
         documents.push({...doc.data(), id: doc.id});
+        arrLinks = arrLinks.concat(Array.from(getUrls(doc.data().desc)));
       });
       if (isSubscribed){
         documents.sort(function compare(b, a) {
@@ -32,6 +44,7 @@ function Press() {
           return dateA - dateB;
         });
       setDocument(documents);
+      setLinks(arrLinks);
     }
     }
     );
@@ -64,6 +77,16 @@ function Press() {
         // })}
         // </VerticalTimeline>
       <Timeline>
+      <Masonry
+          className="my-masonry-grid"
+          columnClassName="my-masonry-grid_column"
+        >
+      {links.map(link=>{
+        return <LinkPreview url={link}/>;
+      })
+      }
+      </Masonry>
+      <hr/>
       {news.map(news => {
         return(
         <TimelineItem key={news.id}>
