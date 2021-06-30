@@ -14,7 +14,7 @@ function Join() {
     {/* <h1 className="cfh">Contact Us</h1> */}
     <Container>
       <Row>
-      <Col md={3} className="my-auto">
+      <Col md={3}>
       <div className="reflection-container">
   <a className="reflection-grid-cell reflection-grid-cell-1" href="#" />
   <a className="reflection-grid-cell reflection-grid-cell-2" href="#" />
@@ -149,7 +149,7 @@ function Join() {
         <li>Better job/research prospects by building a strong work profile! </li>
         <li>20+ publications in top-class conferences/journals such as ICSE, FSE, MSR, EASE, CSCW, CSUR and so on (last 2 years)</li>
         <li>20+ development projects/tools - Most of our projects result in tools/software </li>
-        <li>The lab is in news for its work on using computing for society (The Hindu, NDTV, IndianExpress, Times of India, The Hans India, ETV, DD, The Hans,  and so on) - We need to have a page for press and link all articles in that page, link that page in news itself</li>
+        <li>The lab is in news for its work on using computing for society (The Hindu, NDTV, IndianExpress, Times of India, The Hans India, ETV, DD, The Hans,  and so on)</li>
         <li>International Research Collaborations (University of Waterloo)</li>
         <li>Industry Collaborations (Bosch, Accenture Labs…)</li>
         <li>We also have mini-projects in Educational Technologies and Human-Computer Interaction for around 4-6 months.</li>
