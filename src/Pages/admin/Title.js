@@ -37,7 +37,7 @@ form{
 label input{
   display: none;
 }
-label{
+label:not(.btn){
   display: block;
   width: 30px;
   height: 30px;

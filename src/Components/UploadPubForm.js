@@ -34,7 +34,7 @@ const UploadForm = ({setSelectedOpt,selectedOpt,publications}) =>{
       setAuthors(publication?publication.authors:"");
       setAuthorsOpt(publication?publication.authors.split(",").map(function (value) {
         return value.trim();
-      }):[])
+      }):[]);
       setVenue(publication?publication.venue:"");
       setImgText(publication?publication.url:"");
       setLinks(publication?publication.links:"");
