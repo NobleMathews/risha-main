@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "risha-lab-iittp"
+    "default": "risha-lab-iittp",
+    "functions": "risha-lab-server"
   }
 }
