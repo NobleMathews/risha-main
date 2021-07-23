@@ -408,6 +408,14 @@ export const sponsors = [
     title:"Accenture Labs",
     link:"https://labs.accenture.com/",
   },
+  {
+  project:"Online Facilitation of Debugging Skills through Game Based Learning",
+  duration:"July 2021 to December 2021",
+    src:"COL.jpg",
+    redirect:"/collaborations",
+    title:"Commonwealth Educational Media Centre for Asia (CEMCA)",
+    link:"https://www.cemca.org/",
+  },
   // {
   // project:"AiR: Pollution Visualizer expansion towards climate literacy",
   // duration:"May 2021 to May 2022",
