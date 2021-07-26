@@ -25,6 +25,19 @@ export const members = [
     title: 'Kesav V. Nori',
     desc: 'Software Engineering, Educational Technologies',
     links:`
+    Website [https://serc.iiit.ac.in/personal/kesav.nori]
+    LinkedIn [https://in.linkedin.com/in/kesav-nori-27671291]
+     ` 
+  },
+  {
+    pub:'no',
+    key: 'sureshjain',
+    value: 5,
+    email:'sureshjain@iittp.ac.in',
+    title: 'Suresh Jain',
+    desc: 'Civil and Environmental Engineering',
+    links:`
+      Website [https://sureshjain-com.webnode.com/]
      ` 
   },
   {
