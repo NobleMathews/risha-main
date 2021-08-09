@@ -16,7 +16,7 @@ The members of RISHA Lab are like a growing family who are there to help you and
 #### - Dheeraj
 
 <div>
-  <img src="https://raw.githubusercontent.com/NobleMathews/risha-main/master/src/Pages/_images/dheeraj1.jpg">
+  <img src="https://raw.githubusercontent.com/NobleMathews/risha-main/master/src/Pages/_images/dheeraj.jpg">
 </div>
 
   > [RISHA Lab Dinner]
