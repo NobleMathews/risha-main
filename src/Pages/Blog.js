@@ -4,6 +4,7 @@ import FadeIn from 'react-fade-in';
 import {useParams} from 'react-router-dom';
 import styled from 'styled-components';
 import Masonry from 'react-masonry-css'
+import {Image} from 'react-bootstrap';
 
 const DivB = styled.div`
 @media print {
@@ -269,18 +270,20 @@ const DivA = styled.div`
   text-transform: uppercase;
 }
 
-.cardplus__thumb {
-  height: 235px;
-  overflow: hidden;
-  background-color: #000;
-  transition: height 0.3s;
-}
-.cardplus__thumb img {
-  display: block;
-  opacity: 1;
-  transition: opacity 0.3s, transform 0.3s;
-  transform: scale(1);
-}
+// .cardplus__thumb {
+//   height: 235px;
+//   overflow: hidden;
+//   background-color: #000;
+//   transition: height 0.3s;
+// }
+// .cardplus__thumb img {
+//   display: block;
+//   opacity: 1;
+//   transition: opacity 0.3s, transform 0.3s;
+//   transform: scale(1);
+//   object-fit: cover;
+//   height: -webkit-fill-available;
+// }
 .cardplus:hover .cardplus__thumb img {
   opacity: 0.6;
 }
@@ -312,7 +315,6 @@ const DivA = styled.div`
   padding: 0 0 10px 0;
   margin: 0;
   font-size: 22px;
-  color: #000;
   font-weight: bold;
 }
 
@@ -354,8 +356,8 @@ const DivA = styled.div`
 
 const breakpointColumnsObj = {
   default: 4,
-  1100: 3,
-  700: 2,
+  1200: 3,
+  1100: 2,
   500: 1
 };
 
@@ -389,7 +391,7 @@ return (
             <article class="cardplus">
         {blogs.get(blogc).image &&
               <header class="cardplus__thumb">
-              <img src={blogs.get(blogc).image} />	
+                <Image src={blogs.get(blogc).image} fluid />
               </header>
         }
               <div class="cardplus__body">
