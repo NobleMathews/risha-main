@@ -48,7 +48,7 @@ function Talks() {
               <p>
               I have always enjoyed delivering talks and interacting with faculty, students and industry professionals in the area of Software Engineering, Educational Technologies and Computing for Society. I also deliver some talks as an ACM Eminent Speaker (https://india.acm.org/education/learning/esp/sridhar-chimalakonda). If you want me to deliver a talk, please reach out to me!
               </p>
-              <p class="lead">
+              <p className="lead">
               Disclaimer - My talks are inclined to be a bit provocative in an attempt to raise curiosity in the audience (especially students) :)  
               </p>
         </div>

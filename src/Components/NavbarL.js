@@ -14,6 +14,7 @@ function NavbarN(props) {
             <NavLink onClick={props.closeN} activeClassName="nav-link active" className="nav-link" to="/lab">People</NavLink>
             <NavLink onClick={props.closeN} activeClassName="nav-link active" className="nav-link" to="/collaborations">Collaborations</NavLink>
             <NavLink onClick={props.closeN} activeClassName="nav-link active" className="nav-link" to="/slam">SlamBook</NavLink>
+            <NavLink onClick={props.closeN} activeClassName="nav-link active" className="nav-link" to="/blogs">Blog</NavLink>
             {/* Shift to sirs page */}
             {/* <NavLink activeClassName="nav-link active" className="nav-link" to="/calendar">Calendar</NavLink> */}
             {/* <NavLink activeClassName="nav-link active" className="nav-link" to="/news">News</NavLink> */}

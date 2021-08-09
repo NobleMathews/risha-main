@@ -8,6 +8,7 @@ import Join from './Pages/Join';
 import Talks from './Pages/Talks';
 import Press from './Pages/Press';
 import Collaborators from './Pages/Collaborators';
+import Blog from './Pages/Blog';
 import GalleryAdmin from './Pages/admin/Title';
 import NewsAdmin from './Pages/admin/NewsAdmin';
 import Calendar from './Pages/Calendar';
@@ -42,6 +43,7 @@ class App extends Component {
       location.state.modal &&
       this.previousLocation !== location
     )
+
     return (
       <div className="App">
 
@@ -59,6 +61,8 @@ class App extends Component {
           <Route path="/news" component={Press} />
           <Route path="/slam" component={Slam} />
           <Route path="/collaborations" component={Collaborators} />
+          <Route path ="/blogs" component={Blog} />
+          <Route path="/blog/:id" component={Blog}/>
           <Route path="/calendar" component={Calendar} />
           <Route path="/gallery" component={Gallery} />
           <Route path="/ch" component={Professor} />
