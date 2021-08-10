@@ -6,6 +6,8 @@ subtitle: 'Deep, Abhishek'
 
 # Working at RISHA Lab
 
+We joined RISHA Lab back in August 2020 for our BTP work. There were many options but RISHA Lab had already stood out from the others in terms of work and achievements. Also, the topic we chose “Working on Unanswered questions on StackOverflow” eventually turned into a good work - <b>“SOCluster - Towards Intent Based Clustering of Stack Overflow Question using a Graph-Based Approach”</b>.
+
 But there are some prerequisites that determine the measure of your compatibility with RISHA Lab - <b>eagerness to learn & dedication for work</b>. It’s okay if you don’t know the direction, you’ll be guided properly. But it’s very important that you follow the directions provided to you to achieve success here. We were new to Research Work when we joined. And that’s why we had to put in some effort to understand Literature and to get the hang of Research Writing. But all this proved very helpful at the end while preparing our BTP Thesis.
 
 Regular updates, WSR (Weekly Status Review) meetings are key parts of RISHA Lab. It motivates you to analyze your work, keep improving and identify the hurdles to avoid getting stuck. These weekly meetings are meant to review the work we have done and to get feedback from the mentors and sir. It helped us a lot to improve our research work. We are open to propose any idea regarding the topic and they are always ready to help us to convert ideas into research work with proper guidance.

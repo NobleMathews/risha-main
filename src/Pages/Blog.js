@@ -354,6 +354,46 @@ const DivA = styled.div`
 }
 `
 
+// const DivUn = styled.div`
+// `
+// class UncontrolledComponentUsingThirdPartyLibrary extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this._myUncontrolledComponent = React.createRef();
+//   }
+
+//    shouldComponentUpdate() {
+//      return false;
+//    }
+   
+//    componentDidMount(){
+//     const numCols = 3;
+//     const colHeights = Array(numCols).fill(0);
+//     const container = this._myUncontrolledComponent;
+//     Array.from(container.children).forEach((child, i) => {
+//       const order = i % numCols;
+//       child.style.order = order;
+//       colHeights[order] += parseFloat(child.clientHeight);
+//     })
+//     container.style.height = Math.max(...colHeights) + 'px';
+//     }
+
+//     render(){
+//       return (
+//       <DivUn>
+//         <ul ref={this._myUncontrolledComponent}>
+//             {["tom","hanks"].map((person, index) => 
+//                   <li key={`uncontrolled-item-${index}`}>
+//                     { person }
+//                  </li>) 
+//             }
+//             </ul>
+//       </DivUn>
+//       )
+//     }
+// }
+
+
 const breakpointColumnsObj = {
   default: 4,
   1200: 3,
@@ -365,11 +405,6 @@ function Blog() {
   const { id } = useParams();
   const webpackRequireContext = require.context('!markdown-with-front-matter-loader!./_posts', false, /.md$/);
   const blogs = webpackRequireContext.keys().reduce((memo, fileName) => memo.set(fileName.match(/.\/([^.]+).*/)[1], webpackRequireContext(fileName)), new Map())
-  // const blogIndex = (blogs) => () => <ul>{[...blogs.keys()].map(path => <li key={path}><Link to={'/'+path}>{blogs.get(path).title || path}</Link></li>)}</ul>;
-  // const blogWrapper = ({ __content }) => () => <div className='markdown-body' dangerouslySetInnerHTML={{__html: __content}}></div>;  
-  // <IndexRoute key='index' component={blogIndex(blogs)} />
-  // const reactRoutes = [].concat([...blogs.keys()].map(path => <Route key={path} path={path} component={blogWrapper(blogs.get(path))} />));
-  // const blog_content = blogWrapper(blogs.get(id));
   console.log(blogs);
   const blog = blogs.get(id);
 return (
@@ -394,7 +429,7 @@ return (
                 <Image src={blogs.get(blogc).image} fluid />
               </header>
         }
-              <div class="cardplus__body">
+              <div class="cardplus__body mylight">
               {blogs.get(blogc).image &&
                 <div class="cardplus__category">{blogs.get(blogc).category}</div>
               }
