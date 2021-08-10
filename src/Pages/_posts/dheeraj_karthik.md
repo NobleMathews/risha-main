@@ -5,7 +5,7 @@ subtitle: 'Dheeraj, Karthik'
 image: 'https://raw.githubusercontent.com/NobleMathews/risha-main/master/src/Pages/_images/dheeraj.jpg'
 ---
 
-# Learning to cope with the Unexpected
+## Learning to cope with the Unexpected
 
 "I first started working with Sridhar sir towards the end of my second year. At that time, Sridhar sir was teaching our batch, and he gave us a glimpse of the fantastic work being done by students around the world. His motivation to make IIT Tirupati recognized as one of the top institutes for software engineering research on par with the likes of MIT and Stanford got me fired up. In addition, the effort and the variety of research problems undertaken by the lab got me motivated. Before starting my work, I mentioned that I was inspired but knew nothing about software engineering or research. Despite this, he was very welcoming and told me that everyone had to start somewhere. Hence with no knowledge of research, I started my journey with Sridhar sir and the group, which eventually got named RISHA Lab. Only a handful of undergraduate students were there initially, but undergraduate research slowly started picking up momentum in the institute, leading to more students being part of the RISHA family. 
 

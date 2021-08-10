@@ -5,7 +5,7 @@ subtitle: 'Aparna, Rishitha'
 image: 'https://raw.githubusercontent.com/NobleMathews/risha-main/master/src/Pages/_images/aparna.jpg'
 ---
 
-# OUR JOURNEY WITH RISHA LAB 
+## OUR JOURNEY WITH RISHA LAB 
 
 It all started in our 5th semester when we were asked to develop a mobile application for our Software Engineering course. We were clueless about everything, but with the help of Akhila Sri Manasa, who was our TA, we finally figured out a suitable project that aligned with our interests. That's when we figured software engineering is an extensive line of work with a lot of exciting topics, and it's fascinating since we'll be able to pursue any career path from that point forward.
 

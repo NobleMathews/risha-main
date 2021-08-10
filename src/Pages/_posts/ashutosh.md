@@ -5,7 +5,7 @@ subtitle: 'Ashutosh'
 image: 'https://raw.githubusercontent.com/NobleMathews/risha-main/master/src/Pages/_images/ashutosh.jpg'
 ---
 
-# Introduction to Professionalism : My stint at RISHA lab
+## Introduction to Professionalism : My stint at RISHA lab
 
 RISHA (Research in Intelligent Software and Human Analytics ) lab led by Sridhar sir has been my happy hunting ground in the later stages of my Engineering time. My first experience with the lab was after the sixth semester. I got an opportunity to work directly with Sridhar sir on Bug Localization as a B.Tech internship project. I already had secured my internship opportunity with Bosch Engineering and Research Solutions, Bangalore. However, due to the prevailing Covid-19 situation, I could not continue with the company. Sridhar sir was supportive during that phase and offered me to work with him. During my interactions with sir before the internship, I had already figured out that he was really ambitious and passionate about the work being done in the lab. Even in the curriculum courses including the labs, he expected us to do our very best and push our limits. Therefore I knew that I had to be at my very best during the internship.
 

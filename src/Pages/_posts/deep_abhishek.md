@@ -4,7 +4,7 @@ category: 'B.Tech 2021'
 subtitle: 'Deep, Abhishek'
 ---
 
-# Working at RISHA Lab
+## Working at RISHA Lab
 
 We joined RISHA Lab back in August 2020 for our BTP work. There were many options but RISHA Lab had already stood out from the others in terms of work and achievements. Also, the topic we chose “Working on Unanswered questions on StackOverflow” eventually turned into a good work - <b>“SOCluster - Towards Intent Based Clustering of Stack Overflow Question using a Graph-Based Approach”</b>.
 
