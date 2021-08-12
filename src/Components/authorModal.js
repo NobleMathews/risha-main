@@ -19,7 +19,7 @@ class authModal extends Component {
       <div
         role="button"
         className="fade modal-backdrop show specialModal"
-        onClick={() => this.props.history.goBack()}
+        onClick={() => this.historyMethod()}
       >
       <FadeIn>
       <div className="modal-dialog" role="document">
@@ -44,7 +44,7 @@ class authModal extends Component {
               <a href={"mailto:"+author.email} target="_blank">Contact : <AiOutlineMail/></a>
               </OverlayTrigger>
             </div>
-            <button type="button" className="close" data-dismiss="modal" aria-label="Close"  onClick={() => this.props.history.goBack()}>
+            <button type="button" className="close" data-dismiss="modal" aria-label="Close"  onClick={() => this.historyMethod()}>
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
@@ -66,6 +66,13 @@ class authModal extends Component {
         </div>
     );    
     }
+
+  historyMethod() {
+    if(this.props.history.length>2)
+    return this.props.history.goBack();
+    else
+    return this.props.history.push("/publications");
+  }
 };
 
 export default withRouter(authModal);
