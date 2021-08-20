@@ -4,7 +4,8 @@ import slamCoverr from './slamimg/border2r.png'
 import slamCoverl from './slamimg/border2l.png'
 import FadeIn from 'react-fade-in';
 import Footer from "../Components/Footer";
-import Tabletop from "tabletop";
+import Papa from "papaparse";
+// import Tabletop from "tabletop";
 import {Spinner} from "react-bootstrap";
 import _ from 'lodash';
 
@@ -39,17 +40,29 @@ export default function Slam() {
 	}
 
 	useEffect(() => {
-		Tabletop.init({
-		  key: "1LNOpfed9Ua83C9CdnlvBRHBzJSqcjo_2P88qkdXogRA",
-		  simpleSheet: true
-		})
-		  .then((data) => {
-			setSlam(data[Math.floor(Math.random() * data.length)]);
-			const fdata = _.orderBy(data,'Year of pas	sing out','desc');
-			const gdata = _.groupBy(fdata,"Course you were enrolled in");
-			return setData(gdata)
-			})
-		  .catch((err) => console.warn(err));
+		// Tabletop.init({
+		//   key: "1LNOpfed9Ua83C9CdnlvBRHBzJSqcjo_2P88qkdXogRA",
+		//   simpleSheet: true
+		// })
+		//   .then((data) => {
+		// 	setSlam(data[Math.floor(Math.random() * data.length)]);
+		// 	const fdata = _.orderBy(data,'Year of passing out','desc');
+		// 	const gdata = _.groupBy(fdata,"Course you were enrolled in");
+		// 	return setData(gdata)
+		// 	})
+		//   .catch((err) => console.warn(err));
+
+		  Papa.parse('https://docs.google.com/spreadsheets/d/e/2PACX-1vQnKKT5g7NW9WG6MbadWY5FyejuFfv5BiD0jaC7FzlPHS3B064xA5i1YV-bt-1FkN4ZB-tYOfVuRCLZ/pub?output=csv', {
+			download: true,
+			header: true,
+			complete: function(results) {
+			  var data = results.data
+			  setSlam(data[Math.floor(Math.random() * data.length)]);
+			  const fdata = _.orderBy(data,'Year of passing out','desc');
+			  const gdata = _.groupBy(fdata,"Course you were enrolled in");
+			  setData(gdata)
+			}
+		  })
 	  }, []);
 
 	// var image = "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80";
