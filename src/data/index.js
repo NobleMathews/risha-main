@@ -429,6 +429,14 @@ export const sponsors = [
     title:"Commonwealth Educational Media Centre for Asia (CEMCA)",
     link:"https://www.cemca.org/",
   },
+  {
+    project:"Towards Comprehending COBOL Programs using Knowledge Graphs",
+    duration:"Oct 2021 to Oct 2022",
+    src:"exafluence.png",
+    redirect:"/collaborations",
+    title:"Exafluence",
+    link:"https://exafluence.com/",
+  },
   // {
   // project:"AiR: Pollution Visualizer expansion towards climate literacy",
   // duration:"May 2021 to May 2022",
