@@ -116,7 +116,7 @@ export const members = [
     ` 
   },
   {
-    pub: 'yes',
+    pub: 'no',
     key: 'darahas',
     value: 4,
     email:'cs18b007@iittp.ac.in',
@@ -128,7 +128,7 @@ export const members = [
     ` 
   },
   {
-    pub:'yes',
+    pub:'no',
     key: 'shruti',
     value: 4,
     email:'cs18b043@iittp.ac.in',
@@ -140,7 +140,7 @@ export const members = [
     ` 
   },
   {
-    pub:'yes',
+    pub:'no',
     key: 'shubhankar',
     value: 4,
     email:'cs18b034@iittp.ac.in',
@@ -168,6 +168,18 @@ export const members = [
   },
   {
     pub:'yes',
+    key: 'debeshee',
+    value: 4,
+    email:'cs19b012@iittp.ac.in',
+    title: 'Debeshee Das',
+    desc: 'Software Engineering, Machine Learning, AI for SE',
+    links:`
+    LinkedIn [www.linkedin.com/in/debeshee-das]
+    Github [https://github.com/debesheedas]
+    `
+  },
+  {
+    pub:'no',
     key: 'ishaan',
     value: 4,
     email:'cs20b018@iittp.ac.in',
