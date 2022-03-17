@@ -172,7 +172,7 @@ export const members = [
     value: 4,
     email:'cs19b012@iittp.ac.in',
     title: 'Debeshee Das',
-    desc: 'Software Engineering, Machine Learning, AI for SE',
+    desc: 'Software Engineering, ML, AI for SE',
     links:`
     LinkedIn [www.linkedin.com/in/debeshee-das]
     Github [https://github.com/debesheedas]
