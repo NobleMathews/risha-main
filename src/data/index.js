@@ -449,6 +449,22 @@ export const sponsors = [
     title:"Exafluence",
     link:"https://exafluence.com/",
   },
+  {
+    project:"Multi-View Graph Representation Learning for Code",
+    duration:"Jan 2022 to Jan 2023",
+    src:"IBMIRL.jpg",
+    redirect:"/collaborations",
+    title:"IBM India Research Lab",
+    link:"https://research.ibm.com/labs/india/",
+  },
+  {
+    project:"A Virtual AR/VR Museum for Science and Technology Literacy",
+    duration:"Apr 2022 to Apr 2024",
+    src:"dst.png",
+    redirect:"/collaborations",
+    title:"Department of Science and Technology, India",
+    link:"https://dst.gov.in/",
+  },
   // {
   // project:"AiR: Pollution Visualizer expansion towards climate literacy",
   // duration:"May 2021 to May 2022",
