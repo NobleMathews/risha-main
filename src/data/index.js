@@ -101,21 +101,6 @@ export const members = [
     links:'' 
   },
   {
-    pub:'yes',
-    key: 'mahendran',
-    value: 3,
-    email:'cs19m008@iittp.ac.in',
-    title: 'Mahendran N',
-    desc: 'Energy consumption, Deep Learning',
-    links:`
-    LinkedIn [https://www.linkedin.com/in/mahendran-narayanan]
-    Google Scholar [https://scholar.google.com/citations?user=c8subicAAAAJ&hl=en]
-    Github [https://github.com/mahendran-narayanan]
-    Twitter [https://twitter.com/mahendran_kct]
-    ORCiD [https://orcid.org/0000-0002-5653-7187]
-    ` 
-  },
-  {
     pub: 'no',
     key: 'darahas',
     value: 4,
@@ -149,6 +134,18 @@ export const members = [
     links:`
     LinkedIn [https://www.linkedin.com/in/shobhi1310]
     Github [https://github.com/shobhi1310]
+    ` 
+  },
+  {
+    pub:'yes',
+    key: 'prantik',
+    value: 3,
+    email:'cs20m010@iittp.ac.in',
+    title: 'Prantik Parashar Sarmah',
+    desc: 'Code Summarization, Software Engineering',
+    links:`
+    LinkedIn [https://www.linkedin.com/in/prantik-sarmah-31185a117/]
+    Github [https://github.com/ros-implon]
     ` 
   },
   {
@@ -377,7 +374,22 @@ export const alumini = [
     desc: '↠ IT Software Engineer at UBS', 
     links:'' 
       
-  }
+  },
+  {
+    pub:'yes',
+    key: 'mahendran',
+    value: 3,
+    email:'cs19m008@iittp.ac.in',
+    title: 'Mahendran N',
+    desc: 'Energy consumption, Deep Learning',
+    links:`
+    LinkedIn [https://www.linkedin.com/in/mahendran-narayanan]
+    Google Scholar [https://scholar.google.com/citations?user=c8subicAAAAJ&hl=en]
+    Github [https://github.com/mahendran-narayanan]
+    Twitter [https://twitter.com/mahendran_kct]
+    ORCiD [https://orcid.org/0000-0002-5653-7187]
+    ` 
+  },
 ].sort((a,b) => a.value-b.value);
 export const collaborators = [
 
