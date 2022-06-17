@@ -64,7 +64,7 @@ export const members = [
     title: 'A Eashaan Rao',
     desc: 'Cross-Project Learning',
     links:`
-    LinkedIn [www.linkedin.com/in/a-eashaan-rao-786977110]
+    LinkedIn [https://www.linkedin.com/in/a-eashaan-rao-786977110]
     Github [https://github.com/Eashurox]
     Twitter [https://twitter.com/eashaan_a]
     Research Gate [https://www.researchgate.net/profile/Eashaan-Rao]
@@ -171,7 +171,7 @@ export const members = [
     title: 'Debeshee Das',
     desc: 'Software Engineering, ML, AI for SE',
     links:`
-    LinkedIn [www.linkedin.com/in/debeshee-das]
+    LinkedIn [https://www.linkedin.com/in/debeshee-das]
     Github [https://github.com/debesheedas]
     `
   },
