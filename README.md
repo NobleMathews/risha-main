@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# To edit new_member
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Updating Data
+- File: src\data\index.js
+    - If you want to add the member only for citations within the website / they are not members of the lab use the `collaborators` array instead of `members` as shown below. You can also choose to hide the entry using the `pub` key in cases where there are temporary members involved
+  ```
+  export const members = [
+  {
+    pub:'yes',
+    key: 'sridhar',
+    value: 0,
+    email:'ch@iittp.ac.in',
+    title: 'Sridhar Chimalakonda',
+    desc: 'Software Engineering',
+    links:`
+    LinkedIn [https://www.linkedin.com/in/sridharch]
+    Google Scholar [https://scholar.google.com/citations?user=X3AR0HgAAAAJ&hl=en]
+    Github [https://github.com/SridharChimalakonda]
+    Twitter [https://twitter.com/ChimalakondaSri]
+    ORCiD [https://orcid.org/0000-0003-0818-8178]
+    ` 
+  },
+  ...
+  ]
+    ```
+    - pub -> publish on page if 'yes'
+    - `key` -> id used to identify across website for citation and image names
+    - title -> Full Name
+    - desc -> Area of Research
+    - Links -> newline separated entries of the form "`text_to_display` [`actual link`]"
+## Updating Images
+- Folder: public\images
+    - Add in "`key`.jpg"
+    - Add in "b_`key`.jpg" for childhood image
 
-## Available Scripts
 
-In the project directory, you can run:
+# To add collaborator
+- File: src\data\index.js
+  - Update the `sponsors` array
+```
+[
+  {
+    project:"Academic",
+    duration:"May 2019 - Present",
+    src:"waterloo.jpg",
+    redirect:"/collaborations",
+    title:"University of Waterloo",
+    link:"https://cs.uwaterloo.ca/~m2nagapp/index.html",
+    collaborator:"Mei Nagappan",
+  },
+...
+]
+```
+  - The `project` field can be either `Academic` or just the name of the current project since both are handled differently
 
-### `yarn start`
+# Other
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- To add alumini update the alumini array in src\data\index.js
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Slambook needs to be updated from the excel sheet which collects form info
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Blogs need to be placed in src\Pages\_posts with images in src\Pages\_images as proper markdown files with header as shown below
+```
+---
+title: 'Our journey with RISHA Lab'
+category: 'B.Tech 2021'
+subtitle: 'Aparna, Rishitha'
+image: 'https://raw.githubusercontent.com/NobleMathews/risha-main/master/src/Pages/_images/aparna.jpg'
+---
+```
