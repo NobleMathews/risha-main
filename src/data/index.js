@@ -432,6 +432,26 @@ export const collaborators = [
     links:`
     Website [https://cse.nitk.ac.in/faculty/chandrasekaran-k]` 
   },
+  {
+    pub:'no',
+    key: 'vibhu',
+    value: 5,
+    email:'vibhu.sharma@accenture.com',
+    title: 'Vibhu Saujanya Sharma',
+    desc: 'Software Engineering',
+    links:`
+    Linkedin [https://www.linkedin.com/in/sharmavibhu/?originalSubdomain=in]` 
+  },
+  {
+    pub:'no',
+    key: 'vikrant',
+    value: 5,
+    email:'vikrant.kaulgud@accenture.com',
+    title: 'Vikrant Kaulgud',
+    desc: 'Software Engineering',
+    links:`
+    Linkedin [https://www.linkedin.com/in/vikrantkaulgud/?originalSubdomain=in]` 
+  },
 
 ]
 
