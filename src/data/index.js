@@ -392,6 +392,46 @@ export const alumini = [
   },
 ].sort((a,b) => a.value-b.value);
 export const collaborators = [
+  {
+    pub:'no',
+    key: 'mei',
+    value: 5,
+    email:'mei.nagappan at uwaterloo dot ca',
+    title: 'Meiyappan Nagappan',
+    desc: 'Software Engineering',
+    links:`
+    Website [https://cs.uwaterloo.ca/~m2nagapp/]` 
+  },
+  {
+    pub:'no',
+    key: 'nuthan',
+    value: 5,
+    email:'nm6061@rit.edu',
+    title: 'Nuthan Munaiah',
+    desc: 'Software Engineering',
+    links:`
+    Website [https://nuthanmunaiah.github.io/]` 
+  },
+  {
+    pub:'no',
+    key: 'marimuthu',
+    value: 5,
+    email:'cs15fv08.muthu@nitk.edu.in',
+    title: 'Marimuthu Chinnakali',
+    desc: 'Software Engineering',
+    links:`
+    Google Scholar [https://scholar.google.co.in/citations?user=O4AxcogAAAAJ&hl=en]` 
+  },
+  {
+    pub:'no',
+    key: 'chandrasekaran',
+    value: 5,
+    email:'kchnitk@ieee.org',
+    title: 'Chandrasekaran K',
+    desc: 'Software Engineering',
+    links:`
+    Website [https://cse.nitk.ac.in/faculty/chandrasekaran-k]` 
+  },
 
 ]
 
