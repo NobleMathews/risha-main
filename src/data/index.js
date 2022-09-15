@@ -390,6 +390,26 @@ export const alumini = [
     ORCiD [https://orcid.org/0000-0002-5653-7187]
     ` 
   },
+  {
+    pub:'yes',
+    key: 'sameed',
+    value: 4,
+    email:'cs18b021@iittp.ac.in',
+    title: 'Mir Sameed Ali',
+    desc: 'Data Scientist at Razor Group',
+    links:`
+    LinkedIn [https://www.linkedin.com/in/mir-sameed-ali-329a64175/?originalSubdomain=in]
+    ` 
+  },
+  {
+    pub:'yes',
+    key: 'n_manjunath',
+    value: 4,
+    email:'cs18b041@iittp.ac.in',
+    title: 'Nikhil Manjunath',
+    desc: 'Software Engineering',
+    links: `` 
+  },
 ].sort((a,b) => a.value-b.value);
 export const collaborators = [
   {
