@@ -8,7 +8,7 @@ import Masonry from 'react-masonry-css'
 import MainModal from '../Components/ModalM';
 import FeatPub from '../Pages/FeatPub';
 import FadeIn from 'react-fade-in';
-import { FaGithub, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { FaGithub, FaTwitter, FaYoutube, FaLinkedin } from 'react-icons/fa';
 import {BiLinkExternal} from 'react-icons/bi';
 import { sponsors } from "../data";
 
@@ -265,9 +265,10 @@ function Main() {
                 <div className="p-4">
                   <h4 className="font-italic">Find us on</h4>
                   <ol className="list-unstyled">
-                    <li><a href="https://twitter.com/rishalab"><FaTwitter /> Twitter</a></li>
-                    <li><a href="https://www.youtube.com/channel/UCcetB0OV3W1iUK69JRHHLTw"><FaYoutube /> Youtube</a></li>
-                    <li><a href="https://github.com/RISHA-LAB-IITT"><FaGithub /> GitHub</a></li>
+                    <li><a href="https://twitter.com/rishalab" target="_blank"><FaTwitter /> Twitter</a></li>
+                    <li><a href="https://www.youtube.com/channel/UCcetB0OV3W1iUK69JRHHLTw" target="_blank"><FaYoutube /> Youtube</a></li>
+                    <li><a href="https://github.com/rishalab" target="_blank"><FaGithub /> GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/risha-lab-iitt-12780a212/" target="_blank"><FaLinkedIn /> LinkedIn</a></li>
                   </ol>
                 </div>
                 {/* <div className="p-4 mb-3 mylight rounded">
