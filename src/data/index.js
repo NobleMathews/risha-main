@@ -91,63 +91,7 @@ export const members = [
     desc: '',
     links:'' 
   },
-  {
-    pub: 'no',
-    key: 'satish',
-    value: 2,
-    email:'cs20s502@iittp.ac.in',
-    title: 'Satish Shetty',
-    desc: '',
-    links:'' 
-  },
-  {
-    pub: 'no',
-    key: 'darahas',
-    value: 4,
-    email:'cs18b007@iittp.ac.in',
-    title: 'Darahas Kopparapu',
-    desc: 'Software Engineering',
-    links:`
-    LinkedIn [https://www.linkedin.com/in/darahask]
-    Github [https://github.com/darahask]
-    ` 
-  },
-  {
-    pub:'no',
-    key: 'shruti',
-    value: 4,
-    email:'cs18b043@iittp.ac.in',
-    title: 'Shruti Priya',
-    desc: 'Software Engineering',
-    links:`
-    LinkedIn [https://www.linkedin.com/in/shruti-priya-56b630175]
-    Github [https://github.com/shruti-shrz]
-    ` 
-  },
-  {
-    pub:'no',
-    key: 'shubhankar',
-    value: 4,
-    email:'cs18b034@iittp.ac.in',
-    title: 'Shubhankar Bhadra',
-    desc: 'Empirical Study, Human Computer Interaction',
-    links:`
-    LinkedIn [https://www.linkedin.com/in/shobhi1310]
-    Github [https://github.com/shobhi1310]
-    ` 
-  },
-  {
-    pub:'yes',
-    key: 'prantik',
-    value: 3,
-    email:'cs20m010@iittp.ac.in',
-    title: 'Prantik Parashar Sarmah',
-    desc: 'Code Summarization, Software Engineering',
-    links:`
-    LinkedIn [https://www.linkedin.com/in/prantik-sarmah-31185a117/]
-    Github [https://github.com/ros-implon]
-    ` 
-  },
+
   {
     pub:'yes',
     key: 'noble',
@@ -176,16 +120,60 @@ export const members = [
     `
   },
   {
-    pub:'no',
-    key: 'ishaan',
+    pub:'yes',
+    key: 'rajrupa',
     value: 4,
-    email:'cs20b018@iittp.ac.in',
-    title: 'Kulkarni ishaan Meghshyam',
-    desc: 'Web Accessibility Testing Software',
+    email:'cs22s504@iittp.ac.in',
+    title: 'Rajrupa Chattaraj',
+    desc: 'Software Engineering, ML, AI for SE',
     links:`
-    Github [https://github.com/IshaanKulkarni]
+    LinkedIn [https://in.linkedin.com/in/rajrupa-chattaraj-5936ba157]
     `
   },
+  {
+    pub:'yes',
+    key: 'jahnavi',
+    value: 4,
+    email:'cs22s504@iittp.ac.in',
+    title: 'Jahnavi K',
+    desc: 'Software Engineering, ML, AI for SE',
+    links:`
+    `
+  },
+  {
+    pub:'yes',
+    key: 'aashrith',
+    value: 4,
+    email:'cs19b025@iittp.ac.in',
+    title: 'Madasu Aashirth Sai',
+    desc: 'Code Summarization',
+    links:`
+    LinkedIn [https://in.linkedin.com/in/aashrith-sai-madasu-170771217]
+    `
+  },
+  {
+    pub:'yes',
+    key: 'anuraag',
+    value: 4,
+    email:'cs19b012@iittp.ac.in',
+    title: 'Anuraag Reddy',
+    desc: 'Code Summarization',
+    links:`
+    LinkedIn [https://in.linkedin.com/in/anuraag-reddy-6181b814b]
+    `
+  },
+  {
+    pub:'yes',
+    key: 'kranthi',
+    value: 4,
+    email:'cs19b036@iittp.ac.in',
+    title: 'Sedamaki Kranthi',
+    desc: 'Software Engineering, ML, AI for SE',
+    links:`
+    LinkedIn [https://in.linkedin.com/in/kranthisedamaki]
+    `
+  },
+
 ].sort((a,b) => a.value-b.value);
 export const alumini = [
   {
@@ -409,6 +397,42 @@ export const alumini = [
     title: 'Nikhil Manjunath',
     desc: 'Software Engineering',
     links: `` 
+  },
+  {
+    pub:'yes',
+    key: 'prantik',
+    value: 3,
+    email:'cs20m010@iittp.ac.in',
+    title: 'Prantik Parashar Sarmah',
+    desc: 'Code Summarization, Software Engineering',
+    links:`
+    LinkedIn [https://www.linkedin.com/in/prantik-sarmah-31185a117/]
+    Github [https://github.com/ros-implon]
+    ` 
+  },
+  {
+    pub:'no',
+    key: 'shruti',
+    value: 4,
+    email:'cs18b043@iittp.ac.in',
+    title: 'Shruti Priya',
+    desc: 'Software Engineering',
+    links:`
+    LinkedIn [https://www.linkedin.com/in/shruti-priya-56b630175]
+    Github [https://github.com/shruti-shrz]
+    ` 
+  },
+  {
+    pub:'no',
+    key: 'shubhankar',
+    value: 4,
+    email:'cs18b034@iittp.ac.in',
+    title: 'Shubhankar Bhadra',
+    desc: 'Empirical Study, Human Computer Interaction',
+    links:`
+    LinkedIn [https://www.linkedin.com/in/shobhi1310]
+    Github [https://github.com/shobhi1310]
+    ` 
   },
 ].sort((a,b) => a.value-b.value);
 export const collaborators = [
