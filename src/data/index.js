@@ -511,7 +511,7 @@ export const sponsors = [
   },
   {
     project:"Academic",
-    duration:"May 2019 - Present",
+    duration:"June 2022 - Present",
     src:"waterloo.jpg",
     redirect:"/collaborations",
     title:"Polytechnique Montréal",
