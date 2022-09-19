@@ -122,7 +122,7 @@ export const members = [
   {
     pub:'yes',
     key: 'rajrupa',
-    value: 4,
+    value: 2,
     email:'cs22s504@iittp.ac.in',
     title: 'Rajrupa Chattaraj',
     desc: 'Software Engineering, ML, AI for SE',
@@ -133,7 +133,7 @@ export const members = [
   {
     pub:'yes',
     key: 'jahnavi',
-    value: 4,
+    value: 2,
     email:'cs22s504@iittp.ac.in',
     title: 'Jahnavi K',
     desc: 'Software Engineering, ML, AI for SE',
@@ -509,6 +509,15 @@ export const sponsors = [
   link:"https://cs.uwaterloo.ca/~m2nagapp/index.html",
   collaborator:"Mei Nagappan",
   },
+  {
+    project:"Academic",
+    duration:"May 2019 - Present",
+    src:"waterloo.jpg",
+    redirect:"/collaborations",
+    title:"Polytechnique Montréal",
+    link:"https://www.polymtl.ca/expertises/en/khomh-foutse",
+    collaborator:"Foutse Khomh",
+    },
   {
   project:"A Novel Approach for Bug Localization",
   duration:"Nov 2019 to Nov 2020",
