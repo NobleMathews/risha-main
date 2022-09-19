@@ -535,6 +535,14 @@ export const sponsors = [
     link:"https://www.bosch.com/research/",
   },
   {
+    project:"An Approach for Generation of Domain Knowledge Graphs from Source Code",
+    duration:"Jan 2022 to Dec 2022",
+    src:"bosch.png",
+    redirect:"/collaborations",
+    title:"Bosch",
+    link:"https://www.bosch.com/research/",
+  },
+  {
   project:"Software Reuse and Quality Analysis of an Online Coding Platform",
   duration:"April 2019 to April 2022",
   src:"codechef.png",
