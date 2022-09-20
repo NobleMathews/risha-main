@@ -268,7 +268,6 @@ function Main() {
                     <li><a href="https://twitter.com/rishalab" target="_blank"><FaTwitter /> Twitter</a></li>
                     <li><a href="https://www.youtube.com/channel/UCcetB0OV3W1iUK69JRHHLTw" target="_blank"><FaYoutube /> Youtube</a></li>
                     <li><a href="https://github.com/rishalab" target="_blank"><FaGithub /> GitHub</a></li>
-                    <li><a href="https://www.linkedin.com/in/risha-lab-iitt-12780a212/" target="_blank"><FaLinkedIn /> LinkedIn</a></li>
                   </ol>
                 </div>
                 {/* <div className="p-4 mb-3 mylight rounded">
