@@ -2,7 +2,7 @@
 title: 'Transformative Journey: My RISHA Lab Experience at IIT Tirupati'
 category: 'M.Tech 2020'
 subtitle: 'Vartika Agrahari'
-image: 'https://raw.githubusercontent.com/NobleMathews/risha-main/master/src/Pages/_images/Vartika.jpg'
+image: 'https://raw.githubusercontent.com/NobleMathews/risha-main/master/src/Pages/_images/Vartika.jpeg'
 ---
 
 # **Transformative Journey: My RISHA Lab Experience at IIT Tirupati**
