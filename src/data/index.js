@@ -501,6 +501,22 @@ export const collaborators = [
 
 export const sponsors = [
   {
+    project:"To explore ways to facilitate communication, collaboration and computing skills for undergrads from rural India",
+    duration:"Oct 2023 to Oct 2024",
+    src:"GoogleResearch.png",
+    redirect:"/collaborations",
+    title:"Google Research",
+    link:"https://research.google/",
+  },
+  {
+    project:"AI Mocktails: Finding Jewels in the Jungle of Source Code Representations and Models for AI-Driven Software Engineering Tasks",
+    duration:"Sept 2023 to Sept 2024",
+    src:"MicrosoftResearch.png",
+    redirect:"/collaborations",
+    title:"Microsoft Research",
+    link:"https://www.microsoft.com/en-us/research/",
+  },
+  {
     project:"AI-Driven Bug Classification and Detection in Onboard Satellite Software Systems",
     duration:"Aug 2023 to Aug 2025",
     src:"ISRO.png",
