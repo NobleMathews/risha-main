@@ -71,7 +71,7 @@ export const members = [
     ` 
   },
   {
-    pub: 'yes',
+    pub: 'no',
     key: 'shriram',
     value: 2,
     email:'cs20s503@iittp.ac.in',
@@ -93,7 +93,7 @@ export const members = [
   },
 
   {
-    pub:'yes',
+    pub:'no',
     key: 'noble',
     value: 4,
     email:'ch19b023@iittp.ac.in',
@@ -108,7 +108,7 @@ export const members = [
     `
   },
   {
-    pub:'yes',
+    pub:'no',
     key: 'debeshee',
     value: 4,
     email:'cs19b012@iittp.ac.in',
@@ -141,7 +141,7 @@ export const members = [
     `
   },
   {
-    pub:'yes',
+    pub:'no',
     key: 'aashrith',
     value: 4,
     email:'cs19b025@iittp.ac.in',
@@ -152,7 +152,7 @@ export const members = [
     `
   },
   {
-    pub:'yes',
+    pub:'no',
     key: 'anuraag',
     value: 4,
     email:'cs19b012@iittp.ac.in',
@@ -163,7 +163,7 @@ export const members = [
     `
   },
   {
-    pub:'yes',
+    pub:'no',
     key: 'kranthi',
     value: 4,
     email:'cs19b036@iittp.ac.in',
