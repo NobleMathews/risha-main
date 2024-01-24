@@ -175,7 +175,7 @@ export const members = [
   },
   {
     pub: 'yes',
-    key: 'jaimin ',
+    key: 'jaimin',
     value: 4,
     email: 'cs22b051@iittp.ac.in',
     title: 'Viramgama Jaimin ',
