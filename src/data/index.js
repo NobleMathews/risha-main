@@ -173,7 +173,177 @@ export const members = [
     LinkedIn [https://in.linkedin.com/in/kranthisedamaki]
     `
   },
-
+  {
+    pub: 'yes',
+    key: 'jaimin ',
+    value: 4,
+    email: 'cs22b051@iittp.ac.in',
+    title: 'Viramgama Jaimin ',
+    desc: '',
+    links: `
+    LinkedIn [https://www.linkedin.com/in/jaimin-viramgama-802387253]   
+    Github [https://github.com/i-apex] 
+    `
+  },
+  {
+    pub: 'yes',
+    key: 'shivadharshan',
+    value: 4,
+    email: 'cs22b057@iittp.ac.in',
+    title: 'Shivadharshan S',
+    desc: '',
+    links: `
+    Github [https://github.com/Shiva9361] 
+    `
+  },
+  {
+    pub: 'yes',
+    key: 'kowshik',
+    value: 4,
+    email: 'cs22b015@iittp.ac.in',
+    title: 'KOWSHIK REDDY CHALLA ',
+    desc: '',
+    links: ` 
+    `
+  },
+  {
+    pub: 'yes',
+    key: 'aarya',
+    value: 4,
+    email: 'cs22b018@iittp.ac.in',
+    title: 'Aarya Chepuri',
+    desc: '',
+    links: ` 
+    `
+  },
+  {
+    pub: 'yes',
+    key: 'sanjay',
+    value: 4,
+    email: 'cs22b029@iittp.ac.in',
+    title: 'K Sanjay Varshith ',
+    desc: '',
+    links: `
+    LinkedIn [https://www.linkedin.com/in/sanjay-varshith?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app]  
+    Github [https://github.com/Sanjayvarshith] 
+    `
+  },
+  {
+    pub: 'yes',
+    key: 'mokshith',
+    value: 4,
+    email: 'cs22b046@iittp.ac.in',
+    title: 'Tanguturi Mokshith Reddy ',
+    desc: '',
+    links: `
+    LinkedIn [https://www.linkedin.com/in/mokshith-tanguturi-aa7455293/]  
+    Github [https://github.com/Mokshith1708] 
+    `
+  },
+  {
+    pub: 'yes',
+    key: 'sasaank',
+    value: 4,
+    email: 'cs22b059@iittp.ac.in',
+    title: 'Sasaank Janapati ',
+    desc: '',
+    links: `
+    LinkedIn [https://www.linkedin.com/in/sasaank-janapati-25056b29a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app]  
+    Github [https://github.com/SasaankJanapati] 
+    `
+  },
+  {
+    pub: 'yes',
+    key: 'akilesh',
+    value: 4,
+    email: 'cs22b040@iittp.ac.in',
+    title: 'Akilesh P',
+    desc: '',
+    links: `
+    Github [https://github.com/Akileshdash] 
+    `
+  },
+  {
+    pub: 'yes',
+    key: 'sonith',
+    value: 4,
+    email: 'cs22b036@iittp.ac.in',
+    title: 'M V Sonith',
+    desc: '',
+    links: `
+    LinkedIn [https://www.linkedin.com/in/sonith-m-v-0a7a4b256?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app]  
+    Github [https://github.com/sonith17] 
+    `
+  },
+  {
+    pub: 'yes',
+    key: 'hemasri',
+    value: 4,
+    email: 'cs20b020@iittp.ac.in',
+    title: 'Hemasri Sai Lella ',
+    desc: 'Energy aware software engineering ',
+    links: `
+    LinkedIn [https://www.linkedin.com/in/hemasri-sai-lella-bba10b227]  
+    Github [https://github.com/LellaHemasriSai] 
+    `
+  },
+  {
+    pub: 'yes',
+    key: 'preethi',
+    value: 4,
+    email: 'cs20b030@iittp.ac.in',
+    title: 'Preethi Varsha Marivina ',
+    desc: 'User Interface Energy',
+    links: `
+    LinkedIn [https://www.linkedin.com/in/preethi-varsha-marivina?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app]  
+    Github [https://github.com/PreethiVarshaM] 
+    `
+  },
+  {
+    pub: 'yes',
+    key: 'manasa',
+    value: 4,
+    email: 'cs20b019@iittp.ac.in',
+    title: 'Kurra Manasa',
+    desc: 'Energy Domain',
+    links: ` 
+    `
+  },
+  {
+    pub: 'yes',
+    key: 'siddhartha',
+    value: 4,
+    email: 'cs20b040@iittp.ac.in',
+    title: 'Siddhartha G',
+    desc: '',
+    links: `
+    LinkedIn [https://www.linkedin.com/in/siddharthag22/]  
+    Github [https://github.com/S1ddh4rthaG] 
+    `
+  },
+  {
+    pub: 'yes',
+    key: 'rahul',
+    value: 3,
+    email: 'cs22m110@iittp.ac.in',
+    title: 'Rahul Krishna Gaddam ',
+    desc: 'AI4SE and SE4AI',
+    links: `
+    LinkedIn [https://www.linkedin.com/in/rahul-krishna-gaddam-912254168]  
+    Github [https://github.com/RahulKrishna8029] 
+    `
+  },
+  {
+    pub: 'yes',
+    key: 'ajinkya',
+    value: 2,
+    email: 'cs23s501@iittp.ac.in',
+    title: 'Ajinkya Sawarkar',
+    desc: '',
+    links: `
+    LinkedIn [https://www.linkedin.com/in/ajinkya-sawarkar-99ab921bb?trk=universal-search-cluster]  
+    `
+    }   
 ].sort((a,b) => a.value-b.value);
 export const alumini = [
   {
