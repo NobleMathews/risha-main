@@ -1,6 +1,6 @@
 // key identifies file name for image and is used in every href
 // value 
-export const value=["Assistant Professor","Ph.D. Student","M.S. Student","M.Tech. Student","B.Tech. Student","Collaborator"] 
+export const value=["Associate Professor and Head","Ph.D. Student","M.S. Student","M.Tech. Student","B.Tech. Student","Collaborator"] 
 export const members = [
   {
     pub:'yes',

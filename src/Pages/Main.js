@@ -224,7 +224,8 @@ function Main() {
                     <Row className="my-3">
                       <Col className="mx-auto">
                         <Image className="testermain" src="https://2020.msrconf.org/getProfileImage/sridharchimalakonda/76c8c23f-1094-41a3-ac57-9d38bf899419/small.jpg?1596264188000" alt="LabHead" roundedCircle />
-                        <p className="ml-1 tester-sub mb-0">Assistant Professor,<br/> Department of Computer Science & Engineering <a style={{display:"block"}} className="preserveb" target="_blank" referrerPolicy="no-referrer" href="https://www.iittp.ac.in">IIT Tirupati, India</a></p>
+                        <p className="ml-1 tester-sub mb-0">Associate Professor and Head,<br/> Department of Computer Science & Engineering <a style={{display:"block"}} className="preserveb" target="_blank" referrerPolicy="no-referrer" href="https://www.iittp.ac.in">IIT Tirupati, India</a></p>
+                        <p className="ml-1 tester-sub mb-0"><br/> Adjunct Associate Professor <br/> David R. Cheriton School of Computer Science <a style={{display:"block"}} className="preserveb" target="_blank" referrerPolicy="no-referrer" href="https://uwaterloo.ca/">University of Waterloo, Canada</a></p>
                         <p className="ml-1 tester-sub mb-0">Email: <a className="preserveb" href="mailto:ch@iittp.ac.in">ch@iittp.ac.in</a></p>
                       </Col>
                     </Row>
