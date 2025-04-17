@@ -87,7 +87,7 @@ export default function Slam() {
 		<hr/>
 		<FadeIn>
 		<div style={{textAlign:"left"}} className={!isMobile?"d-flex bd-highlight align-items-center":""}>
-		<div  className="p-2 foto" style={{background:`#fff url(http://drive.google.com/uc?export=view&id=${iSlam["Your current photo"].split("?id=")[1]}) no-repeat center`,transform:`rotate(${random}deg) translate(${random2}px, ${random3}px)`}}></div>
+		<div  className="p-2 foto" style={{background:`#fff url(https://drive.google.com/thumbnail?id=${iSlam["Your current photo"]?.split("?id=")[1]}&sz=w200) no-repeat center`,transform:`rotate(${random}deg) translate(${random2}px, ${random3}px)`}}></div>
 		<div className="p-2 flex-grow-1" style={{textAlign:"left"}}>
 		<p><b>Name: </b>{iSlam["Your Name"]}</p>
 		<p><b>Birth Date: </b>{iSlam["Your date of birth"]}</p>
