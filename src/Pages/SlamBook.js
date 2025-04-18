@@ -96,7 +96,7 @@ export default function Slam() {
 		</div>
 		</div>
 		{/* </div>
-		<div  className="p-2 foto" style={{background:`#fff url(http://drive.google.com/uc?export=view&id=${iSlam["Your current photo"].split("?id=")[1]}) no-repeat center`,transform:`rotate(${random}deg) translate(${random2}px, ${random3}px)`}}></div>
+		<div  className="p-2 foto" style={{background:`#fff url(https://drive.google.com/thumbnail?id=${iSlam["Your current photo"]?.split("?id=")[1]}&sz=w200) no-repeat center`,transform:`rotate(${random}deg) translate(${random2}px, ${random3}px)`}}></div>
 		</div> */}
 		{/* <div className="d-flex bd-highlight align-items-center"> */}
 		<>
