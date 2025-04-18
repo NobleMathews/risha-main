@@ -1,7 +1,7 @@
 ---
 title: 'My Journey into Software Engineering: From Projects to Papers'
 category: 'B.Tech 2024'
-subtitle: 'Preethi'
+subtitle: 'Hemasri Sai Lella'
 image: 'https://raw.githubusercontent.com/NobleMathews/risha-main/master/src/Pages/_images/preethi.jpg'
 ---
 
