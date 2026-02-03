@@ -5,7 +5,7 @@ import { Row, Container, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import img from "../assets/logo_min.png";
-import { members, alumini, value, sponsors } from "../data"
+import { faculty_members, members, alumini, value, sponsors } from "../data"
 import _ from 'lodash';
 
 _.mixin({
@@ -39,6 +39,68 @@ function Lab() {
           <p style={{ margin: "0px" }}><b>Hover to discover</b></p>
           {/* <p> There is always one moment in childhood when the door opens and lets the future in ~ Graham Greene</p> */}
           <p>Ignite your passion and chase your dreams! We do it in the <b>#RishaFamily</b>!</p>
+          <hr />
+
+          {/* Faculty Members  */}
+          <h4>Faculty</h4>
+
+          <div className="container">
+            <div className="img-grid lab-member">
+              {faculty_members
+                .filter(f => f.value === 0 || f.value === 1)
+                .sort((a, b) => a.value - b.value)
+                .map((member) => (
+                  <figure className="figure" key={member.key}>
+                    <Link
+                      to={{
+                        pathname: `/info/${member.key}`,
+                        state: { modal: true }
+                      }}
+                    >
+                      <div className="img-wrap hover-switch">
+                        <motion.img
+                          className="rounded"
+                          src={"/images/team/" + member.key + ".jpg"}
+                          alt="thumb"
+                          style={{ width: "100%", height: "auto" }}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ delay: 0.8 }}
+                          onError={(e) => e.target.src = '/images/team/default.jpg'}
+                        />
+                        <motion.img
+                          className="rounded"
+                          src={"/images/team/b_" + member.key + ".jpg"}
+                          alt="thumb"
+                          style={{ width: "100%", height: "auto" }}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ delay: 0.8 }}
+                          onError={(e) => e.target.src = '/images/team/default.jpg'}
+                        />
+                      </div>
+                    </Link>
+
+                    <figcaption className="figure-caption text-center">
+                      <p>
+                        <Link
+                          to={{
+                            pathname: `/info/${member.key}`,
+                            state: { modal: true }
+                          }}
+                        >
+                          {member.title}
+                        </Link>
+                        <br />
+                        {member.designation ?? value[member.value]}
+                      </p>
+                    </figcaption>
+                  </figure>
+                ))}
+            </div>
+          </div>
+          
+          <h4>Current Students</h4>
           <div className="container">
             <div className="img-grid lab-member">
               {members.filter(x => x.pub == 'yes').map((member) => (
