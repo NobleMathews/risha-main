@@ -18,172 +18,100 @@ export const members = [
     ` 
   },
   {
-    pub:'no',
-    key: 'kvn',
-    value: 5,
-    email:'',
-    title: 'Kesav V. Nori',
-    desc: 'Software Engineering, Educational Technologies',
-    links:`
-    Website [https://serc.iiit.ac.in/personal/kesav.nori]
-    LinkedIn [https://in.linkedin.com/in/kesav-nori-27671291]
-     ` 
-  },
-  {
-    pub:'no',
-    key: 'sureshjain',
-    value: 5,
-    email:'sureshjain@iittp.ac.in',
-    title: 'Suresh Jain',
-    desc: 'Civil and Environmental Engineering',
-    links:`
-      Website [https://sureshjain-com.webnode.com/]
-     ` 
-  },
-  {
-    pub:'yes',
-    key: 'akhila',
-    value: 1,
-    email:'cs19d504@iittp.ac.in',
-    title: 'Akhila Sri Manasa Venigalla',
-    desc: 'Software Documentation',
-    links:`
-    LinkedIn [https://www.linkedin.com/in/akhila-sri-manasa7896]
-    Google Scholar [https://scholar.google.com/citations?user=--HXC1wAAAAJ&hl=en]
-    Github [https://github.com/AkhilaSriManasa]
-    Twitter [https://twitter.com/AkhilaSriManasa]
-    ResearchGate [https://www.researchgate.net/profile/Akhila-Sri-Manasa-Venigalla]
-    ORCiD [https://orcid.org/0000-0003-4356-0334]
-    ` 
-  },
-  {
-    pub:'yes',
-    key: 'eashan',
-    value: 1,
-    email:'cs21d002@iittp.ac.in',
-    title: 'A Eashaan Rao',
-    desc: 'Cross-Project Learning',
-    links:`
-    LinkedIn [https://www.linkedin.com/in/a-eashaan-rao-786977110]
-    Github [https://github.com/Eashurox]
-    Twitter [https://twitter.com/eashaan_a]
-    Research Gate [https://www.researchgate.net/profile/Eashaan-Rao]
-    ` 
-  },
-  {
-    pub: 'no',
-    key: 'shriram',
+    pub: 'yes',
+    key: 'upendra',
     value: 2,
-    email:'cs20s503@iittp.ac.in',
-    title: 'Shriram Shridhar Shanbhag',
-    desc: 'Software Engineering',
-    links:`
-    LinkedIn [https://www.linkedin.com/in/shriram-shanbhag-9a8138103/]
-    Github [https://github.com/tritims]
-    ` 
-  },
-  {
-    pub: 'no',
-    key: 'chaitanya',
-    value: 2,
-    email:'cs18s502@iittp.ac.in',
-    title: 'Chaitanya S. Lakkundi',
-    desc: '',
-    links:'' 
-  },
-
-  {
-    pub:'no',
-    key: 'noble',
-    value: 4,
-    email:'ch19b023@iittp.ac.in',
-    title: 'Noble Saji Mathews',
-    desc: 'Code Analysis, AI, Software Engineering',
-    links:`
-    Website [https://noblesm.com]
-    LinkedIn [https://www.linkedin.com/in/noblesmathews]
-    Google Scholar [https://scholar.google.com/citations?user=niVr6tgAAAAJ&hl=en]
-    ORCiD [https://orcid.org/0000-0003-2266-8848]
-    Research Gate [https://www.researchgate.net/profile/Noble_Mathews]
-    Github [https://github.com/NobleMathews]
-    `
-  },
-  {
-    pub:'no',
-    key: 'debeshee',
-    value: 4,
-    email:'cs19b012@iittp.ac.in',
-    title: 'Debeshee Das',
-    desc: 'Software Engineering, ML, AI for SE',
-    links:`
-    LinkedIn [https://www.linkedin.com/in/debeshee-das]
-    Github [https://github.com/debesheedas]
-    `
-  },
-  {
-    pub:'yes',
-    key: 'rajrupa',
-    value: 2,
-    email:'cs22s504@iittp.ac.in',
-    title: 'Rajrupa Chattaraj',
-    desc: 'Software Engineering, ML, AI for SE',
-    links:`
-    LinkedIn [https://in.linkedin.com/in/rajrupa-chattaraj-5936ba157]
-    `
-  },
-  {
-    pub:'yes',
-    key: 'jahnavi',
-    value: 2,
-    email:'cs22s504@iittp.ac.in',
-    title: 'Jahnavi K',
-    desc: 'Software Engineering, ML, AI for SE',
-    links:`
-    `
-  },
-  {
-    pub:'no',
-    key: 'aashrith',
-    value: 4,
-    email:'cs19b025@iittp.ac.in',
-    title: 'Madasu Aashirth Sai',
-    desc: 'Code Summarization',
-    links:`
-    LinkedIn [https://in.linkedin.com/in/aashrith-sai-madasu-170771217]
-    `
-  },
-  {
-    pub:'no',
-    key: 'anuraag',
-    value: 4,
-    email:'cs19b012@iittp.ac.in',
-    title: 'Anuraag Reddy',
-    desc: 'Code Summarization',
-    links:`
-    LinkedIn [https://in.linkedin.com/in/anuraag-reddy-6181b814b]
-    `
-  },
-  {
-    pub:'no',
-    key: 'kranthi',
-    value: 4,
-    email:'cs19b036@iittp.ac.in',
-    title: 'Sedamaki Kranthi',
-    desc: 'Software Engineering, ML, AI for SE',
-    links:`
-    LinkedIn [https://in.linkedin.com/in/kranthisedamaki]
+    email: 'cs25s513@iittp.ac.in',
+    title: 'K Upendra',
+    desc: 'Exploring Ideas that come in the way ✌️',
+    links: `
+    Github [https://github.com/Upendra2003] 
+    LinkedIn []
     `
   },
   {
     pub: 'yes',
-    key: 'jaimin',
-    value: 4,
-    email: 'cs22b051@iittp.ac.in',
-    title: 'Viramgama Jaimin ',
+    key: 'nandini',
+    value: 1,
+    email: 'CS25D506@iittp.ac.in',
+    title: 'Meka Naga Nandini Devi',
     desc: '',
     links: `
-    LinkedIn [https://www.linkedin.com/in/jaimin-viramgama-802387253]   
-    Github [https://github.com/i-apex] 
+    Github [] 
+    LinkedIn []
+    `
+  },
+  {
+    pub: 'yes',
+    key: 'stany',
+    value: 4,
+    email: 'cs23b059@iittp.ac.in',
+    title: 'Koppala Stanycletus',
+    desc: 'HCI',
+    links: `
+    Github [https://github.com/Stany-Cletus] 
+    LinkedIn [https://www.linkedin.com/in/koppala-stanycletus-7540b6272/]
+    `
+  },
+  {
+    pub: 'yes',
+    key: 'sarang',
+    value: 4,
+    email: 'cs24b039@iittp.ac.in',
+    title: 'Sarang Mittal',
+    desc: '',
+    links: `
+    Github [https://github.com/sm2909] 
+    LinkedIn []
+    `
+  },
+  {
+    pub: 'yes',
+    key: 'sharat',
+    value: 2,
+    email: 'cs26s003@iittp.ac.in',
+    title: 'Sharat Jacob Jacob',
+    desc: 'Privacy Preserving across Applications',
+    links: `
+    Github [https://github.com/Sharatjacob2] 
+    LinkedIn [https://www.linkedin.com/in/sharat-jacob-jacob/]
+    Personal Website [https://twicenamed.netlify.app/]
+    `
+  },
+  {
+    pub: 'yes',
+    key: 'srikrishna',
+    value: 4,
+    email: 'cs23b058@iittp.ac.in',
+    title: 'Kidambi Venkata Srikrishna',
+    desc: 'COBOL(Legacy systems), Compliance checking',
+    links: `
+    Github [https://github.com/SrikrishnaKidambi] 
+    LinkedIn [https://www.linkedin.com/in/venkata-srikrishna-kidambi-6b45bb287/]
+    `
+  },
+  {
+    pub: 'yes',
+    key: 'kavya',
+    value: 3,
+    email: 'cs24m111@iittp.ac.in',
+    title: 'G Kavyasri',
+    desc: 'SE for AI',
+    links: `
+    Github [https://github.com/cs24m111] 
+    LinkedIn [https://www.linkedin.com/in/kavyasri-gajula-511624249/]
+    `
+  },
+  {
+    pub: 'yes',
+    key: 'pranav',
+    value: 2,
+    email: 'cs25s523@iittp.ac.in',
+    title: 'V Pranav',
+    desc: 'Trustworthy in AI Agents',
+    links: `
+    Github [https://share.google/xuyU3y1gPuDFToO7G] 
+    LinkedIn [https://www.linkedin.com/in/pranav-v-353337298?utm_source=share_via&utm_content=profile&utm_medium=member_android]
     `
   },
   {
@@ -347,6 +275,149 @@ export const members = [
     }   
 ].sort((a,b) => a.value-b.value);
 export const alumini = [
+  {
+    key: 'jaimin',
+    value: 4,
+    email: 'cs22b051@iittp.ac.in',
+    title: 'Viramgama Jaimin ',
+    desc: '',
+    links: `
+    LinkedIn [https://www.linkedin.com/in/jaimin-viramgama-802387253]   
+    Github [https://github.com/i-apex] 
+    `
+  },
+  {
+    key: 'kranthi',
+    value: 4,
+    email:'cs19b036@iittp.ac.in',
+    title: 'Sedamaki Kranthi',
+    desc: 'Software Engineering, ML, AI for SE',
+    links:`
+    LinkedIn [https://in.linkedin.com/in/kranthisedamaki]
+    `
+  },
+  {
+    key: 'chaitanya',
+    value: 2,
+    email:'cs18s502@iittp.ac.in',
+    title: 'Chaitanya S. Lakkundi',
+    desc: '',
+    links:'' 
+  },
+  {
+    key: 'anuraag',
+    value: 4,
+    email:'cs19b012@iittp.ac.in',
+    title: 'Anuraag Reddy',
+    desc: 'Code Summarization',
+    links:`
+    LinkedIn [https://in.linkedin.com/in/anuraag-reddy-6181b814b]
+    `
+  },
+  {
+    key: 'aashrith',
+    value: 4,
+    email:'cs19b025@iittp.ac.in',
+    title: 'Madasu Aashirth Sai',
+    desc: 'Code Summarization',
+    links:`
+    LinkedIn [https://in.linkedin.com/in/aashrith-sai-madasu-170771217]
+    `
+  },
+  {
+    key: 'jahnavi',
+    value: 2,
+    email:'cs22s504@iittp.ac.in',
+    title: 'Jahnavi K',
+    desc: 'Software Engineering, ML, AI for SE',
+    links:`
+    `
+  },
+  {
+    key: 'rajrupa',
+    value: 2,
+    email:'cs22s504@iittp.ac.in',
+    title: 'Rajrupa Chattaraj',
+    desc: 'Software Engineering, ML, AI for SE',
+    links:`
+    LinkedIn [https://in.linkedin.com/in/rajrupa-chattaraj-5936ba157]
+    `
+  },
+    {
+    key: 'debeshee',
+    value: 4,
+    email:'cs19b012@iittp.ac.in',
+    title: 'Debeshee Das',
+    desc: 'Software Engineering, ML, AI for SE',
+    links:`
+    LinkedIn [https://www.linkedin.com/in/debeshee-das]
+    Github [https://github.com/debesheedas]
+    `
+  },
+  {
+    key: 'noble',
+    value: 4,
+    email:'ch19b023@iittp.ac.in',
+    title: 'Noble Saji Mathews',
+    desc: 'Code Analysis, AI, Software Engineering',
+    links:`
+    Website [https://noblesm.com]
+    LinkedIn [https://www.linkedin.com/in/noblesmathews]
+    Google Scholar [https://scholar.google.com/citations?user=niVr6tgAAAAJ&hl=en]
+    ORCiD [https://orcid.org/0000-0003-2266-8848]
+    Research Gate [https://www.researchgate.net/profile/Noble_Mathews]
+    Github [https://github.com/NobleMathews]
+    `
+  },
+    {
+    key: 'shriram',
+    value: 2,
+    email:'cs20s503@iittp.ac.in',
+    title: 'Shriram Shridhar Shanbhag',
+    desc: 'Software Engineering',
+    links:`
+    LinkedIn [https://www.linkedin.com/in/shriram-shanbhag-9a8138103/]
+    Github [https://github.com/tritims]
+    ` 
+  },
+    {
+    key: 'eashan',
+    value: 1,
+    email:'cs21d002@iittp.ac.in',
+    title: 'A Eashaan Rao',
+    desc: 'Cross-Project Learning',
+    links:`
+    LinkedIn [https://www.linkedin.com/in/a-eashaan-rao-786977110]
+    Github [https://github.com/Eashurox]
+    Twitter [https://twitter.com/eashaan_a]
+    Research Gate [https://www.researchgate.net/profile/Eashaan-Rao]
+    ` 
+  },
+    {
+    key: 'akhila',
+    value: 1,
+    email:'cs19d504@iittp.ac.in',
+    title: 'Akhila Sri Manasa Venigalla',
+    desc: 'Software Documentation',
+    links:`
+    LinkedIn [https://www.linkedin.com/in/akhila-sri-manasa7896]
+    Google Scholar [https://scholar.google.com/citations?user=--HXC1wAAAAJ&hl=en]
+    Github [https://github.com/AkhilaSriManasa]
+    Twitter [https://twitter.com/AkhilaSriManasa]
+    ResearchGate [https://www.researchgate.net/profile/Akhila-Sri-Manasa-Venigalla]
+    ORCiD [https://orcid.org/0000-0003-4356-0334]
+    ` 
+  },
+  {
+    key: 'sureshjain',
+    value: 5,
+    email:'sureshjain@iittp.ac.in',
+    title: 'Suresh Jain',
+    desc: 'Civil and Environmental Engineering',
+    links:`
+      Website [https://sureshjain-com.webnode.com/]
+     ` 
+  },
   {
     key: 'akash',
     value: 4,
