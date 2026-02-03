@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
 import { withRouter } from 'react-router-dom';
-import {authors,value,alumini} from "../data";
+import {authors,value,alumini, faculty_members} from "../data";
 import {AiOutlineMail} from 'react-icons/ai';
 import {Tooltip,OverlayTrigger} from 'react-bootstrap';
 import FadeIn from 'react-fade-in';
@@ -11,10 +11,13 @@ class authModal extends Component {
     }
     render(){
     const id = this.props.match.params.id;
-    const author = authors.find(method => method.key === id);
-    const isAlumini = alumini.find(method => method.key === id);
+    const people = [...faculty_members, ...authors, ...alumini];
+    const author = people.find(p => p.key === id);
+    const isAlumini = alumini.some(p => p.key === id);
     const alum = isAlumini?" (Alumini) ":"";
-
+    if (!author) {
+      return <div className="modal-content mylight">Profile not found</div>;
+    }
     return(
       <div
         role="button"
