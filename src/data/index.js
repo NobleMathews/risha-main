@@ -1,11 +1,13 @@
 // key identifies file name for image and is used in every href
 // value 
 export const value=["Associate Professor and Head","Ph.D. Student","M.S. Student","M.Tech. Student","B.Tech. Student","Collaborator"] 
-export const members = [
+
+export const faculty_members=[
   {
     pub:'yes',
     key: 'sridhar',
     value: 0,
+    designation: 'Associate Professor and Head',
     email:'ch@iittp.ac.in',
     title: 'Sridhar Chimalakonda',
     desc: 'Software Engineering',
@@ -18,12 +20,31 @@ export const members = [
     ` 
   },
   {
+    pub:'yes',
+    key: 'varsha',
+    value: 0,
+    designation: 'Assistant Professor',
+    email:'varshabhat@iittp.ac.in',
+    title: 'Varsha Bhat K',
+    desc: 'Cryptography',
+    links:`
+    LinkedIn []
+    Google Scholar []
+    Github []
+    Twitter []
+    ORCiD []
+    ` 
+  },
+]
+
+export const members = [
+  {
     pub: 'yes',
     key: 'upendra',
     value: 2,
     email: 'cs25s513@iittp.ac.in',
     title: 'K Upendra',
-    desc: 'Exploring Ideas that come in the way ✌️',
+    desc: 'Hello WOrLD.',
     links: `
     Github [https://github.com/Upendra2003] 
     LinkedIn []
@@ -274,6 +295,8 @@ export const members = [
     `
     }   
 ].sort((a,b) => a.value-b.value);
+
+
 export const alumini = [
   {
     key: 'jaimin',
