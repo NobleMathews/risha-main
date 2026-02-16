@@ -367,43 +367,6 @@ export const alumini = [
     `
   },
     {
-    key: 'debeshee',
-    value: 4,
-    email:'cs19b012@iittp.ac.in',
-    title: 'Debeshee Das',
-    desc: 'Software Engineering, ML, AI for SE',
-    links:`
-    LinkedIn [https://www.linkedin.com/in/debeshee-das]
-    Github [https://github.com/debesheedas]
-    `
-  },
-  {
-    key: 'noble',
-    value: 4,
-    email:'ch19b023@iittp.ac.in',
-    title: 'Noble Saji Mathews',
-    desc: 'Code Analysis, AI, Software Engineering',
-    links:`
-    Website [https://noblesm.com]
-    LinkedIn [https://www.linkedin.com/in/noblesmathews]
-    Google Scholar [https://scholar.google.com/citations?user=niVr6tgAAAAJ&hl=en]
-    ORCiD [https://orcid.org/0000-0003-2266-8848]
-    Research Gate [https://www.researchgate.net/profile/Noble_Mathews]
-    Github [https://github.com/NobleMathews]
-    `
-  },
-    {
-    key: 'shriram',
-    value: 2,
-    email:'cs20s503@iittp.ac.in',
-    title: 'Shriram Shridhar Shanbhag',
-    desc: 'Software Engineering',
-    links:`
-    LinkedIn [https://www.linkedin.com/in/shriram-shanbhag-9a8138103/]
-    Github [https://github.com/tritims]
-    ` 
-  },
-    {
     key: 'eashan',
     value: 1,
     email:'cs21d002@iittp.ac.in',
@@ -710,39 +673,6 @@ export const alumini = [
     LinkedIn [https://www.linkedin.com/in/shriram-shanbhag-9a8138103/]
     Github [https://github.com/tritims]
     ` 
-  },
-  {
-    pub:'no',
-    key: 'aashrith',
-    value: 4,
-    email:'cs19b025@iittp.ac.in',
-    title: 'Madasu Aashirth Sai',
-    desc: 'Code Summarization',
-    links:`
-    LinkedIn [https://in.linkedin.com/in/aashrith-sai-madasu-170771217]
-    `
-  },
-  {
-    pub:'no',
-    key: 'anuraag',
-    value: 4,
-    email:'cs19b012@iittp.ac.in',
-    title: 'Anuraag Reddy',
-    desc: 'Code Summarization',
-    links:`
-    LinkedIn [https://in.linkedin.com/in/anuraag-reddy-6181b814b]
-    `
-  },
-  {
-    pub:'no',
-    key: 'kranthi',
-    value: 4,
-    email:'cs19b036@iittp.ac.in',
-    title: 'Sedamaki Kranthi',
-    desc: 'Software Engineering, ML, AI for SE',
-    links:`
-    LinkedIn [https://in.linkedin.com/in/kranthisedamaki]
-    `
   },
   {
     pub:'no',
