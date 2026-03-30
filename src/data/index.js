@@ -40,6 +40,30 @@ export const faculty_members=[
 export const members = [
   {
     pub: 'yes',
+    key: 'venkat',
+    value: 4,
+    email: 'cs22b058@iittp.ac.in',
+    title: 'Venkat Koushal',
+    desc: 'Exploring',
+    links: `
+    Github [] 
+    LinkedIn []
+    `
+  },
+  {
+    pub: 'yes',
+    key: 'raghavendra',
+    value: 4,
+    email: 'cs23b026@iittp.ac.in',
+    title: 'Raghavendra Pappu',
+    desc: 'Exploring',
+    links: `
+    Github [] 
+    LinkedIn []
+    `
+  },
+  {
+    pub: 'yes',
     key: 'upendra',
     value: 2,
     email: 'cs25s513@iittp.ac.in',
