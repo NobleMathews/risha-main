@@ -52,6 +52,18 @@ export const members = [
   },
   {
     pub: 'yes',
+    key: 'vishnu',
+    value: 4,
+    email: 'cs24b004@iittp.ac.in',
+    title: 'Vishnu Bachu',
+    desc: 'Exploring',
+    links: `
+    Github [] 
+    LinkedIn []
+    `
+  },
+  {
+    pub: 'yes',
     key: 'raghavendra',
     value: 4,
     email: 'cs23b026@iittp.ac.in',
