@@ -52,6 +52,67 @@ export const members = [
   },
   {
     pub: 'yes',
+    key: 'vishnu',
+    value: 4,
+    email: 'cs24b004@iittp.ac.in',
+    title: 'Vishnu Bachu',
+    desc: 'Exploring',
+    links: `
+    Github [https://github.com/VishnuBachu] 
+    LinkedIn [www.linkedin.com/in/bachu-vishnu-vardhan-971485361]
+    `
+  },
+  {
+    pub: 'yes',
+    key: 'karthik',
+    value: 4,
+    email: 'cs24b046@iittp.ac.in',
+    title: 'Karthik Tamarapalli',
+    desc: 'Compliance and Software Engineering',
+    links: `
+    Github [https://github.com/karthik768990/] 
+    LinkedIn [https://www.linkedin.com/in/karthik-tamarapalli/]
+    Portfolio [https://karthiktamarapalli.vercel.app/]
+    `
+  },
+  {
+    pub: 'yes',
+    key: 'sireesh',
+    value: 4,
+    email: 'cs24b013@iittp.ac.in',
+    title: 'G Sireesh Reddy',
+    desc: 'Exploring',
+    links: `
+    Github [https://github.com/gSIREESH24] 
+    LinkedIn []
+    `
+  },
+  {
+    pub: 'yes',
+    key: 'adithya',
+    value: 4,
+    email: 'cs23b001@iittp.ac.in',
+    title: 'Adithya Ananth',
+    desc: 'Green and Sustainable Software Engineering, SE4AI',
+    links: `
+    Github [https://github.com/adithya-ananth] 
+    LinkedIn [https://www.linkedin.com/in/ananth-adithya]
+    `
+  },
+  {
+    pub: 'yes',
+    key: 'jaipradeep',
+    value: 4,
+    email: 'cs23b024@iittp.ac.in',
+    title: 'Jai Pradeep',
+    desc: 'Code Modernization, AI/SWE',
+    links: `
+    Github [https://github.com/Jai-Pradeep/] 
+    LinkedIn [inkedin.com/in/jai-pradeep-jayachandran-1910241b6/]
+    `
+  },
+  {
+    pub: 'yes',
     key: 'raghavendra',
     value: 4,
     email: 'cs23b026@iittp.ac.in',
@@ -60,6 +121,18 @@ export const members = [
     links: `
     Github [] 
     LinkedIn []
+    `
+  },
+   {
+    pub: 'yes',
+    key: 'aravind',
+    value: 3,
+    email: 'cs25m101@iittp.ac.in',
+    title: 'Aravind Byredla',
+    desc: 'COBOL evolution ',
+    links: `
+    Github [https://github.com/Aravind-Byredla] 
+    LinkedIn [https://in.linkedin.com/in/aravind-byredla89]
     `
   },
   {
@@ -135,6 +208,47 @@ export const members = [
     LinkedIn [https://www.linkedin.com/in/venkata-srikrishna-kidambi-6b45bb287/]
     `
   },
+  
+  {
+    pub: 'yes',
+    key: 'pranav',
+    value: 2,
+    email: 'cs25s523@iittp.ac.in',
+    title: 'V Pranav',
+    desc: 'Trustworthy in AI Agents',
+    links: `
+    Github [https://share.google/xuyU3y1gPuDFToO7G] 
+    LinkedIn [https://www.linkedin.com/in/pranav-v-353337298?utm_source=share_via&utm_content=profile&utm_medium=member_android]
+    `
+  },
+ 
+  {
+    pub: 'yes',
+    key: 'rahul',
+    value: 3,
+    email: 'cs22m110@iittp.ac.in',
+    title: 'Rahul Krishna Gaddam ',
+    desc: 'AI4SE and SE4AI',
+    links: `
+    LinkedIn [https://www.linkedin.com/in/rahul-krishna-gaddam-912254168]  
+    Github [https://github.com/RahulKrishna8029] 
+    `
+  },
+  {
+    pub: 'yes',
+    key: 'ajinkya',
+    value: 2,
+    email: 'cs23s501@iittp.ac.in',
+    title: 'Ajinkya Sawarkar',
+    desc: '',
+    links: `
+    LinkedIn [https://www.linkedin.com/in/ajinkya-sawarkar-99ab921bb?trk=universal-search-cluster]  
+    `
+    }   
+].sort((a,b) => a.value-b.value);
+
+
+export const alumini = [
   {
     pub: 'yes',
     key: 'kavya',
@@ -148,38 +262,17 @@ export const members = [
     `
   },
   {
-    pub: 'yes',
-    key: 'pranav',
-    value: 2,
-    email: 'cs25s523@iittp.ac.in',
-    title: 'V Pranav',
-    desc: 'Trustworthy in AI Agents',
-    links: `
-    Github [https://share.google/xuyU3y1gPuDFToO7G] 
-    LinkedIn [https://www.linkedin.com/in/pranav-v-353337298?utm_source=share_via&utm_content=profile&utm_medium=member_android]
-    `
-  },
-  {
-    pub: 'yes',
-    key: 'shivadharshan',
+    key: 'jaimin',
     value: 4,
-    email: 'cs22b057@iittp.ac.in',
-    title: 'Shivadharshan S',
+    email: 'cs22b051@iittp.ac.in',
+    title: 'Viramgama Jaimin ',
     desc: '',
     links: `
-    Github [https://github.com/Shiva9361] 
+    LinkedIn [https://www.linkedin.com/in/jaimin-viramgama-802387253]   
+    Github [https://github.com/i-apex] 
     `
   },
-  {
-    pub: 'yes',
-    key: 'kowshik',
-    value: 4,
-    email: 'cs22b015@iittp.ac.in',
-    title: 'KOWSHIK REDDY CHALLA ',
-    desc: '',
-    links: ` 
-    `
-  },
+   
   {
     pub: 'yes',
     key: 'aarya',
@@ -297,40 +390,23 @@ export const members = [
   },
   {
     pub: 'yes',
-    key: 'rahul',
-    value: 3,
-    email: 'cs22m110@iittp.ac.in',
-    title: 'Rahul Krishna Gaddam ',
-    desc: 'AI4SE and SE4AI',
-    links: `
-    LinkedIn [https://www.linkedin.com/in/rahul-krishna-gaddam-912254168]  
-    Github [https://github.com/RahulKrishna8029] 
+    key: 'kowshik',
+    value: 4,
+    email: 'cs22b015@iittp.ac.in',
+    title: 'KOWSHIK REDDY CHALLA ',
+    desc: '',
+    links: ` 
     `
   },
-  {
+   {
     pub: 'yes',
-    key: 'ajinkya',
-    value: 2,
-    email: 'cs23s501@iittp.ac.in',
-    title: 'Ajinkya Sawarkar',
-    desc: '',
-    links: `
-    LinkedIn [https://www.linkedin.com/in/ajinkya-sawarkar-99ab921bb?trk=universal-search-cluster]  
-    `
-    }   
-].sort((a,b) => a.value-b.value);
-
-
-export const alumini = [
-  {
-    key: 'jaimin',
+    key: 'shivadharshan',
     value: 4,
-    email: 'cs22b051@iittp.ac.in',
-    title: 'Viramgama Jaimin ',
+    email: 'cs22b057@iittp.ac.in',
+    title: 'Shivadharshan S',
     desc: '',
     links: `
-    LinkedIn [https://www.linkedin.com/in/jaimin-viramgama-802387253]   
-    Github [https://github.com/i-apex] 
+    Github [https://github.com/Shiva9361] 
     `
   },
   {
